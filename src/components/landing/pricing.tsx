@@ -76,7 +76,7 @@ export function Pricing() {
               >
                 {meta.featured && (
                   <motion.span
-                    className="absolute -top-3 left-1/2 flex -translate-x-1/2 items-center gap-1.5 overflow-hidden rounded-full bg-gold px-4 py-1.5 text-xs font-bold uppercase tracking-wide text-forest-950 shadow-card"
+                    className="absolute -top-3 left-1/2 -translate-x-1/2"
                     animate={reduce ? {} : { y: [0, -4, 0] }}
                     transition={{
                       duration: 3,
@@ -84,20 +84,26 @@ export function Pricing() {
                       ease: "easeInOut",
                     }}
                   >
-                    <Star size={13} weight="fill" />
-                    {t("recomandat")}
-                    {/* shine sweep */}
+                    {/* gradient glow ring */}
                     <motion.span
                       aria-hidden="true"
-                      className="pointer-events-none absolute inset-y-0 left-0 w-1/3 bg-linear-to-r from-transparent via-white/60 to-transparent"
-                      animate={reduce ? {} : { x: ["-140%", "460%"] }}
+                      className="pointer-events-none absolute inset-[-1.5px] rounded-full"
+                      style={{
+                        background:
+                          "conic-gradient(from 0deg, #c9a24b, #fbf6ec, #84ac90, #c9a24b)",
+                      }}
+                      animate={reduce ? {} : { rotate: 360 }}
                       transition={{
-                        duration: 2,
+                        duration: 4,
                         repeat: Infinity,
-                        ease: "easeInOut",
-                        repeatDelay: 1.4,
+                        ease: "linear",
                       }}
                     />
+                    {/* badge label */}
+                    <span className="relative flex items-center gap-1.5 rounded-full bg-gold px-4 py-1.5 text-xs font-bold uppercase tracking-wide text-forest-950 shadow-card">
+                      <Star size={13} weight="fill" />
+                      {t("recomandat")}
+                    </span>
                   </motion.span>
                 )}
 
