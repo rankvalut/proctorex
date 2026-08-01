@@ -1,11 +1,11 @@
 "use client";
 
 import { useState } from "react";
-import { Basket, List, X, Leaf, Globe } from "@phosphor-icons/react";
-import { useLocale, useTranslations } from "next-intl";
+import Image from "next/image";
+import { Basket, List, X } from "@phosphor-icons/react";
+import { useTranslations } from "next-intl";
 import { useCart } from "@/components/cart/cart-provider";
 import { Link } from "@/i18n/navigation";
-import { type Locale } from "@/i18n/routing";
 
 const NAV_KEYS = [
   { href: "/#despre", key: "despre" },
@@ -16,56 +16,48 @@ const NAV_KEYS = [
   { href: "/#contact", key: "contact" },
 ] as const;
 
-const LANGUAGES: { code: Locale; label: string }[] = [
-  { code: "ro", label: "Română" },
-  { code: "en", label: "English" },
-  { code: "uk", label: "Українська" },
-  { code: "ru", label: "Русский" },
-  { code: "es", label: "Español" },
-];
-
 export function Header() {
   const { count, openCart } = useCart();
   const t = useTranslations("nav");
   const brand = useTranslations("brand");
   const cart = useTranslations("cart");
-  const lang = useTranslations("language");
-  const locale = useLocale();
   const [open, setOpen] = useState(false);
-  const [langOpen, setLangOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-40 border-b border-cream-3 bg-cream/90 backdrop-blur">
-      <div className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-3 px-5 md:h-18 md:px-8">
+    <header className="relative z-40 border-b border-cream-3 bg-cream">
+      <div className="mx-auto flex h-[6.95rem] max-w-[1320px] items-center justify-between gap-5 px-6 md:px-10">
         {/* Brand */}
         <a
-          href="#top"
-          className="flex items-center gap-2.5"
+          href="#despre"
+          className="relative flex min-w-[210px] flex-col items-start leading-none"
           aria-label="PROCTOREX"
         >
-          <span className="flex h-11 w-11 items-center justify-center rounded-full border border-forest/25 bg-cream-2 text-forest">
-            <Leaf weight="fill" size={19} />
+          <Image
+            src="/proctorex/proctorex-3leaf.png"
+            alt=""
+            width={1239}
+            height={848}
+            unoptimized
+            className="pointer-events-none absolute left-[4.1rem] -top-2 h-[2.5rem] w-[3.9rem] object-contain"
+          />
+          <span className="font-display mt-7 block text-[2.1rem] font-semibold tracking-[-0.045em] text-forest-900">
+            PROCTOREX
           </span>
-          <span className="leading-tight">
-            <span className="font-display block text-2xl font-semibold text-forest-900">
-              PROCTOREX
-            </span>
-            <span className="font-display block text-[13px] italic text-forest-700">
-              {brand("tagline")}
-            </span>
+          <span className="font-display mt-2 block pl-4 text-[15px] italic text-forest-700">
+            {brand("tagline")}
           </span>
         </a>
 
         {/* Desktop nav */}
         <nav
           aria-label="Principal"
-          className="hidden items-center gap-6 lg:flex"
+          className="hidden items-center gap-6 md:flex"
         >
           {NAV_KEYS.map((item) => (
             <Link
               key={item.href}
               href={item.href}
-              className="text-[15px] text-ink-soft transition-colors duration-200 hover:text-forest"
+              className="font-display whitespace-nowrap text-[12px] uppercase tracking-[0.01em] text-ink-soft transition-colors duration-200 hover:text-forest"
             >
               {t(item.key)}
             </Link>
@@ -74,50 +66,10 @@ export function Header() {
 
         {/* Actions */}
         <div className="flex items-center gap-2">
-          {/* Language switcher */}
-          <div className="relative">
-            <button
-              type="button"
-              onClick={() => setLangOpen((v) => !v)}
-              aria-haspopup="menu"
-              aria-expanded={langOpen}
-              aria-label={lang("label")}
-              className="flex h-10 items-center gap-1.5 rounded-lg border border-cream-3 px-3 text-sm text-ink-soft transition-colors hover:bg-cream-2"
-            >
-              <Globe size={16} weight="bold" />
-              <span className="hidden sm:inline">
-                {LANGUAGES.find((l) => l.code === locale)?.label}
-              </span>
-            </button>
-            {langOpen && (
-              <div
-                role="menu"
-                className="absolute right-0 top-12 w-40 overflow-hidden rounded-2xl border border-cream-3 bg-cream p-1.5 shadow-card"
-              >
-                {LANGUAGES.map((l) => (
-                  <Link
-                    key={l.code}
-                    href="/"
-                    locale={l.code}
-                    role="menuitem"
-                    onClick={() => setLangOpen(false)}
-                    className={`block rounded-xl px-3 py-2 text-sm font-semibold transition-colors hover:bg-cream-2 ${
-                      l.code === locale
-                        ? "text-forest"
-                        : "text-ink-soft"
-                    }`}
-                  >
-                    {l.label}
-                  </Link>
-                ))}
-              </div>
-            )}
-          </div>
-
           <button
             type="button"
             onClick={openCart}
-            className="hidden shrink-0 items-center gap-2 whitespace-nowrap rounded-lg border border-forest/40 bg-transparent px-4 py-2 text-sm text-forest-900 transition-colors duration-200 hover:border-forest hover:bg-forest/5 sm:flex"
+            className="hidden h-10 shrink-0 items-center gap-2 whitespace-nowrap rounded-[10px] bg-cream-2 px-4 text-[13px] text-forest-900 transition-colors duration-200 hover:bg-leaf-soft sm:flex"
           >
             <Basket size={17} weight="bold" />
             {cart("pill", { count })}
@@ -125,7 +77,7 @@ export function Header() {
           <button
             type="button"
             onClick={() => setOpen((v) => !v)}
-            className="flex h-10 w-10 items-center justify-center rounded-lg border border-cream-3 text-forest-900 lg:hidden"
+            className="flex h-11 w-11 items-center justify-center rounded-[10px] border border-cream-3 text-forest-900 md:hidden"
             aria-label={open ? "Închide meniul" : "Deschide meniul"}
             aria-expanded={open}
           >
@@ -138,7 +90,7 @@ export function Header() {
       {open && (
         <nav
           aria-label="Principal (mobil)"
-          className="border-t border-cream-3 bg-cream px-5 py-4 lg:hidden"
+          className="border-t border-cream-3 bg-cream px-6 py-4 md:hidden"
         >
           <ul className="flex flex-col gap-1">
             {NAV_KEYS.map((item) => (
@@ -146,7 +98,7 @@ export function Header() {
                 <Link
                   href={item.href}
                   onClick={() => setOpen(false)}
-                  className="block rounded-lg px-3 py-2.5 text-[15px] text-ink-soft hover:bg-cream-2 hover:text-forest"
+                  className="block rounded-lg px-3 py-2.5 font-display text-[15px] uppercase text-ink-soft hover:bg-cream-2 hover:text-forest"
                 >
                   {t(item.key)}
                 </Link>

@@ -86,19 +86,19 @@
       { "name": "Pachet 2 × PROCTOREX 100 g", "cta": "Comandă pachetul" }
     ],
     "perks": [
-      "Livrare discretă",
-      "Plată sigură",
-      "Retur gratuit 30 zile"
+      "Transport gratuit la comenzile peste 250 lei",
+      "Retur gratuit 30 zile",
+      "Plată: Card sau Ramburs"
     ]
   },
   "order": {
     "eyebrow": "Comandă",
     "title": "Comandă rapid și discret",
-    "subtext": "Completează formularul, iar un operator te va suna pentru a confirma comanda. Fără cont, fără pași complicați.",
+    "subtext": "Completează formularul și te contactăm pentru confirmare.",
     "assurances": [
-      "Ambalaj neutru și discret",
-      "Livrare rapidă în toată România",
-      "Plată sigură — Card sau Ramburs",
+      "Datele tale sunt în siguranță.",
+      "Livrare rapidă, ambalaj discret.",
+      "Poți plăti ramburs sau cu cardul.",
       "Datele tale rămân confidențiale"
     ],
     "summaryTitle": "Comanda ta",
@@ -111,6 +111,7 @@
     "fieldOras": "Oraș",
     "fieldCodPostal": "Cod poștal",
     "fieldAdresa": "Adresă de livrare",
+    "fieldEmail": "E-mail",
     "phTelefon": "07xx xxx xxx",
     "phAdresa": "Stradă, număr, bloc, scară, apartament",
     "submit": "Trimite Comanda",

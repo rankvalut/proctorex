@@ -86,19 +86,19 @@
       { "name": "Pack 2 × PROCTOREX 100 g", "cta": "Pedir el pack" }
     ],
     "perks": [
-      "Entrega discreta",
-      "Pago seguro",
-      "Devolución gratis 30 días"
+      "Envío gratis en pedidos superiores a 250 lei",
+      "Devolución gratis 30 días",
+      "Pago: tarjeta o contra reembolso"
     ]
   },
   "order": {
     "eyebrow": "Pedido",
     "title": "Pide rápido y de forma discreta",
-    "subtext": "Rellena el formulario y un operador te llamará para confirmar tu pedido. Sin cuenta, sin pasos complicados.",
+    "subtext": "Completa el formulario y te contactaremos para confirmar.",
     "assurances": [
-      "Embalaje neutro y discreto",
-      "Envío rápido a toda Rumanía",
-      "Pago seguro: tarjeta o contra reembolso",
+      "Tus datos están seguros.",
+      "Envío rápido, embalaje discreto.",
+      "Paga con tarjeta o contra reembolso.",
       "Tus datos permanecen confidenciales"
     ],
     "summaryTitle": "Tu pedido",
@@ -111,6 +111,7 @@
     "fieldOras": "Ciudad",
     "fieldCodPostal": "Código postal",
     "fieldAdresa": "Dirección de entrega",
+    "fieldEmail": "Correo electrónico",
     "phTelefon": "07xx xxx xxx",
     "phAdresa": "Calle, número, bloque, escalera, piso",
     "submit": "Enviar pedido",

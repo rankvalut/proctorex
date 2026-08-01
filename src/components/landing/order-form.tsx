@@ -1,347 +1,236 @@
 "use client";
 
+import Image from "next/image";
 import { useState, type FormEvent } from "react";
 import {
-  PaperPlaneTilt,
   CheckCircle,
-  PhoneCall,
+  CreditCard,
   Lock,
-  Package,
+  PhoneCall,
   Truck,
-  ShieldCheck,
-  Basket,
+  CaretDown,
 } from "@phosphor-icons/react";
 import { useTranslations } from "next-intl";
 import { toast } from "sonner";
-import { Eyebrow } from "@/components/ui/eyebrow";
-import { Reveal } from "@/components/ui/reveal";
 import { useCart } from "@/components/cart/cart-provider";
-import { Link } from "@/i18n/navigation";
 
-const ASSURANCE_ICONS = [Package, Truck, ShieldCheck, Lock];
+const ASSURANCE_ICONS = [Lock, Truck, CreditCard];
 
 const initialForm = {
   nume: "",
   telefon: "",
+  email: "",
   tara: "România",
-  oras: "",
+  oras: "România",
   adresa: "",
-  codPostal: "",
+  codPostal: "0000",
 };
 
 export function OrderForm() {
-  const { items, total, count, clearCart } = useCart();
+  const { total, count, clearCart } = useCart();
   const t = useTranslations("order");
   const cartT = useTranslations("cart");
   const [form, setForm] = useState(initialForm);
   const [errors, setErrors] = useState<Partial<typeof initialForm>>({});
-  const [status, setStatus] = useState<"idle" | "submitting" | "success">(
-    "idle",
-  );
-  const [placed, setPlaced] = useState<{ total: number; count: number }>({
-    total: 0,
-    count: 0,
-  });
-
+  const [status, setStatus] = useState<"idle" | "submitting" | "success">("idle");
+  const [placed, setPlaced] = useState({ total: 0, count: 0 });
   const assurances = t.raw("assurances") as string[];
 
   function validate() {
     const next: Partial<typeof initialForm> = {};
-    if (form.nume.trim().length < 3) {
-      next.nume = t("errorNume");
-    }
-    if (form.telefon.trim().replace(/\D/g, "").length < 7) {
-      next.telefon = t("errorTelefon");
-    }
-    if (form.tara.trim().length < 2) {
-      next.tara = t("errorTara");
-    }
-    if (form.oras.trim().length < 2) {
-      next.oras = t("errorOras");
-    }
-    if (form.adresa.trim().length < 10) {
-      next.adresa = t("errorAdresa");
-    }
-    if (form.codPostal.trim().replace(/[^a-z0-9]/gi, "").length < 4) {
-      next.codPostal = t("errorCodPostal");
-    }
+    if (form.nume.trim().length < 3) next.nume = t("errorNume");
+    if (form.telefon.trim().replace(/\D/g, "").length < 7) next.telefon = t("errorTelefon");
+    if (form.adresa.trim().length < 10) next.adresa = t("errorAdresa");
     return next;
   }
 
-  async function onSubmit(e: FormEvent) {
-    e.preventDefault();
+  async function onSubmit(event: FormEvent) {
+    event.preventDefault();
     const next = validate();
     setErrors(next);
     if (Object.keys(next).length > 0) {
-      toast.error(t("errorTitle"), {
-        description: t("errorDesc"),
-      });
+      toast.error(t("errorTitle"), { description: t("errorDesc") });
       return;
     }
 
     setStatus("submitting");
-    // Demo submission — connect this to your order backend / API route.
-    await new Promise((r) => setTimeout(r, 900));
+    await new Promise((resolve) => setTimeout(resolve, 900));
     setPlaced({ total, count });
     clearCart();
     setStatus("success");
-    toast.success(cartT("toastOrder"), {
-      description: cartT("toastOrderDesc"),
-    });
+    toast.success(cartT("toastOrder"), { description: cartT("toastOrderDesc") });
   }
 
-  const set = (key: keyof typeof initialForm) => (v: string) => {
-    setForm((f) => ({ ...f, [key]: v }));
-    setErrors((e) => ({ ...e, [key]: undefined }));
+  const set = (key: keyof typeof initialForm) => (value: string) => {
+    setForm((current) => ({ ...current, [key]: value }));
+    setErrors((current) => ({ ...current, [key]: undefined }));
   };
 
   if (status === "success") {
     return (
-      <section id="comanda" className="relative overflow-hidden">
-        <div className="mx-auto max-w-6xl px-5 py-16 md:px-8 md:py-24">
-          <Reveal>
-            <div className="mx-auto max-w-xl rounded-blob border border-leaf/40 bg-leaf-soft p-10 text-center shadow-soft">
-              <span className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-forest text-cream">
-                <CheckCircle size={32} weight="fill" />
-              </span>
-              <h2 className="font-display mt-6 text-3xl font-bold text-forest-900">
-                {t("successTitle", { name: form.nume.trim() })}
-              </h2>
-              <p className="mt-3 leading-relaxed text-ink-soft">
-                {t("successSub")}
+      <section id="comanda" className="relative overflow-hidden border-t border-cream-3">
+        <div className="mx-auto max-w-6xl px-6 py-12 md:px-8">
+          <div className="mx-auto max-w-xl border border-leaf/40 bg-leaf-soft p-8 text-center">
+            <span className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-forest text-cream">
+              <CheckCircle size={30} weight="fill" />
+            </span>
+            <h2 className="font-display mt-5 text-3xl font-bold text-forest-900">
+              {t("successTitle", { name: form.nume.trim() })}
+            </h2>
+            <p className="mt-2 text-ink-soft">{t("successSub")}</p>
+            <div className="mt-5 flex items-center justify-center gap-2 bg-forest px-5 py-3 text-left text-sm text-cream">
+              <PhoneCall size={20} weight="fill" />
+              <p>
+                <strong>{t("operatorTitle")}</strong>{" "}
+                {t("operatorText", { phone: form.telefon.trim(), city: form.oras })}
               </p>
-
-              {/* Operator call notice */}
-              <div className="mt-5 flex items-center justify-center gap-2.5 rounded-2xl bg-forest px-5 py-4 text-cream">
-                <PhoneCall size={22} weight="fill" />
-                <p className="text-left text-sm leading-snug">
-                  <strong>{t("operatorTitle")}</strong>{" "}
-                  {t("operatorText", {
-                    phone: form.telefon.trim(),
-                    city: form.oras.trim(),
-                  })}
-                </p>
-              </div>
-
-              {placed.count > 0 && (
-                <div className="mt-5 rounded-2xl border border-cream-3 bg-white/60 px-5 py-4 text-left">
-                  <p className="text-xs font-bold uppercase tracking-wide text-leaf-600">
-                    {t("summaryLabel")}
-                  </p>
-                  <p className="mt-1 text-sm text-ink-soft">
-                    {t("summaryLine", {
-                      count: placed.count,
-                      total: placed.total,
-                    })}
-                  </p>
-                </div>
-              )}
-
-              <button
-                type="button"
-                onClick={() => {
-                  setForm(initialForm);
-                  setStatus("idle");
-                }}
-                className="mt-7 inline-flex items-center gap-2 rounded-lg bg-forest px-6 py-3 font-bold text-cream transition-colors duration-200 hover:bg-forest-700 active:scale-[0.97]"
-              >
-                {t("another")}
-              </button>
             </div>
-          </Reveal>
+            {placed.count > 0 && (
+              <p className="mt-4 text-sm text-ink-soft">
+                {t("summaryLine", { count: placed.count, total: placed.total })}
+              </p>
+            )}
+            <button
+              type="button"
+              onClick={() => {
+                setForm(initialForm);
+                setStatus("idle");
+              }}
+              className="mt-6 rounded-[5px] bg-forest px-6 py-3 text-cream hover:bg-forest-700"
+            >
+              {t("another")}
+            </button>
+          </div>
         </div>
       </section>
     );
   }
 
   return (
-    <section id="comanda" className="relative overflow-hidden">
-      <div className="mx-auto grid max-w-6xl items-center gap-12 px-5 py-16 md:px-8 md:py-24 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
-        <Reveal>
-          <div>
-            <Eyebrow>{t("eyebrow")}</Eyebrow>
-            <h2 className="font-display mt-3 text-3xl font-bold leading-tight tracking-tight text-forest-900 sm:text-4xl md:text-5xl">
-              {t("title")}
-            </h2>
-            <p className="mt-4 max-w-[46ch] text-lg leading-relaxed text-ink-soft">
-              {t("subtext")}
-            </p>
-            <ul className="mt-8 flex flex-col gap-4">
-              {assurances.map((label, i) => {
-                const Icon = ASSURANCE_ICONS[i];
-                return (
-                  <li
-                    key={label}
-                    className="flex items-center gap-3 text-sm font-semibold text-ink-soft"
-                  >
-                    <span className="flex h-9 w-9 items-center justify-center rounded-full bg-leaf-soft text-forest-700">
-                      <Icon size={18} weight="bold" />
-                    </span>
-                    {label}
-                  </li>
-                );
-              })}
-            </ul>
-          </div>
-        </Reveal>
+    <section id="comanda" className="relative min-h-[18.75rem] overflow-hidden border-t border-cream-3">
+      <Image
+        src="/proctorex/proctorex-leaf-branch.png"
+        alt=""
+        width={1050}
+        height={1498}
+        unoptimized
+        className="pointer-events-none absolute -bottom-3 -left-3 w-[13.75rem] opacity-65"
+      />
+      <Image
+        src="/proctorex/proctorex-leaf-branch.png"
+        alt=""
+        width={1050}
+        height={1498}
+        unoptimized
+        className="pointer-events-none absolute -bottom-3 -right-3 w-[13.75rem] scale-x-[-1] opacity-65"
+      />
 
-        <Reveal delay={0.05}>
-          <form
-            onSubmit={onSubmit}
-            noValidate
-            className="rounded-blob border border-cream-3 bg-cream p-7 shadow-card md:p-9"
-          >
-            {/* Cart summary */}
-            <div className="mb-6 rounded-2xl border border-cream-3 bg-cream-2 px-5 py-4">
-              <p className="flex items-center gap-2 text-xs font-bold uppercase tracking-wide text-leaf-600">
-                <Basket size={15} weight="bold" />
-                {t("summaryTitle")}
-              </p>
-              {items.length === 0 ? (
-                <p className="mt-1.5 text-sm text-ink-soft">
-                  {t("summaryEmpty")}{" "}
-                  <a href="#preturi" className="font-semibold text-forest underline underline-offset-2">
-                    {t("summaryEmptyLink")}
-                  </a>
-                  .
-                </p>
-              ) : (
-                <>
-                  <ul className="mt-2 flex flex-col gap-1.5">
-                    {items.map((item) => (
-                      <li
-                        key={item.id}
-                        className="flex items-center justify-between text-sm text-ink-soft"
-                      >
-                        <span>
-                          {item.label}{" "}
-                          <span className="text-leaf-600">× {item.qty}</span>
-                        </span>
-                        <span className="font-semibold text-forest-900">
-                          {item.qty * item.price} lei
-                        </span>
-                      </li>
-                    ))}
-                  </ul>
-                  <div className="mt-2 flex items-center justify-between border-t border-cream-3 pt-2">
-                    <span className="text-sm font-bold text-forest-900">
-                      {t("summaryTotal", { count })}
-                    </span>
-                    <span className="font-display text-lg font-bold text-forest">
-                      {total} lei
-                    </span>
-                  </div>
-                </>
-              )}
-            </div>
+      <div className="relative mx-auto max-w-[760px] px-6 py-2.5 md:px-8 md:py-2.5">
+        <div className="text-center">
+          <h2 className="font-display text-[1.7rem] italic font-semibold leading-tight text-forest-900 md:text-[1.85rem]">
+            {t("title")}
+          </h2>
+          <p className="mt-1 text-[13px] text-ink">{t("subtext")}</p>
+        </div>
 
-            <div className="grid gap-5">
-              <Field label={t("fieldNume")} id="nume" error={errors.nume}>
+        <form onSubmit={onSubmit} noValidate className="mx-auto mt-1 max-w-[606px]">
+          <div className="grid grid-cols-2 items-start gap-2">
+            <Field label={t("fieldNume")} id="nume" error={errors.nume}>
+              <input
+                id="nume"
+                name="nume"
+                autoComplete="name"
+                placeholder={t("fieldNume")}
+                value={form.nume}
+                onChange={(event) => set("nume")(event.target.value)}
+                className={inputClass(Boolean(errors.nume))}
+              />
+            </Field>
+
+            <Field label={t("fieldAdresa")} id="adresa" error={errors.adresa} className="row-span-3">
+              <textarea
+                id="adresa"
+                name="adresa"
+                rows={5}
+                autoComplete="street-address"
+                placeholder={t("fieldAdresa")}
+                value={form.adresa}
+                onChange={(event) => set("adresa")(event.target.value)}
+                className={`${inputClass(Boolean(errors.adresa))} h-[7.2rem] resize-none`}
+              />
+            </Field>
+
+            <Field label={t("fieldTelefon")} id="telefon" error={errors.telefon}>
+              <div className="flex gap-2">
+                <span className="flex h-9 w-[5.8rem] shrink-0 items-center justify-between border border-cream-3 bg-white px-3 text-xs text-ink">
+                  {t("fieldTelefon")}
+                  <CaretDown size={11} />
+                </span>
+                <span className="flex h-9 w-[3.2rem] shrink-0 items-center justify-center border border-cream-3 bg-white text-xs text-ink">
+                  +40
+                </span>
                 <input
-                  id="nume"
-                  name="nume"
-                  autoComplete="name"
-                  value={form.nume}
-                  onChange={(e) => set("nume")(e.target.value)}
-                  className={inputClass(!!errors.nume)}
+                  id="telefon"
+                  name="telefon"
+                  type="tel"
+                  autoComplete="tel"
+                  placeholder={t("phTelefon")}
+                  value={form.telefon}
+                  onChange={(event) => set("telefon")(event.target.value)}
+                  className={inputClass(Boolean(errors.telefon))}
                 />
-              </Field>
-
-              <div className="grid gap-5 sm:grid-cols-2">
-                <Field label={t("fieldTelefon")} id="telefon" error={errors.telefon}>
-                  <input
-                    id="telefon"
-                    name="telefon"
-                    type="tel"
-                    autoComplete="tel"
-                    placeholder={t("phTelefon")}
-                    value={form.telefon}
-                    onChange={(e) => set("telefon")(e.target.value)}
-                    className={inputClass(!!errors.telefon)}
-                  />
-                </Field>
-                <Field label={t("fieldTara")} id="tara" error={errors.tara}>
-                  <input
-                    id="tara"
-                    name="tara"
-                    autoComplete="country-name"
-                    value={form.tara}
-                    onChange={(e) => set("tara")(e.target.value)}
-                    className={inputClass(!!errors.tara)}
-                  />
-                </Field>
               </div>
+            </Field>
 
-              <div className="grid gap-5 sm:grid-cols-2">
-                <Field label={t("fieldOras")} id="oras" error={errors.oras}>
-                  <input
-                    id="oras"
-                    name="oras"
-                    autoComplete="address-level2"
-                    value={form.oras}
-                    onChange={(e) => set("oras")(e.target.value)}
-                    className={inputClass(!!errors.oras)}
-                  />
-                </Field>
-                <Field label={t("fieldCodPostal")} id="codPostal" error={errors.codPostal}>
-                  <input
-                    id="codPostal"
-                    name="codPostal"
-                    autoComplete="postal-code"
-                    inputMode="numeric"
-                    value={form.codPostal}
-                    onChange={(e) => set("codPostal")(e.target.value)}
-                    className={inputClass(!!errors.codPostal)}
-                  />
-                </Field>
-              </div>
+            <Field label={t("fieldEmail")} id="email">
+              <input
+                id="email"
+                name="email"
+                type="email"
+                autoComplete="email"
+                value={form.email}
+                onChange={(event) => set("email")(event.target.value)}
+                placeholder={t("fieldEmail")}
+                className={inputClass(false)}
+              />
+            </Field>
+          </div>
 
-              <Field label={t("fieldAdresa")} id="adresa" error={errors.adresa}>
-                <textarea
-                  id="adresa"
-                  name="adresa"
-                  rows={3}
-                  autoComplete="street-address"
-                  placeholder={t("phAdresa")}
-                  value={form.adresa}
-                  onChange={(e) => set("adresa")(e.target.value)}
-                  className={`${inputClass(!!errors.adresa)} resize-none`}
-                />
-              </Field>
+          <input type="hidden" name="tara" value={form.tara} readOnly />
+          <input type="hidden" name="oras" value={form.oras} readOnly />
+          <input type="hidden" name="codPostal" value={form.codPostal} readOnly />
 
-              <button
-                type="submit"
-                disabled={status === "submitting"}
-                className="mt-1 inline-flex w-full items-center justify-center gap-2 rounded-lg bg-forest px-7 py-4 text-base font-bold text-cream shadow-card transition-all duration-200 hover:bg-forest-700 active:scale-[0.97] disabled:cursor-not-allowed disabled:opacity-70"
-              >
-                {status === "submitting" ? (
-                  <>
-                    <span className="h-4 w-4 animate-spin rounded-full border-2 border-cream/40 border-t-cream" />
-                    {t("submitting")}
-                  </>
-                ) : (
-                  <>
-                    <PaperPlaneTilt size={19} weight="bold" />
-                    {t("submit")}
-                  </>
-                )}
-              </button>
+          <ul className="mt-2 grid gap-2 text-[11px] text-ink sm:grid-cols-3 sm:gap-3">
+            {assurances.slice(0, 3).map((label, index) => {
+              const Icon = ASSURANCE_ICONS[index];
+              return (
+                <li key={label} className="flex items-center justify-center gap-1.5 whitespace-nowrap">
+                  <Icon size={17} weight="regular" className="shrink-0 text-forest" />
+                  {label}
+                </li>
+              );
+            })}
+          </ul>
 
-              <p className="text-center text-xs leading-relaxed text-ink-soft">
-                {t.rich("terms", {
-                  link: (chunks) => (
-                    <Link
-                      href="/termeni-si-conditii"
-                      className="font-semibold text-forest underline underline-offset-2"
-                    >
-                      {chunks}
-                    </Link>
-                  ),
-                })}
-              </p>
-            </div>
-          </form>
-        </Reveal>
+          <button
+            type="submit"
+            disabled={status === "submitting"}
+            className="mx-auto mt-5 flex h-11 min-w-[255px] items-center justify-center gap-2 rounded-[5px] bg-forest px-7 text-[16px] text-cream shadow-card transition-colors duration-200 hover:bg-forest-700 disabled:cursor-not-allowed disabled:opacity-70"
+          >
+            {status === "submitting" ? (
+              <>
+                <span className="h-4 w-4 animate-spin rounded-full border-2 border-cream/40 border-t-cream" />
+                {t("submitting")}
+              </>
+            ) : (
+              <>
+                <Lock size={19} weight="regular" />
+                {t("submit")}
+              </>
+            )}
+          </button>
+
+        </form>
       </div>
     </section>
   );
@@ -351,33 +240,26 @@ function Field({
   label,
   id,
   error,
+  className,
   children,
 }: {
   label: string;
   id: string;
   error?: string;
+  className?: string;
   children: React.ReactNode;
 }) {
   return (
-    <div>
-      <label
-        htmlFor={id}
-        className="mb-1.5 block text-sm font-bold text-forest-900"
-      >
+    <div className={className}>
+      <label htmlFor={id} className="sr-only">
         {label}
       </label>
       {children}
-      {error && (
-        <p role="alert" className="mt-1.5 text-sm font-semibold text-red-700">
-          {error}
-        </p>
-      )}
+      {error && <p className="mt-1 text-[10px] font-semibold text-red-700" role="alert">{error}</p>}
     </div>
   );
 }
 
 function inputClass(hasError: boolean) {
-  return `w-full rounded-2xl border bg-white/70 px-4 py-3 text-ink placeholder:text-ink-soft/50 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-forest/40 ${
-    hasError ? "border-red-400" : "border-cream-3 focus:border-forest"
-  }`;
+  return `h-9 w-full rounded-[3px] border bg-white px-3 py-2 text-xs text-ink placeholder:text-ink-soft/65 transition-colors duration-200 focus:border-forest focus:outline-none focus:ring-1 focus:ring-forest/25 ${hasError ? "border-red-400" : "border-cream-3"}`;
 }

@@ -1,12 +1,8 @@
 @import "tailwindcss";
 
 /* ---------------------------------------------------------------------------
-   PROCTOREX — design tokens
-   Classic Romanian herbal / medical print style:
-   - Display: Cormorant Garamond (serif) · Body: Lora (serif)
-   - Warm cream paper background + dark herbal green accents
-   - Moderate radii, soft warm shadows — no SaaS look
---------------------------------------------------------------------------- */
+   PROCTOREX — classic Romanian herbal print direction
+---------------------------------------------------------------------------- */
 
 @theme inline {
   --font-sans: var(--font-lora);
@@ -14,36 +10,38 @@
 }
 
 @theme {
-  /* Cream family — warm paper backgrounds */
-  --color-cream: #faf6ee;
-  --color-cream-2: #f4ecda;
-  --color-cream-3: #ece1c8;
-  --color-cream-4: #e1d0ae;
+  /* Reference palette — white paper, pale botanical green, deep forest ink */
+  --color-cream: #fffefa;
+  --color-cream-2: #f3f7ee;
+  --color-cream-3: #e5e7df;
+  --color-cream-4: #d6dfd2;
+  --color-stone: #e8dfcd;
+  --color-stone-dark: #d2c5ab;
 
   /* Forest green family — dark herbal green */
-  --color-forest: #1f5a3a;
-  --color-forest-600: #2c6f4b;
-  --color-forest-700: #24543a;
-  --color-forest-800: #1d4a31;
-  --color-forest-900: #163a27;
-  --color-forest-950: #0d2719;
+  --color-forest: #1e5b3e;
+  --color-forest-600: #2d7048;
+  --color-forest-700: #245c3d;
+  --color-forest-800: #1d4b32;
+  --color-forest-900: #143b26;
+  --color-forest-950: #0c291a;
 
   /* Sage / leaf accents */
   --color-leaf: #84ac90;
-  --color-leaf-600: #5f8d70;
-  --color-leaf-soft: #e5efe4;
+  --color-leaf-600: #638d70;
+  --color-leaf-soft: #e7f0e5;
 
   /* Gold accent (badges, petals, highlights) */
   --color-gold: #c9a24b;
   --color-gold-600: #a97f2e;
 
   /* Ink — deep green-black body text */
-  --color-ink: #1b2b22;
-  --color-ink-soft: #465a4e;
+  --color-ink: #18271f;
+  --color-ink-soft: #34443a;
 
   /* Soft, warm shadows (not sharp modern UI shadows) */
-  --shadow-soft: 0 14px 34px -22px rgba(31, 90, 58, 0.2);
-  --shadow-card: 0 16px 38px -20px rgba(31, 90, 58, 0.28);
+  --shadow-soft: 0 14px 34px -22px rgba(30, 91, 62, 0.2);
+  --shadow-card: 0 16px 38px -20px rgba(30, 91, 62, 0.28);
 
   /* Moderate radius for containers (rounded-blob) */
   --radius-blob: 1.25rem;
@@ -62,6 +60,18 @@ body {
   font-family: var(--font-lora), Georgia, "Times New Roman", serif;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
+}
+
+button,
+a,
+input,
+textarea {
+  -webkit-tap-highlight-color: transparent;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-forest);
+  outline-offset: 3px;
 }
 
 ::selection {

@@ -8,9 +8,9 @@ export function JarMini({ className }: { className?: string }) {
     <svg viewBox="0 0 100 140" className={className} aria-hidden="true">
       <defs>
         <linearGradient id="jm-lid" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0%" stopColor="#2f7a54" />
-          <stop offset="45%" stopColor="#1e5b3e" />
-          <stop offset="100%" stopColor="#153f2d" />
+          <stop offset="0%" stopColor="#fffefa" />
+          <stop offset="45%" stopColor="#f1eee5" />
+          <stop offset="100%" stopColor="#d7d4c9" />
         </linearGradient>
         <linearGradient id="jm-body" x1="0" y1="0" x2="1" y2="0">
           <stop offset="0%" stopColor="#f4ecdd" />
@@ -22,7 +22,7 @@ export function JarMini({ className }: { className?: string }) {
 
       {/* lid */}
       <rect x="26" y="8" width="48" height="20" rx="5" fill="url(#jm-lid)" />
-      <rect x="26" y="24" width="48" height="6" rx="3" fill="#123828" />
+      <rect x="26" y="24" width="48" height="6" rx="3" fill="#c9c6ba" />
       {/* neck */}
       <rect x="32" y="28" width="36" height="14" rx="4" fill="#e9dfc9" />
       {/* body */}

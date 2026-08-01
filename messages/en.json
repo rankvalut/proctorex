@@ -86,19 +86,19 @@
       { "name": "Pack of 2 × PROCTOREX 100 g", "cta": "Order the pack" }
     ],
     "perks": [
-      "Discreet delivery",
-      "Secure payment",
-      "30-day free returns"
+      "Free shipping on orders over 250 lei",
+      "30-day free returns",
+      "Payment: Card or Cash on Delivery"
     ]
   },
   "order": {
     "eyebrow": "Order",
     "title": "Order quickly and discreetly",
-    "subtext": "Fill in the form and an operator will call you to confirm your order. No account, no complicated steps.",
+    "subtext": "Fill in the form and we will contact you for confirmation.",
     "assurances": [
-      "Neutral, discreet packaging",
-      "Fast delivery across Romania",
-      "Secure payment — Card or Cash on delivery",
+      "Your data is secure.",
+      "Fast delivery, discreet packaging.",
+      "Pay by card or cash on delivery.",
       "Your data stays confidential"
     ],
     "summaryTitle": "Your order",
@@ -111,6 +111,7 @@
     "fieldOras": "City",
     "fieldCodPostal": "Postal code",
     "fieldAdresa": "Delivery address",
+    "fieldEmail": "Email",
     "phTelefon": "07xx xxx xxx",
     "phAdresa": "Street, number, block, stair, apartment",
     "submit": "Send Order",
