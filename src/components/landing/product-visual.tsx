@@ -39,6 +39,20 @@ export function ProductVisual({
           <stop offset="100%" stopColor="#a99e83" />
         </linearGradient>
 
+        {/* wooden pedestal */}
+        <linearGradient id="px-pedestal" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stopColor="#d3a76a" />
+          <stop offset="45%" stopColor="#bd8a4d" />
+          <stop offset="100%" stopColor="#93652f" />
+        </linearGradient>
+
+        {/* warm soft shadow */}
+        <radialGradient id="px-warm-shadow" cx="50%" cy="50%" r="50%">
+          <stop offset="0%" stopColor="#3a2c17" stopOpacity="0.28" />
+          <stop offset="70%" stopColor="#3a2c17" stopOpacity="0.12" />
+          <stop offset="100%" stopColor="#3a2c17" stopOpacity="0" />
+        </radialGradient>
+
         {/* jar */}
         <linearGradient id="px-lid" x1="0" y1="0" x2="0" y2="1">
           <stop offset="0%" stopColor="#2f7a54" />
@@ -110,6 +124,31 @@ export function ProductVisual({
           strokeWidth="3"
         />
         <ellipse cx="360" cy="545" rx="235" ry="30" fill="#1b2b22" opacity="0.12" filter="url(#px-soft)" />
+      </g>
+
+      {/* warm shadow + wooden pedestal under the jar */}
+      <g>
+        <ellipse cx="360" cy="540" rx="205" ry="34" fill="url(#px-warm-shadow)" />
+        <ellipse cx="360" cy="524" rx="120" ry="22" fill="url(#px-pedestal)" />
+        <ellipse cx="360" cy="520" rx="112" ry="16" fill="#e8cf9c" opacity="0.55" />
+        <ellipse
+          cx="360"
+          cy="524"
+          rx="120"
+          ry="22"
+          fill="none"
+          stroke="#7a5a33"
+          strokeOpacity="0.3"
+          strokeWidth="2"
+        />
+      </g>
+
+      {/* extra botanicals framing the scene */}
+      <g fill="#5f8d70">
+        <path d="M140 542 C 118 522 110 494 124 470 C 152 486 160 516 140 542 Z" opacity="0.85" />
+        <path d="M600 538 C 624 522 634 494 620 470 C 592 486 584 514 600 538 Z" opacity="0.85" />
+        <path d="M96 470 C 78 452 70 428 82 406 C 106 420 112 448 96 470 Z" opacity="0.6" />
+        <path d="M624 470 C 642 452 650 428 638 406 C 614 420 608 448 624 470 Z" opacity="0.6" />
       </g>
 
       {/* lavender sprig (left) */}

@@ -104,7 +104,7 @@ export function CartDrawer() {
                   <a
                     href="#preturi"
                     onClick={closeCart}
-                    className="mt-2 inline-flex items-center gap-2 rounded-full bg-forest px-6 py-3 text-sm font-bold text-cream transition-colors hover:bg-forest-600"
+                    className="mt-2 inline-flex items-center gap-2 rounded-lg bg-forest px-6 py-3 text-sm font-bold text-cream transition-colors hover:bg-forest-700"
                   >
                     {t("seePrices")}
                     <ArrowRight size={16} weight="bold" />
@@ -191,7 +191,7 @@ export function CartDrawer() {
                 <button
                   type="button"
                   onClick={checkout}
-                  className="mt-4 inline-flex w-full items-center justify-center gap-2 rounded-full bg-forest px-6 py-3.5 font-bold text-cream shadow-card transition-all duration-200 hover:bg-forest-600 active:scale-[0.97]"
+                  className="mt-4 inline-flex w-full items-center justify-center gap-2 rounded-lg bg-forest px-6 py-3.5 font-bold text-cream shadow-card transition-all duration-200 hover:bg-forest-700 active:scale-[0.97]"
                 >
                   {t("checkout")}
                   <ArrowRight size={18} weight="bold" />

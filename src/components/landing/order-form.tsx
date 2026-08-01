@@ -143,7 +143,7 @@ export function OrderForm() {
                   setForm(initialForm);
                   setStatus("idle");
                 }}
-                className="mt-7 inline-flex items-center gap-2 rounded-full bg-forest px-6 py-3 font-bold text-cream transition-colors duration-200 hover:bg-forest-600 active:scale-[0.97]"
+                className="mt-7 inline-flex items-center gap-2 rounded-lg bg-forest px-6 py-3 font-bold text-cream transition-colors duration-200 hover:bg-forest-700 active:scale-[0.97]"
               >
                 {t("another")}
               </button>
@@ -312,7 +312,7 @@ export function OrderForm() {
               <button
                 type="submit"
                 disabled={status === "submitting"}
-                className="mt-1 inline-flex w-full items-center justify-center gap-2 rounded-full bg-forest px-7 py-4 text-base font-bold text-cream shadow-card transition-all duration-200 hover:bg-forest-600 active:scale-[0.97] disabled:cursor-not-allowed disabled:opacity-70"
+                className="mt-1 inline-flex w-full items-center justify-center gap-2 rounded-lg bg-forest px-7 py-4 text-base font-bold text-cream shadow-card transition-all duration-200 hover:bg-forest-700 active:scale-[0.97] disabled:cursor-not-allowed disabled:opacity-70"
               >
                 {status === "submitting" ? (
                   <>

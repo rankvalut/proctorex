@@ -6,24 +6,26 @@ import {
   getTranslations,
   setRequestLocale,
 } from "next-intl/server";
-import { Montserrat, Nunito_Sans } from "next/font/google";
+import { Cormorant_Garamond, Lora } from "next/font/google";
 import { routing, type Locale } from "@/i18n/routing";
 import "@/app/globals.css";
 import { Header } from "@/components/site/header";
 import { Footer } from "@/components/site/footer";
 import { CartProvider } from "@/components/cart/cart-provider";
 
-// Display font: Montserrat — the bold geometric sans used by the
-// original PROCTOREX advertisement for its headlines.
-const montserrat = Montserrat({
-  variable: "--font-montserrat",
+// Display font: Cormorant Garamond — the elegant serif used by the original
+// PROCTOREX advertisement for its headlines and taglines.
+const cormorant = Cormorant_Garamond({
+  variable: "--font-cormorant",
   subsets: ["latin", "latin-ext"],
-  weight: ["500", "600", "700", "800"],
+  weight: ["500", "600", "700"],
+  style: ["normal", "italic"],
   display: "swap",
 });
 
-const nunitoSans = Nunito_Sans({
-  variable: "--font-nunito-sans",
+// Body font: Lora — a readable serif for body copy, menus and buttons.
+const lora = Lora({
+  variable: "--font-lora",
   subsets: ["latin", "latin-ext"],
   display: "swap",
 });
@@ -67,7 +69,7 @@ export default async function LocaleLayout({
   return (
     <html
       lang={locale}
-      className={`${montserrat.variable} ${nunitoSans.variable} h-full antialiased`}
+      className={`${cormorant.variable} ${lora.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
         <NextIntlClientProvider messages={messages}>

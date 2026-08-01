@@ -2,29 +2,31 @@
 
 /* ---------------------------------------------------------------------------
    PROCTOREX — design tokens
-   Palette: natural green + cream (per the source advertisement image)
-   Fonts: Outfit (display) + Nunito Sans (body), self-hosted via next/font
+   Classic Romanian herbal / medical print style:
+   - Display: Cormorant Garamond (serif) · Body: Lora (serif)
+   - Warm cream paper background + dark herbal green accents
+   - Moderate radii, soft warm shadows — no SaaS look
 --------------------------------------------------------------------------- */
 
 @theme inline {
-  --font-sans: var(--font-nunito-sans);
-  --font-display: var(--font-montserrat);
+  --font-sans: var(--font-lora);
+  --font-display: var(--font-cormorant);
 }
 
 @theme {
   /* Cream family — warm paper backgrounds */
-  --color-cream: #fbf6ec;
-  --color-cream-2: #f6eede;
-  --color-cream-3: #efe4cf;
-  --color-cream-4: #e7d9bf;
+  --color-cream: #faf6ee;
+  --color-cream-2: #f4ecda;
+  --color-cream-3: #ece1c8;
+  --color-cream-4: #e1d0ae;
 
-  /* Forest green family — brand / CTA */
-  --color-forest: #1e5b3e;
-  --color-forest-600: #2f7a54;
-  --color-forest-700: #276748;
-  --color-forest-800: #20543c;
-  --color-forest-900: #173f2e;
-  --color-forest-950: #0e2b1f;
+  /* Forest green family — dark herbal green */
+  --color-forest: #1f5a3a;
+  --color-forest-600: #2c6f4b;
+  --color-forest-700: #24543a;
+  --color-forest-800: #1d4a31;
+  --color-forest-900: #163a27;
+  --color-forest-950: #0d2719;
 
   /* Sage / leaf accents */
   --color-leaf: #84ac90;
@@ -37,11 +39,14 @@
 
   /* Ink — deep green-black body text */
   --color-ink: #1b2b22;
-  --color-ink-soft: #43594c;
+  --color-ink-soft: #465a4e;
 
-  /* Soft shadow tinted toward the warm background */
-  --shadow-soft: 0 20px 50px -24px rgba(30, 91, 62, 0.28);
-  --shadow-card: 0 14px 40px -20px rgba(30, 91, 62, 0.35);
+  /* Soft, warm shadows (not sharp modern UI shadows) */
+  --shadow-soft: 0 14px 34px -22px rgba(31, 90, 58, 0.2);
+  --shadow-card: 0 16px 38px -20px rgba(31, 90, 58, 0.28);
+
+  /* Moderate radius for containers (rounded-blob) */
+  --radius-blob: 1.25rem;
 
   --ease-out-strong: cubic-bezier(0.23, 1, 0.32, 1);
 }
@@ -54,8 +59,9 @@ html {
 body {
   background: var(--color-cream);
   color: var(--color-ink);
-  font-family: var(--font-nunito-sans), ui-sans-serif, system-ui, sans-serif;
+  font-family: var(--font-lora), Georgia, "Times New Roman", serif;
   -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
 ::selection {
@@ -63,9 +69,9 @@ body {
   color: var(--color-forest-950);
 }
 
-/* Slightly tighter tracking on large display type */
+/* Cormorant display — refined serif, no negative tracking */
 .font-display {
-  letter-spacing: -0.02em;
+  letter-spacing: 0;
 }
 
 /* Reveal-on-scroll helper (progressive enhancement, respects reduced motion) */

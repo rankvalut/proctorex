@@ -43,14 +43,14 @@ export function Header() {
           className="flex items-center gap-2.5"
           aria-label="PROCTOREX"
         >
-          <span className="flex h-10 w-10 items-center justify-center rounded-full bg-forest text-cream">
-            <Leaf weight="fill" size={20} />
+          <span className="flex h-11 w-11 items-center justify-center rounded-full border border-forest/25 bg-cream-2 text-forest">
+            <Leaf weight="fill" size={19} />
           </span>
           <span className="leading-tight">
-            <span className="font-display block text-lg font-bold tracking-tight text-forest-900">
+            <span className="font-display block text-2xl font-semibold text-forest-900">
               PROCTOREX
             </span>
-            <span className="block text-[11px] font-semibold uppercase tracking-[0.14em] text-leaf-600">
+            <span className="font-display block text-[13px] italic text-forest-700">
               {brand("tagline")}
             </span>
           </span>
@@ -65,7 +65,7 @@ export function Header() {
             <a
               key={item.href}
               href={item.href}
-              className="text-[13px] font-semibold uppercase tracking-[0.08em] text-ink-soft transition-colors duration-200 hover:text-forest"
+              className="text-[15px] text-ink-soft transition-colors duration-200 hover:text-forest"
             >
               {t(item.key)}
             </a>
@@ -82,7 +82,7 @@ export function Header() {
               aria-haspopup="menu"
               aria-expanded={langOpen}
               aria-label={lang("label")}
-              className="flex h-10 items-center gap-1.5 rounded-full border border-cream-3 px-3 text-sm font-bold text-forest-900 transition-colors hover:bg-cream-2"
+              className="flex h-10 items-center gap-1.5 rounded-lg border border-cream-3 px-3 text-sm text-ink-soft transition-colors hover:bg-cream-2"
             >
               <Globe size={16} weight="bold" />
               <span className="hidden sm:inline">
@@ -117,7 +117,7 @@ export function Header() {
           <button
             type="button"
             onClick={openCart}
-            className="hidden shrink-0 items-center gap-2 whitespace-nowrap rounded-full bg-forest px-4 py-2 text-sm font-bold text-cream shadow-card transition-all duration-200 hover:bg-forest-600 active:scale-[0.97] sm:flex"
+            className="hidden shrink-0 items-center gap-2 whitespace-nowrap rounded-lg border border-forest/40 bg-transparent px-4 py-2 text-sm text-forest-900 transition-colors duration-200 hover:border-forest hover:bg-forest/5 sm:flex"
           >
             <Basket size={17} weight="bold" />
             {cart("pill", { count })}
@@ -125,7 +125,7 @@ export function Header() {
           <button
             type="button"
             onClick={() => setOpen((v) => !v)}
-            className="flex h-10 w-10 items-center justify-center rounded-full border border-cream-3 text-forest-900 lg:hidden"
+            className="flex h-10 w-10 items-center justify-center rounded-lg border border-cream-3 text-forest-900 lg:hidden"
             aria-label={open ? "Închide meniul" : "Deschide meniul"}
             aria-expanded={open}
           >
@@ -146,7 +146,7 @@ export function Header() {
                 <a
                   href={item.href}
                   onClick={() => setOpen(false)}
-                  className="block rounded-xl px-3 py-2.5 text-sm font-semibold uppercase tracking-[0.08em] text-ink-soft hover:bg-cream-2 hover:text-forest"
+                  className="block rounded-lg px-3 py-2.5 text-[15px] text-ink-soft hover:bg-cream-2 hover:text-forest"
                 >
                   {t(item.key)}
                 </a>
@@ -159,7 +159,7 @@ export function Header() {
                   setOpen(false);
                   openCart();
                 }}
-                className="flex w-full items-center justify-center gap-2 whitespace-nowrap rounded-full bg-forest px-4 py-3 text-sm font-bold text-cream"
+                className="flex w-full items-center justify-center gap-2 whitespace-nowrap rounded-lg bg-forest px-4 py-3 text-sm text-cream"
               >
                 <Basket size={17} weight="bold" />
                 {cart("pill", { count })}

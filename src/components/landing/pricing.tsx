@@ -180,8 +180,8 @@ export function Pricing() {
                   }
                   className={
                     meta.featured
-                      ? "mt-7 inline-flex items-center justify-center gap-2 rounded-full bg-cream px-6 py-3.5 font-bold text-forest-900 transition-all duration-200 hover:bg-white active:scale-[0.97]"
-                      : "mt-7 inline-flex items-center justify-center gap-2 rounded-full bg-forest px-6 py-3.5 font-bold text-cream shadow-card transition-all duration-200 hover:bg-forest-600 active:scale-[0.97]"
+                      ? "mt-7 inline-flex items-center justify-center gap-2 rounded-lg bg-cream px-6 py-3.5 font-bold text-forest-900 transition-all duration-200 hover:bg-white active:scale-[0.97]"
+                      : "mt-7 inline-flex items-center justify-center gap-2 rounded-lg bg-forest px-6 py-3.5 font-bold text-cream shadow-card transition-all duration-200 hover:bg-forest-700 active:scale-[0.97]"
                   }
                 >
                   <Basket size={18} weight="bold" />

@@ -28,7 +28,7 @@ export async function Ingredients() {
             <p className="mt-4 max-w-[46ch] leading-relaxed text-ink-soft">
               {t("subtext")}
             </p>
-            <div className="mt-6 inline-flex items-center gap-2 rounded-full border border-gold/40 bg-gold/10 px-4 py-2 text-sm font-bold text-gold-600">
+            <div className="mt-6 inline-flex items-center gap-2 rounded-lg border border-gold/40 bg-gold/10 px-4 py-2 text-sm font-semibold text-gold-600">
               <Sparkle size={16} weight="fill" />
               {t("badge")}
             </div>
