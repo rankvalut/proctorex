@@ -4,13 +4,17 @@ import { useState, type FormEvent } from "react";
 import {
   PaperPlaneTilt,
   CheckCircle,
+  PhoneCall,
   Lock,
   Package,
   Truck,
   ShieldCheck,
+  Basket,
 } from "@phosphor-icons/react";
 import { toast } from "sonner";
+import { Eyebrow } from "@/components/ui/eyebrow";
 import { Reveal } from "@/components/ui/reveal";
+import { useCart } from "@/components/cart/cart-provider";
 
 const ASSURANCES = [
   { icon: Package, label: "Ambalaj neutru și discret" },
@@ -19,14 +23,26 @@ const ASSURANCES = [
   { icon: Lock, label: "Datele tale rămân confidențiale" },
 ];
 
-const initialForm = { nume: "", telefon: "", email: "", adresa: "" };
+const initialForm = {
+  nume: "",
+  telefon: "",
+  tara: "România",
+  oras: "",
+  adresa: "",
+  codPostal: "",
+};
 
 export function OrderForm() {
+  const { items, total, count, clearCart } = useCart();
   const [form, setForm] = useState(initialForm);
   const [errors, setErrors] = useState<Partial<typeof initialForm>>({});
   const [status, setStatus] = useState<"idle" | "submitting" | "success">(
     "idle",
   );
+  const [placed, setPlaced] = useState<{ total: number; count: number }>({
+    total: 0,
+    count: 0,
+  });
 
   function validate() {
     const next: Partial<typeof initialForm> = {};
@@ -36,11 +52,17 @@ export function OrderForm() {
     if (form.telefon.trim().replace(/\D/g, "").length < 7) {
       next.telefon = "Introdu un număr de telefon valid.";
     }
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email.trim())) {
-      next.email = "Introdu o adresă de e-mail validă.";
+    if (form.tara.trim().length < 2) {
+      next.tara = "Te rugăm să introduci țara.";
+    }
+    if (form.oras.trim().length < 2) {
+      next.oras = "Te rugăm să introduci orașul.";
     }
     if (form.adresa.trim().length < 10) {
       next.adresa = "Introdu adresa completă de livrare.";
+    }
+    if (form.codPostal.trim().replace(/[^a-z0-9]/gi, "").length < 4) {
+      next.codPostal = "Introdu un cod poștal valid.";
     }
     return next;
   }
@@ -59,9 +81,11 @@ export function OrderForm() {
     setStatus("submitting");
     // Demo submission — connect this to your order backend / API route.
     await new Promise((r) => setTimeout(r, 900));
+    setPlaced({ total, count });
+    clearCart();
     setStatus("success");
     toast.success("Comanda a fost trimisă!", {
-      description: "Te vom contacta în curând pentru confirmare.",
+      description: "Un operator te va suna în curând pentru confirmare.",
     });
   }
 
@@ -80,13 +104,35 @@ export function OrderForm() {
                 <CheckCircle size={32} weight="fill" />
               </span>
               <h2 className="font-display mt-6 text-3xl font-bold text-forest-900">
-                Comandă trimisă cu succes!
+                Mulțumim, {form.nume.trim()}!
               </h2>
               <p className="mt-3 leading-relaxed text-ink-soft">
-                Mulțumim, <strong>{form.nume.trim()}</strong>. Am primit comanda
-                ta și te vom contacta la <strong>{form.telefon.trim()}</strong>{" "}
-                pentru confirmare și detalii de livrare.
+                Comanda ta a fost înregistrată cu succes.
               </p>
+
+              {/* Operator call notice */}
+              <div className="mt-5 flex items-center justify-center gap-2.5 rounded-2xl bg-forest px-5 py-4 text-cream">
+                <PhoneCall size={22} weight="fill" />
+                <p className="text-left text-sm leading-snug">
+                  <strong>Un operator te va suna în scurt timp</strong> la{" "}
+                  <strong>{form.telefon.trim()}</strong> pentru a confirma
+                  comanda și detaliile de livrare către{" "}
+                  <strong>{form.oras.trim()}</strong>.
+                </p>
+              </div>
+
+              {placed.count > 0 && (
+                <div className="mt-5 rounded-2xl border border-cream-3 bg-white/60 px-5 py-4 text-left">
+                  <p className="text-xs font-bold uppercase tracking-wide text-leaf-600">
+                    Rezumatul comenzii
+                  </p>
+                  <p className="mt-1 text-sm text-ink-soft">
+                    {placed.count} {placed.count === 1 ? "produs" : "produse"} —
+                    total <strong className="text-forest-900">{placed.total} lei</strong>
+                  </p>
+                </div>
+              )}
+
               <button
                 type="button"
                 onClick={() => {
@@ -109,14 +155,12 @@ export function OrderForm() {
       <div className="mx-auto grid max-w-6xl items-center gap-12 px-5 py-16 md:px-8 md:py-24 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
         <Reveal>
           <div>
-            <p className="text-[12px] font-bold uppercase tracking-[0.18em] text-leaf-600">
-              Comandă
-            </p>
+            <Eyebrow>Comandă</Eyebrow>
             <h2 className="font-display mt-3 text-3xl font-bold leading-tight tracking-tight text-forest-900 sm:text-4xl md:text-5xl">
               Comandă rapid și discret
             </h2>
             <p className="mt-4 max-w-[46ch] text-lg leading-relaxed text-ink-soft">
-              Completează formularul, iar echipa noastră te contactează pentru a
+              Completează formularul, iar un operator te va suna pentru a
               confirma comanda. Fără cont, fără pași complicați.
             </p>
             <ul className="mt-8 flex flex-col gap-4">
@@ -141,12 +185,52 @@ export function OrderForm() {
             noValidate
             className="rounded-blob border border-cream-3 bg-cream p-7 shadow-card md:p-9"
           >
+            {/* Cart summary */}
+            <div className="mb-6 rounded-2xl border border-cream-3 bg-cream-2 px-5 py-4">
+              <p className="flex items-center gap-2 text-xs font-bold uppercase tracking-wide text-leaf-600">
+                <Basket size={15} weight="bold" />
+                Comanda ta
+              </p>
+              {items.length === 0 ? (
+                <p className="mt-1.5 text-sm text-ink-soft">
+                  Nu ai adăugat încă produse în coș. Poți alege din secțiunea{" "}
+                  <a href="#preturi" className="font-semibold text-forest underline underline-offset-2">
+                    Prețuri
+                  </a>
+                  .
+                </p>
+              ) : (
+                <>
+                  <ul className="mt-2 flex flex-col gap-1.5">
+                    {items.map((item) => (
+                      <li
+                        key={item.id}
+                        className="flex items-center justify-between text-sm text-ink-soft"
+                      >
+                        <span>
+                          {item.label}{" "}
+                          <span className="text-leaf-600">× {item.qty}</span>
+                        </span>
+                        <span className="font-semibold text-forest-900">
+                          {item.qty * item.price} lei
+                        </span>
+                      </li>
+                    ))}
+                  </ul>
+                  <div className="mt-2 flex items-center justify-between border-t border-cream-3 pt-2">
+                    <span className="text-sm font-bold text-forest-900">
+                      Total ({count} {count === 1 ? "produs" : "produse"})
+                    </span>
+                    <span className="font-display text-lg font-bold text-forest">
+                      {total} lei
+                    </span>
+                  </div>
+                </>
+              )}
+            </div>
+
             <div className="grid gap-5">
-              <Field
-                label="Nume complet"
-                id="nume"
-                error={errors.nume}
-              >
+              <Field label="Nume complet" id="nume" error={errors.nume}>
                 <input
                   id="nume"
                   name="nume"
@@ -164,20 +248,44 @@ export function OrderForm() {
                     name="telefon"
                     type="tel"
                     autoComplete="tel"
+                    placeholder="07xx xxx xxx"
                     value={form.telefon}
                     onChange={(e) => set("telefon")(e.target.value)}
                     className={inputClass(!!errors.telefon)}
                   />
                 </Field>
-                <Field label="E-mail" id="email" error={errors.email}>
+                <Field label="Țară" id="tara" error={errors.tara}>
                   <input
-                    id="email"
-                    name="email"
-                    type="email"
-                    autoComplete="email"
-                    value={form.email}
-                    onChange={(e) => set("email")(e.target.value)}
-                    className={inputClass(!!errors.email)}
+                    id="tara"
+                    name="tara"
+                    autoComplete="country-name"
+                    value={form.tara}
+                    onChange={(e) => set("tara")(e.target.value)}
+                    className={inputClass(!!errors.tara)}
+                  />
+                </Field>
+              </div>
+
+              <div className="grid gap-5 sm:grid-cols-2">
+                <Field label="Oraș" id="oras" error={errors.oras}>
+                  <input
+                    id="oras"
+                    name="oras"
+                    autoComplete="address-level2"
+                    value={form.oras}
+                    onChange={(e) => set("oras")(e.target.value)}
+                    className={inputClass(!!errors.oras)}
+                  />
+                </Field>
+                <Field label="Cod poștal" id="codPostal" error={errors.codPostal}>
+                  <input
+                    id="codPostal"
+                    name="codPostal"
+                    autoComplete="postal-code"
+                    inputMode="numeric"
+                    value={form.codPostal}
+                    onChange={(e) => set("codPostal")(e.target.value)}
+                    className={inputClass(!!errors.codPostal)}
                   />
                 </Field>
               </div>
@@ -188,6 +296,7 @@ export function OrderForm() {
                   name="adresa"
                   rows={3}
                   autoComplete="street-address"
+                  placeholder="Stradă, număr, bloc, scară, apartament"
                   value={form.adresa}
                   onChange={(e) => set("adresa")(e.target.value)}
                   className={`${inputClass(!!errors.adresa)} resize-none`}

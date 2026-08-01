@@ -6,6 +6,7 @@ import {
   FlowerTulip,
   Sparkle,
 } from "@phosphor-icons/react/dist/ssr";
+import { Eyebrow } from "@/components/ui/eyebrow";
 import { Reveal } from "@/components/ui/reveal";
 
 const INGREDIENTS = [
@@ -47,9 +48,7 @@ export function Ingredients() {
       <div className="mx-auto grid max-w-6xl items-start gap-12 px-5 py-16 md:px-8 md:py-24 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
         <Reveal>
           <div className="lg:sticky lg:top-28">
-            <p className="text-[12px] font-bold uppercase tracking-[0.18em] text-leaf-600">
-              Ingrediente
-            </p>
+            <Eyebrow>Ingrediente</Eyebrow>
             <h2 className="font-display mt-3 text-3xl font-bold leading-tight tracking-tight text-forest-900 sm:text-4xl">
               Puterea plantelor, într-o formulă blândă.
             </h2>

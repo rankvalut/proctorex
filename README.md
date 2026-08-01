@@ -33,11 +33,24 @@ using the design guidance from the downloaded skill repos (see
 
 1. **Hero** — product visual (SVG jar on stone slab with calendula, lavender
    and softgel capsules), headline, CTA and trust chips
-2. **Beneficii** — "Disconfortul nu ar trebui să îți controleze viața."
+2. **Beneficii** — "Disconfortul nu ar trebui să îți controleze viața." —
+   animated cards that expand on click with extra details
 3. **Ingrediente** — plant-based ingredient list
-4. **Prețuri** — 3 packages (50 g / 100 g / 2 × 100 g) with add-to-cart
-5. **Comandă** — order form (name, phone, e-mail, delivery address)
-6. **Footer** — privacy / terms + ISO 22000:2018 line
+4. **Cum funcționează** — mechanism steps, usage + responsible note
+5. **Prețuri** — 3 packages (50 g / 100 g / 2 × 100 g) with animated prices,
+   staggered entrance and add-to-cart
+6. **Coș (drawer)** — slide-in cart showing ordered items, quantities, total
+7. **Comandă** — order form (name, phone, country, city, address, postal code)
+   with live order summary and an "operator will call" thank-you screen
+8. **Footer** — privacy / terms + ISO 22000:2018 line
+
+## Interactions
+
+- **Cart:** adding a product opens a drawer with line items, quantity controls,
+  remove, total and a "Finalizează comanda" action that jumps to the form.
+- **Benefits:** click a card to open a tooltip with more details.
+- **Order form:** validated inline; on success it clears the cart and shows a
+  thank-you message stating an operator will call shortly to confirm.
 
 > **Note on the product image:** the hero visual is a hand-drawn SVG
 > illustration of the jar + botanicals. If you have the original product photo,

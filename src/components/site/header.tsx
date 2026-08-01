@@ -14,7 +14,7 @@ const NAV = [
 ];
 
 export function Header() {
-  const { count } = useCart();
+  const { count, openCart } = useCart();
   const [open, setOpen] = useState(false);
 
   return (
@@ -57,13 +57,14 @@ export function Header() {
 
         {/* Actions */}
         <div className="flex items-center gap-2">
-          <a
-            href="#comanda"
-            className="hidden items-center gap-2 rounded-full bg-forest px-4 py-2 text-sm font-bold text-cream shadow-card transition-colors duration-200 hover:bg-forest-600 active:scale-[0.97] sm:flex"
+          <button
+            type="button"
+            onClick={openCart}
+            className="hidden items-center gap-2 rounded-full bg-forest px-4 py-2 text-sm font-bold text-cream shadow-card transition-all duration-200 hover:bg-forest-600 active:scale-[0.97] sm:flex"
           >
             <Basket size={17} weight="bold" />
             Coș ({count})
-          </a>
+          </button>
           <button
             type="button"
             onClick={() => setOpen((v) => !v)}
@@ -95,14 +96,17 @@ export function Header() {
               </li>
             ))}
             <li className="mt-2">
-              <a
-                href="#comanda"
-                onClick={() => setOpen(false)}
-                className="flex items-center justify-center gap-2 rounded-full bg-forest px-4 py-3 text-sm font-bold text-cream"
+              <button
+                type="button"
+                onClick={() => {
+                  setOpen(false);
+                  openCart();
+                }}
+                className="flex w-full items-center justify-center gap-2 rounded-full bg-forest px-4 py-3 text-sm font-bold text-cream"
               >
                 <Basket size={17} weight="bold" />
                 Coș ({count})
-              </a>
+              </button>
             </li>
           </ul>
         </nav>
