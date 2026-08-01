@@ -45,12 +45,6 @@ export async function Hero() {
               {t("ctaPrimary")}
               <ArrowDown size={17} weight="bold" />
             </a>
-            <a
-              href="#comanda"
-              className="inline-flex items-center gap-2 rounded-lg border border-forest/40 bg-transparent px-6 py-3 text-sm font-semibold text-forest-900 transition-colors duration-200 hover:bg-forest/5"
-            >
-              {t("ctaSecondary")}
-            </a>
           </div>
 
           {/* Trust chips */}
