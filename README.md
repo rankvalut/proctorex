@@ -37,6 +37,23 @@ The site is fully translated with `next-intl` (locale-prefixed routing).
 - A language switcher (globe icon) sits in the header; `/` redirects to `/ro`.
 - `<html lang>` and per-locale metadata are set automatically.
 
+## Legal pages
+
+Fully translated and statically generated under `/ro|en|uk|ru|es/...`:
+
+| Route                     | Document                      |
+| ------------------------- | ----------------------------- |
+| `politica-de-confidentialitate` | Privacy Policy (GDPR)     |
+| `termeni-si-conditii`     | Terms & Conditions            |
+| `nota-medicala`           | Medical note / disclaimer     |
+| `politica-cookie`         | Cookie Policy                 |
+| `retur`                   | Returns & Refunds             |
+
+The footer's "Documente legale" column, the order form's terms link and the
+Ingredients "Notă medicală" CTA all point to these pages. The medical note and
+the terms clearly state the product is a natural cosmetic (not a medicine),
+makes no guarantee of results and that a medical consultation is required.
+
 ## Design tokens
 
 - **Cream** `#fbf6ec` (page background) — warm paper family

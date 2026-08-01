@@ -16,6 +16,7 @@ import { toast } from "sonner";
 import { Eyebrow } from "@/components/ui/eyebrow";
 import { Reveal } from "@/components/ui/reveal";
 import { useCart } from "@/components/cart/cart-provider";
+import { Link } from "@/i18n/navigation";
 
 const ASSURANCE_ICONS = [Package, Truck, ShieldCheck, Lock];
 
@@ -329,9 +330,12 @@ export function OrderForm() {
               <p className="text-center text-xs leading-relaxed text-ink-soft">
                 {t.rich("terms", {
                   link: (chunks) => (
-                    <a href="#termeni" className="font-semibold text-forest underline underline-offset-2">
+                    <Link
+                      href="/termeni-si-conditii"
+                      className="font-semibold text-forest underline underline-offset-2"
+                    >
                       {chunks}
-                    </a>
+                    </Link>
                   ),
                 })}
               </p>

@@ -68,13 +68,15 @@
     "title": "Puterea plantelor, într-o formulă blândă.",
     "subtext": "Fiecare ingredient a fost ales pentru rolul său natural: calmare, protecție și regenerare. Fără ingrediente inutile, fără parfum artificial.",
     "badge": "100% formulă pe bază de plante",
+    "ctaText": "Orice simptom persistent sau sever trebuie evaluat de un medic. Citește Nota medicală înainte de utilizare.",
+    "ctaLabel": "Nota medicală",
     "list": [
-      { "name": "Calendula", "role": "Calmant, sprijină regenerarea țesutului iritat." },
-      { "name": "Lavandă", "role": "Efect calmant și relaxant asupra zonei sensibile." },
-      { "name": "Hamamelis", "role": "Tonifiază și reduce senzația de iritație." },
-      { "name": "Aloe vera", "role": "Hidratează și răcorește pielea inflamată." },
-      { "name": "Mușețel", "role": "Calmează și sprijină confortul zilnic." },
-      { "name": "Unt de karité", "role": "Protejează și menține elasticitatea pielii." }
+      { "name": "Calendula", "role": "Calmant, sprijină regenerarea țesutului iritat.", "extra": "Calendula (gălbenelele) este folosită de secole în îngrijirea pielii datorită efectului său calmant și a proprietăților care sprijină regenerarea epidermei iritate." },
+      { "name": "Lavandă", "role": "Efect calmant și relaxant asupra zonei sensibile.", "extra": "Uleiul de lavandă are proprietăți calmante și relaxante, contribuind la reducerea senzației de tensiune și disconfort în zona aplicată." },
+      { "name": "Hamamelis", "role": "Tonifiază și reduce senzația de iritație.", "extra": "Extractul de hamamelis are un efect astringent ușor: tonifiază țesutul și reduce senzația de iritație și de mâncărime." },
+      { "name": "Aloe vera", "role": "Hidratează și răcorește pielea inflamată.", "extra": "Gelul de aloe vera hidratează în profunzime, răcorește pielea inflamată și sprijină confortul pielii sensibile." },
+      { "name": "Mușețel", "role": "Calmează și sprijină confortul zilnic.", "extra": "Extractul de mușețel este cunoscut pentru efectul său anti-iritație și calmant, fiind deosebit de blând cu pielea sensibilă." },
+      { "name": "Unt de karité", "role": "Protejează și menține elasticitatea pielii.", "extra": "Untul de karité este bogat în acizi grași și vitamine: hrănește și protejează pielea, menținând elasticitatea și formând o barieră emolientă." }
     ]
   },
   "howItWorks": {
@@ -201,9 +203,87 @@
     "toastErrorDesc": "Unele informații nu sunt complete sau sunt invalide."
   },
   "footer": {
-    "privacy": "Politica de confidențialitate",
-    "terms": "Termeni și condiții",
+    "brandDesc": "Cremă naturală pe bază de plante pentru calmare, protecție și regenerarea zonei sensibile. Livrare discretă și plată sigură.",
+    "colProduct": "Produs",
+    "colLegal": "Documente legale",
+    "colContact": "Contact",
+    "productLinks": ["Beneficii", "Ingrediente", "Cum funcționează", "Prețuri", "Comandă"],
+    "legalLinks": ["Politica de confidențialitate", "Termeni și condiții", "Notă medicală", "Politica cookie-uri", "Retur și rambursare"],
+    "phone": "+40 700 000 000",
+    "email": "contact@proctorex.ro",
+    "schedule": "Luni – Vineri: 9:00 – 18:00",
+    "madeIn": "Fabricat în România",
+    "iso": "Certificat ISO 22000:2018",
+    "discreet": "Ambalaj neutru și discret",
+    "secure": "Plată sigură",
+    "shipping": "Transport în toată România",
     "copyright": "© 2024 PROCTOREX — Fabricat în România. Certificat ISO 22000:2018."
+  },
+  "legal": {
+    "navTitle": "Documente legale",
+    "backHome": "Înapoi la pagina principală",
+    "updatedOn": "Ultima actualizare: august 2026",
+    "privacy": {
+      "title": "Politica de confidențialitate",
+      "intro": "Această politică explică modul în care PROCTOREX colectează, utilizează și protejează datele tale personale, în conformitate cu Regulamentul General privind Protecția Datelor (GDPR – Regulamentul UE 2016/679).",
+      "sections": [
+        { "heading": "1. Operatorul de date", "body": ["Operatorul de date personale este PROCTOREX, cu sediul în România. Pentru orice întrebare legată de datele tale personale, ne poți contacta la adresa de e-mail afișată pe site."] },
+        { "heading": "2. Ce date colectăm", "body": ["Atunci când plasezi o comandă, colectăm următoarele date: nume complet, număr de telefon, țară, oraș, cod poștal și adresă de livrare.", "Nu colectăm date sensibile sau date de plată. Plățile cu cardul sunt procesate exclusiv de partenerii de plată autorizați, în mediu securizat."] },
+        { "heading": "3. În ce scop folosim datele", "body": ["Folosim datele colectate exclusiv pentru: procesarea și livrarea comenzilor, comunicarea cu tine pentru confirmarea comenzii și îndeplinirea obligațiilor legale (de exemplu, obligațiile fiscale)."] },
+        { "heading": "4. Temeiul legal", "body": ["Prelucrarea datelor se bazează pe executarea contractului de vânzare (art. 6 alin. 1 lit. b GDPR) și pe obligațiile legale aplicabile (art. 6 alin. 1 lit. c GDPR)."] },
+        { "heading": "5. Căror terți le transmitem datele", "body": ["Transmitem datele doar către operatorii de curierat (pentru livrare) și către procesatorii de plăți, strict în scopul îndeplinirii comenzii. Nu vindem și nu închiriem datele tale către terți."] },
+        { "heading": "6. Drepturile tale", "body": ["Ai dreptul de acces, rectificare, ștergere, restricționare, portabilitate și opoziție, precum și dreptul de a depune o plângere la ANSPDCP. Îți poți exercita drepturile printr-o cerere scrisă la adresa de contact."] },
+        { "heading": "7. Perioada de stocare", "body": ["Păstrăm datele comenzii pe durata necesară îndeplinirii obligațiilor legale (fiscalitate), respectiv timp de 5 ani de la finalizarea comenzii."] },
+        { "heading": "8. Contact", "body": ["Pentru orice solicitare privind datele tale personale, scrie-ne la adresa de e-mail afișată pe site."] }
+      ]
+    },
+    "terms": {
+      "title": "Termeni și condiții",
+      "intro": "Prin accesarea și utilizarea site-ului PROCTOREX, ești de acord cu următorii termeni și condiții. Te rugăm să îi citești cu atenție înainte de a plasa o comandă.",
+      "sections": [
+        { "heading": "1. Descrierea produsului", "body": ["PROCTOREX este o cremă cosmetică de uz extern, pe bază de plante, destinată îngrijirii și confortului zonei sensibile.", "Nu este un medicament și nu este destinată diagnosticării, tratării sau vindecării niciunei afecțiuni medicale."] },
+        { "heading": "2. Informații cu caracter informativ", "body": ["Informațiile prezentate pe site au caracter informativ și nu înlocuiesc consultul sau recomandările unui medic. Pentru orice simptom persistent, consultă un specialist."] },
+        { "heading": "3. Comenzi și prețuri", "body": ["Prețurile afișate sunt exprimate în lei (RON) și includ TVA. Comanda ta este confirmată în momentul în care un operator te contactează telefonic."] },
+        { "heading": "4. Plata", "body": ["Plata se efectuează cu cardul sau ramburs, la primirea coletului. Datele de plată sunt procesate exclusiv de partenerii de plată autorizați, în mediu securizat."] },
+        { "heading": "5. Livrare", "body": ["Livrăm în România prin curier, în ambalaj neutru și discret. Termenul estimat de livrare poate varia în funcție de destinație."] },
+        { "heading": "6. Limitarea răspunderii", "body": ["PROCTOREX este un produs natural și nu garantează obținerea unui anumit rezultat. Rezultatele pot varia de la o persoană la alta.", "În măsura permisă de lege, nu răspundem pentru eventualele reacții sau consecințe rezultate din utilizarea necorespunzătoare a produsului sau din utilizarea fără consultul medical prealabil."] },
+        { "heading": "7. Proprietate intelectuală", "body": ["Conținutul site-ului (texte, imagini, logo) este proprietatea PROCTOREX și nu poate fi reprodus fără acord scris."] },
+        { "heading": "8. Legea aplicabilă", "body": ["Prezentele condiții sunt guvernate de legislația română. Orice litigiu va fi soluționat de instanțele competente din România."] }
+      ]
+    },
+    "disclaimer": {
+      "title": "Notă medicală importantă",
+      "intro": "Te rugăm să citești cu atenție această notă înainte de a utiliza PROCTOREX.",
+      "sections": [
+        { "heading": "1. Produs cosmetic, nu medicament", "body": ["PROCTOREX este o cremă cosmetică de uz extern, formulată pe bază de plante. Nu este un medicament și nu pretinde că diagnostichează, tratează, ameliorează sau vindecă hemoroizii sau orice altă afecțiune medicală."] },
+        { "heading": "2. Fără garanție de rezultat", "body": ["Fiind un produs natural, PROCTOREX nu garantează obținerea unui rezultat anume. Eficacitatea poate varia de la o persoană la alta, iar simptomele pot persista chiar și după utilizare."] },
+        { "heading": "3. Consultul medical este necesar", "body": ["Înainte de a începe orice tratament, este necesară evaluarea medicală. Dacă ai simptome persistente, severe sau însoțite de sângerare, durere intensă sau alte semne de alarmă, oprește utilizarea și consultă imediat un medic."] },
+        { "heading": "4. Utilizare corectă", "body": ["Aplică doar extern, pe zona curată și uscată, conform instrucțiunilor de pe etichetă. Nu utiliza pe piele lezată grav, nu ingera produsul și nu îl utiliza în caz de hipersensibilitate la oricare dintre ingrediente."] },
+        { "heading": "5. Reacții adverse", "body": ["Dacă apare iritație, roșeață sau orice altă reacție, întrerupe utilizarea și consultă un medic. Nu folosi produsul după data de expirare."] },
+        { "heading": "6. Limitarea răspunderii", "body": ["În măsura permisă de lege, PROCTOREX nu își asumă răspunderea pentru consecințele utilizării produsului fără consult medical sau pentru utilizarea necorespunzătoare a acestuia.", "Conținutul site-ului și al acestei note nu constituie sfat medical."] }
+      ]
+    },
+    "cookies": {
+      "title": "Politica de cookie-uri",
+      "intro": "Această politică explică modul în care folosim cookie-urile pe site-ul PROCTOREX.",
+      "sections": [
+        { "heading": "1. Ce sunt cookie-urile", "body": ["Cookie-urile sunt fișiere mici de text stocate pe dispozitivul tău atunci când vizitezi un site. Ele ajută site-ul să funcționeze corect și să îmbunătățească experiența de navigare."] },
+        { "heading": "2. Ce cookie-uri folosim", "body": ["Folosim doar cookie-uri esențiale, necesare pentru funcționarea site-ului (de exemplu, menținerea sesiunii și a limbii selectate). Nu folosim cookie-uri de publicitate sau de urmărire comportamentală."] },
+        { "heading": "3. Gestionarea cookie-urilor", "body": ["Poți șterge sau bloca cookie-urile din setările browserului. Reține că blocarea cookie-urilor esențiale poate afecta funcționarea corectă a site-ului."] },
+        { "heading": "4. Contact", "body": ["Pentru întrebări privind utilizarea cookie-urilor, ne poți contacta la adresa afișată pe site."] }
+      ]
+    },
+    "returns": {
+      "title": "Retur și rambursare",
+      "intro": "Vrem să fii mulțumit de produs. Iată cum funcționează returul și rambursarea la PROCTOREX.",
+      "sections": [
+        { "heading": "1. Dreptul de retragere", "body": ["Ai dreptul de a te retrage din contract în termen de 14 zile de la primirea produsului, conform legislației europene aplicabile. În plus, oferim 30 de zile pentru retur, fără costuri."] },
+        { "heading": "2. Condiții pentru retur", "body": ["Produsul trebuie returnat în ambalajul original, nedeschis și neutilizat, împreună cu dovada achiziției. Nu putem accepta returul produselor deschise din motive de igienă."] },
+        { "heading": "3. Cum returnezi", "body": ["Pentru a iniția un retur, contactează-ne telefonic sau prin e-mail, iar un operator îți va comunica pașii de urmat și adresa de returnare."] },
+        { "heading": "4. Rambursarea", "body": ["Suma plătită va fi rambursată în maximum 14 zile de la primirea produsului returnat, prin aceeași metodă de plată utilizată pentru comandă."] },
+        { "heading": "5. Excepții", "body": ["Produsele deschise sau deteriorate din vina clientului nu pot fi returnate, cu excepția cazului în care produsul este defect sau nu corespunde comenzii."] }
+      ]
+    }
   },
   "language": {
     "label": "Limba"

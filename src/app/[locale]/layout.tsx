@@ -6,16 +6,19 @@ import {
   getTranslations,
   setRequestLocale,
 } from "next-intl/server";
-import { Outfit, Nunito_Sans } from "next/font/google";
+import { Poppins, Nunito_Sans } from "next/font/google";
 import { routing, type Locale } from "@/i18n/routing";
 import "@/app/globals.css";
 import { Header } from "@/components/site/header";
 import { Footer } from "@/components/site/footer";
 import { CartProvider } from "@/components/cart/cart-provider";
 
-const outfit = Outfit({
-  variable: "--font-outfit",
+// Display font: Poppins — the bold, rounded geometric sans used by the
+// original PROCTOREX advertisement for its headlines.
+const poppins = Poppins({
+  variable: "--font-poppins",
   subsets: ["latin", "latin-ext"],
+  weight: ["500", "600", "700", "800"],
   display: "swap",
 });
 
@@ -64,7 +67,7 @@ export default async function LocaleLayout({
   return (
     <html
       lang={locale}
-      className={`${outfit.variable} ${nunitoSans.variable} h-full antialiased`}
+      className={`${poppins.variable} ${nunitoSans.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
         <NextIntlClientProvider messages={messages}>

@@ -68,13 +68,15 @@
     "title": "The power of plants, in a gentle formula.",
     "subtext": "Every ingredient was chosen for its natural role: soothing, protection and regeneration. No unnecessary ingredients, no artificial fragrance.",
     "badge": "100% plant-based formula",
+    "ctaText": "Any persistent or severe symptom should be evaluated by a doctor. Read the medical note before use.",
+    "ctaLabel": "Medical note",
     "list": [
-      { "name": "Calendula", "role": "Soothing; supports the regeneration of irritated tissue." },
-      { "name": "Lavender", "role": "Calming and relaxing effect on the sensitive area." },
-      { "name": "Witch hazel", "role": "Tones and reduces the feeling of irritation." },
-      { "name": "Aloe vera", "role": "Hydrates and cools inflamed skin." },
-      { "name": "Chamomile", "role": "Soothes and supports daily comfort." },
-      { "name": "Shea butter", "role": "Protects and maintains skin elasticity." }
+      { "name": "Calendula", "role": "Soothing; supports the regeneration of irritated tissue.", "extra": "Calendula (marigold) has been used in skin care for centuries thanks to its soothing effect and properties that support the regeneration of irritated skin." },
+      { "name": "Lavender", "role": "Calming and relaxing effect on the sensitive area.", "extra": "Lavender oil has calming and relaxing properties, helping to reduce the feeling of tension and discomfort in the applied area." },
+      { "name": "Witch hazel", "role": "Tones and reduces the feeling of irritation.", "extra": "Witch hazel extract has a gentle astringent effect: it tones the tissue and reduces the feeling of irritation and itching." },
+      { "name": "Aloe vera", "role": "Hydrates and cools inflamed skin.", "extra": "Aloe vera gel deeply hydrates, cools inflamed skin and supports the comfort of sensitive skin." },
+      { "name": "Chamomile", "role": "Soothes and supports daily comfort.", "extra": "Chamomile extract is known for its anti-irritant and soothing effect, being especially gentle on sensitive skin." },
+      { "name": "Shea butter", "role": "Protects and maintains skin elasticity.", "extra": "Shea butter is rich in fatty acids and vitamins: it nourishes and protects the skin, maintains elasticity and forms an emollient barrier." }
     ]
   },
   "howItWorks": {
@@ -201,9 +203,86 @@
     "toastErrorDesc": "Some information is incomplete or invalid."
   },
   "footer": {
-    "privacy": "Privacy Policy",
-    "terms": "Terms and Conditions",
+    "brandDesc": "A natural, plant-based cream for soothing, protecting and regenerating the sensitive area. Discreet delivery and secure payment.",
+    "colProduct": "Product",
+    "colLegal": "Legal documents",
+    "colContact": "Contact",
+    "productLinks": ["Benefits", "Ingredients", "How it works", "Prices", "Order"],
+    "legalLinks": ["Privacy Policy", "Terms and Conditions", "Medical note", "Cookie Policy", "Returns & refunds"],
+    "phone": "+40 700 000 000",
+    "email": "contact@proctorex.ro",
+    "schedule": "Monday – Friday: 9:00 – 18:00",
+    "madeIn": "Made in Romania",
+    "iso": "ISO 22000:2018 certified",
+    "discreet": "Neutral, discreet packaging",
+    "secure": "Secure payment",
+    "shipping": "Delivery across Romania",
     "copyright": "© 2024 PROCTOREX — Made in Romania. ISO 22000:2018 certified."
+  },
+  "legal": {
+    "navTitle": "Legal documents",
+    "backHome": "Back to the home page",
+    "updatedOn": "Last updated: August 2026",
+    "privacy": {
+      "title": "Privacy Policy",
+      "intro": "This policy explains how PROCTOREX collects, uses and protects your personal data, in accordance with the General Data Protection Regulation (GDPR – Regulation (EU) 2016/679).",
+      "sections": [
+        { "heading": "1. Data controller", "body": ["The data controller is PROCTOREX, based in Romania. For any question regarding your personal data, contact us at the e-mail address shown on the website."] },
+        { "heading": "2. What data we collect", "body": ["When you place an order, we collect the following data: full name, phone number, country, city, postal code and delivery address.", "We do not collect sensitive data or payment data. Card payments are processed exclusively by authorised payment partners, in a secure environment."] },
+        { "heading": "3. Why we use your data", "body": ["We use the collected data exclusively for: processing and delivering orders, contacting you to confirm the order and fulfilling legal obligations (for example, tax obligations)."] },
+        { "heading": "4. Legal basis", "body": ["Processing is based on the performance of the sales contract (Art. 6(1)(b) GDPR) and on applicable legal obligations (Art. 6(1)(c) GDPR)."] },
+        { "heading": "5. Third parties", "body": ["We share data only with courier operators (for delivery) and payment processors, strictly to fulfil your order. We never sell or rent your data to third parties."] },
+        { "heading": "6. Your rights", "body": ["You have the right to access, rectification, erasure, restriction, portability and objection, as well as the right to lodge a complaint with the data protection authority. You can exercise your rights with a written request to the contact address."] },
+        { "heading": "7. Retention period", "body": ["We keep order data for as long as required by law (taxation), i.e. 5 years after the order is completed."] },
+        { "heading": "8. Contact", "body": ["For any request regarding your personal data, write to us at the e-mail address shown on the website."] }
+      ]
+    },
+    "terms": {
+      "title": "Terms and Conditions",
+      "intro": "By accessing and using the PROCTOREX website, you agree to the following terms and conditions. Please read them carefully before placing an order.",
+      "sections": [
+        { "heading": "1. Product description", "body": ["PROCTOREX is a cosmetic cream for external use, plant-based, intended for the care and comfort of the sensitive area.", "It is not a medicine and is not intended to diagnose, treat or cure any medical condition."] },
+        { "heading": "2. Informational content", "body": ["The information presented on the website is for informational purposes and does not replace a doctor's consultation or recommendations. For any persistent symptom, consult a specialist."] },
+        { "heading": "3. Orders and prices", "body": ["Displayed prices are in Romanian lei (RON) and include VAT. Your order is confirmed when an operator contacts you by phone."] },
+        { "heading": "4. Payment", "body": ["Payment is made by card or cash on delivery. Card payment data is processed exclusively by authorised payment partners, in a secure environment."] },
+        { "heading": "5. Delivery", "body": ["We deliver across Romania by courier, in neutral and discreet packaging. The estimated delivery time may vary depending on the destination."] },
+        { "heading": "6. Limitation of liability", "body": ["PROCTOREX is a natural product and does not guarantee a specific result. Results may vary from person to person.", "To the extent permitted by law, we are not liable for any reactions or consequences resulting from improper use of the product or from use without prior medical advice."] },
+        { "heading": "7. Intellectual property", "body": ["The content of the website (texts, images, logo) is the property of PROCTOREX and may not be reproduced without written consent."] },
+        { "heading": "8. Applicable law", "body": ["These terms are governed by Romanian law. Any dispute will be settled by the competent courts of Romania."] }
+      ]
+    },
+    "disclaimer": {
+      "title": "Important medical note", "intro": "Please read this note carefully before using PROCTOREX.",
+      "sections": [
+        { "heading": "1. A cosmetic product, not a medicine", "body": ["PROCTOREX is a cosmetic cream for external use, formulated from plants. It is not a medicine and does not claim to diagnose, treat, relieve or cure haemorrhoids or any other medical condition."] },
+        { "heading": "2. No guarantee of results", "body": ["As a natural product, PROCTOREX does not guarantee a specific outcome. Effectiveness may vary from person to person, and symptoms may persist even after use."] },
+        { "heading": "3. Medical advice is required", "body": ["Before starting any treatment, a medical evaluation is necessary. If you have persistent, severe symptoms or symptoms accompanied by bleeding, intense pain or other warning signs, stop use and consult a doctor immediately."] },
+        { "heading": "4. Correct use", "body": ["Apply only externally, on a clean and dry area, as per the instructions on the label. Do not use on severely damaged skin, do not ingest the product and do not use it if you are hypersensitive to any of the ingredients."] },
+        { "heading": "5. Adverse reactions", "body": ["If irritation, redness or any other reaction occurs, discontinue use and consult a doctor. Do not use the product after its expiry date."] },
+        { "heading": "6. Limitation of liability", "body": ["To the extent permitted by law, PROCTOREX accepts no liability for the consequences of using the product without medical advice or for its improper use.", "The content of the website and of this note does not constitute medical advice."] }
+      ]
+    },
+    "cookies": {
+      "title": "Cookie Policy",
+      "intro": "This policy explains how we use cookies on the PROCTOREX website.",
+      "sections": [
+        { "heading": "1. What are cookies", "body": ["Cookies are small text files stored on your device when you visit a website. They help the site work correctly and improve your browsing experience."] },
+        { "heading": "2. What cookies we use", "body": ["We only use essential cookies, required for the website to function (for example, keeping your session and selected language). We do not use advertising or behavioural tracking cookies."] },
+        { "heading": "3. Managing cookies", "body": ["You can delete or block cookies from your browser settings. Please note that blocking essential cookies may affect the correct functioning of the website."] },
+        { "heading": "4. Contact", "body": ["For questions about cookie usage, contact us at the address shown on the website."] }
+      ]
+    },
+    "returns": {
+      "title": "Returns & Refunds",
+      "intro": "We want you to be satisfied with the product. Here is how returns and refunds work at PROCTOREX.",
+      "sections": [
+        { "heading": "1. Right of withdrawal", "body": ["You have the right to withdraw from the contract within 14 days of receiving the product, in accordance with applicable EU law. In addition, we offer 30 days for returns, free of charge."] },
+        { "heading": "2. Return conditions", "body": ["The product must be returned in its original packaging, unopened and unused, together with proof of purchase. For hygiene reasons, we cannot accept returns of opened products."] },
+        { "heading": "3. How to return", "body": ["To start a return, contact us by phone or e-mail and an operator will give you the steps to follow and the return address."] },
+        { "heading": "4. Refunds", "body": ["The amount paid will be refunded within a maximum of 14 days after receiving the returned product, using the same payment method used for the order."] },
+        { "heading": "5. Exceptions", "body": ["Opened products or products damaged through the customer's fault cannot be returned, unless the product is defective or does not match the order."] }
+      ]
+    }
   },
   "language": {
     "label": "Language"

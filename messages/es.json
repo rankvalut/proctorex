@@ -68,13 +68,15 @@
     "title": "El poder de las plantas, en una fórmula suave.",
     "subtext": "Cada ingrediente fue elegido por su papel natural: calmar, proteger y regenerar. Sin ingredientes innecesarios, sin perfume artificial.",
     "badge": "Fórmula 100% a base de plantas",
+    "ctaText": "Cualquier síntoma persistente o grave debe ser evaluado por un médico. Lee la nota médica antes de usar el producto.",
+    "ctaLabel": "Nota médica",
     "list": [
-      { "name": "Caléndula", "role": "Calma y favorece la regeneración del tejido irritado." },
-      { "name": "Lavanda", "role": "Efecto calmante y relajante sobre la zona sensible." },
-      { "name": "Hamamelis", "role": "Tonifica y reduce la sensación de irritación." },
-      { "name": "Aloe vera", "role": "Hidrata y refresca la piel inflamada." },
-      { "name": "Manzanilla", "role": "Calma y favorece el confort diario." },
-      { "name": "Manteca de karité", "role": "Protege y mantiene la elasticidad de la piel." }
+      { "name": "Caléndula", "role": "Calma y favorece la regeneración del tejido irritado.", "extra": "La caléndula se ha utilizado durante siglos en el cuidado de la piel por su efecto calmante y sus propiedades que favorecen la regeneración de la piel irritada." },
+      { "name": "Lavanda", "role": "Efecto calmante y relajante sobre la zona sensible.", "extra": "El aceite de lavanda tiene propiedades calmantes y relajantes, y ayuda a reducir la sensación de tensión y molestia en la zona aplicada." },
+      { "name": "Hamamelis", "role": "Tonifica y reduce la sensación de irritación.", "extra": "El extracto de hamamelis tiene un suave efecto astringente: tonifica el tejido y reduce la sensación de irritación y picor." },
+      { "name": "Aloe vera", "role": "Hidrata y refresca la piel inflamada.", "extra": "El gel de aloe vera hidrata en profundidad, refresca la piel inflamada y favorece el confort de la piel sensible." },
+      { "name": "Manzanilla", "role": "Calma y favorece el confort diario.", "extra": "El extracto de manzanilla es conocido por su efecto antiirritante y calmante, siendo especialmente suave con la piel sensible." },
+      { "name": "Manteca de karité", "role": "Protege y mantiene la elasticidad de la piel.", "extra": "La manteca de karité es rica en ácidos grasos y vitaminas: nutre y protege la piel, mantiene su elasticidad y forma una barrera emoliente." }
     ]
   },
   "howItWorks": {
@@ -201,9 +203,87 @@
     "toastErrorDesc": "Alguna información es incompleta o no es válida."
   },
   "footer": {
-    "privacy": "Política de privacidad",
-    "terms": "Términos y condiciones",
+    "brandDesc": "Crema natural a base de plantas para calmar, proteger y regenerar la zona sensible. Entrega discreta y pago seguro.",
+    "colProduct": "Producto",
+    "colLegal": "Documentos legales",
+    "colContact": "Contacto",
+    "productLinks": ["Beneficios", "Ingredientes", "Cómo funciona", "Precios", "Pedido"],
+    "legalLinks": ["Política de privacidad", "Términos y condiciones", "Nota médica", "Política de cookies", "Devoluciones y reembolsos"],
+    "phone": "+40 700 000 000",
+    "email": "contact@proctorex.ro",
+    "schedule": "Lun – Vie: 9:00 – 18:00",
+    "madeIn": "Fabricado en Rumanía",
+    "iso": "Certificado ISO 22000:2018",
+    "discreet": "Embalaje neutro y discreto",
+    "secure": "Pago seguro",
+    "shipping": "Envío a toda Rumanía",
     "copyright": "© 2024 PROCTOREX — Fabricado en Rumanía. Certificado ISO 22000:2018."
+  },
+  "legal": {
+    "navTitle": "Documentos legales",
+    "backHome": "Volver a la página principal",
+    "updatedOn": "Última actualización: agosto de 2026",
+    "privacy": {
+      "title": "Política de privacidad",
+      "intro": "Esta política explica cómo PROCTOREX recopila, utiliza y protege tus datos personales, de conformidad con el Reglamento General de Protección de Datos (RGPD – Reglamento (UE) 2016/679).",
+      "sections": [
+        { "heading": "1. Responsable del tratamiento", "body": ["El responsable del tratamiento de datos es PROCTOREX, con sede en Rumanía. Para cualquier pregunta sobre tus datos personales, puedes contactarnos en la dirección de correo electrónico indicada en el sitio web."] },
+        { "heading": "2. Qué datos recopilamos", "body": ["Al realizar un pedido, recopilamos los siguientes datos: nombre completo, número de teléfono, país, ciudad, código postal y dirección de entrega.", "No recopilamos datos sensibles ni datos de pago. Los pagos con tarjeta se procesan exclusivamente mediante socios de pago autorizados, en un entorno seguro."] },
+        { "heading": "3. Para qué usamos tus datos", "body": ["Usamos los datos recopilados exclusivamente para: procesar y entregar pedidos, contactarte para confirmar el pedido y cumplir con las obligaciones legales (por ejemplo, fiscales)."] },
+        { "heading": "4. Base jurídica", "body": ["El tratamiento se basa en la ejecución del contrato de compraventa (art. 6.1.b RGPD) y en las obligaciones legales aplicables (art. 6.1.c RGPD)."] },
+        { "heading": "5. Terceros", "body": ["Solo compartimos datos con operadores de mensajería (para la entrega) y procesadores de pago, estrictamente para cumplir tu pedido. Nunca vendemos ni alquilamos tus datos a terceros."] },
+        { "heading": "6. Tus derechos", "body": ["Tienes derecho de acceso, rectificación, supresión, limitación, portabilidad y oposición, así como el derecho a presentar una reclamación ante la autoridad de protección de datos. Puedes ejercer tus derechos mediante una solicitud escrita a la dirección de contacto."] },
+        { "heading": "7. Periodo de conservación", "body": ["Conservamos los datos del pedido durante el tiempo necesario para cumplir las obligaciones legales (fiscales), es decir, 5 años después de completar el pedido."] },
+        { "heading": "8. Contacto", "body": ["Para cualquier solicitud sobre tus datos personales, escríbenos a la dirección de correo electrónico indicada en el sitio web."] }
+      ]
+    },
+    "terms": {
+      "title": "Términos y condiciones",
+      "intro": "Al acceder y utilizar el sitio web de PROCTOREX, aceptas los siguientes términos y condiciones. Léelos atentamente antes de realizar un pedido.",
+      "sections": [
+        { "heading": "1. Descripción del producto", "body": ["PROCTOREX es una crema cosmética de uso externo, a base de plantas, destinada al cuidado y confort de la zona sensible.", "No es un medicamento y no está destinada a diagnosticar, tratar o curar ninguna afección médica."] },
+        { "heading": "2. Contenido informativo", "body": ["La información presentada en el sitio web tiene carácter informativo y no sustituye la consulta ni las recomendaciones de un médico. Para cualquier síntoma persistente, consulta a un especialista."] },
+        { "heading": "3. Pedidos y precios", "body": ["Los precios mostrados están expresados en leu rumano (RON) e incluyen IVA. Tu pedido se confirma cuando un operador se pone en contacto contigo por teléfono."] },
+        { "heading": "4. Pago", "body": ["El pago se realiza con tarjeta o contra reembolso al recibir el paquete. Los datos de pago se procesan exclusivamente mediante socios de pago autorizados, en un entorno seguro."] },
+        { "heading": "5. Entrega", "body": ["Realizamos entregas en Rumanía por mensajería, en embalaje neutro y discreto. El plazo estimado de entrega puede variar según el destino."] },
+        { "heading": "6. Limitación de responsabilidad", "body": ["PROCTOREX es un producto natural y no garantiza un resultado específico. Los resultados pueden variar de una persona a otra.", "En la medida permitida por la ley, no somos responsables de posibles reacciones o consecuencias derivadas del uso inadecuado del producto o de su uso sin consulta médica previa."] },
+        { "heading": "7. Propiedad intelectual", "body": ["El contenido del sitio web (textos, imágenes, logotipo) es propiedad de PROCTOREX y no puede reproducirse sin consentimiento por escrito."] },
+        { "heading": "8. Ley aplicable", "body": ["Estas condiciones se rigen por la legislación rumana. Cualquier disputa será resuelta por los tribunales competentes de Rumanía."] }
+      ]
+    },
+    "disclaimer": {
+      "title": "Nota médica importante",
+      "intro": "Por favor, lee atentamente esta nota antes de usar PROCTOREX.",
+      "sections": [
+        { "heading": "1. Producto cosmético, no un medicamento", "body": ["PROCTOREX es una crema cosmética de uso externo, formulada a base de plantas. No es un medicamento y no afirma diagnosticar, tratar, aliviar o curar las hemorroides ni ninguna otra afección médica."] },
+        { "heading": "2. Sin garantía de resultados", "body": ["Al ser un producto natural, PROCTOREX no garantiza un resultado concreto. La eficacia puede variar de una persona a otra, y los síntomas pueden persistir incluso después del uso."] },
+        { "heading": "3. Se requiere consulta médica", "body": ["Antes de iniciar cualquier tratamiento es necesaria una evaluación médica. Si tienes síntomas persistentes o graves, acompañados de sangrado, dolor intenso u otras señales de alarma, deja de usarlo y consulta a un médico de inmediato."] },
+        { "heading": "4. Uso correcto", "body": ["Aplica solo externamente, sobre la zona limpia y seca, según las instrucciones de la etiqueta. No lo uses sobre piel gravemente dañada, no lo ingieras y no lo uses si eres hipersensible a cualquiera de los ingredientes."] },
+        { "heading": "5. Reacciones adversas", "body": ["Si aparece irritación, enrojecimiento o cualquier otra reacción, interrumpe el uso y consulta a un médico. No uses el producto después de su fecha de caducidad."] },
+        { "heading": "6. Limitación de responsabilidad", "body": ["En la medida permitida por la ley, PROCTOREX no asume responsabilidad por las consecuencias del uso del producto sin consulta médica ni por su uso inadecuado.", "El contenido del sitio web y de esta nota no constituye asesoramiento médico."] }
+      ]
+    },
+    "cookies": {
+      "title": "Política de cookies",
+      "intro": "Esta política explica cómo usamos las cookies en el sitio web de PROCTOREX.",
+      "sections": [
+        { "heading": "1. Qué son las cookies", "body": ["Las cookies son pequeños archivos de texto que se almacenan en tu dispositivo al visitar un sitio web. Ayudan a que el sitio funcione correctamente y mejoran la experiencia de navegación."] },
+        { "heading": "2. Qué cookies usamos", "body": ["Solo usamos cookies esenciales, necesarias para el funcionamiento del sitio (por ejemplo, mantener la sesión y el idioma seleccionado). No usamos cookies de publicidad ni de seguimiento del comportamiento."] },
+        { "heading": "3. Gestión de cookies", "body": ["Puedes eliminar o bloquear las cookies desde la configuración de tu navegador. Ten en cuenta que bloquear las cookies esenciales puede afectar al correcto funcionamiento del sitio."] },
+        { "heading": "4. Contacto", "body": ["Para preguntas sobre el uso de cookies, contacta con nosotros en la dirección indicada en el sitio web."] }
+      ]
+    },
+    "returns": {
+      "title": "Devoluciones y reembolsos",
+      "intro": "Queremos que estés satisfecho con el producto. Así funcionan las devoluciones y los reembolsos en PROCTOREX.",
+      "sections": [
+        { "heading": "1. Derecho de desistimiento", "body": ["Tienes derecho a desistir del contrato en un plazo de 14 días desde la recepción del producto, conforme a la legislación europea aplicable. Además, ofrecemos 30 días para devoluciones, sin coste."] },
+        { "heading": "2. Condiciones de devolución", "body": ["El producto debe devolverse en su embalaje original, sin abrir y sin usar, junto con el comprobante de compra. Por razones de higiene, no podemos aceptar la devolución de productos abiertos."] },
+        { "heading": "3. Cómo devolver", "body": ["Para iniciar una devolución, contáctanos por teléfono o correo electrónico y un operador te indicará los pasos a seguir y la dirección de devolución."] },
+        { "heading": "4. Reembolsos", "body": ["El importe pagado se reembolsará en un máximo de 14 días tras recibir el producto devuelto, mediante el mismo método de pago utilizado para el pedido."] },
+        { "heading": "5. Excepciones", "body": ["Los productos abiertos o dañados por culpa del cliente no pueden devolverse, salvo que el producto esté defectuoso o no se corresponda con el pedido."] }
+      ]
+    }
   },
   "language": {
     "label": "Idioma"

@@ -8,7 +8,7 @@
 
 @theme inline {
   --font-sans: var(--font-nunito-sans);
-  --font-display: var(--font-outfit);
+  --font-display: var(--font-poppins);
 }
 
 @theme {
