@@ -10,7 +10,7 @@ import { type Locale } from "@/i18n/routing";
 const NAV_KEYS = [
   { href: "/#despre", key: "despre" },
   { href: "/ingrediente", key: "ingrediente" },
-  { href: "/beneficii", key: "beneficii" },
+  { href: "/#beneficii", key: "beneficii" },
   { href: "/cum-functioneaza", key: "cumFunctioneaza" },
   { href: "/#preturi", key: "preturi" },
   { href: "/#comanda", key: "comanda" },

@@ -1,6 +1,7 @@
 import { setRequestLocale } from "next-intl/server";
 import { type Locale } from "@/i18n/routing";
 import { Hero } from "@/components/landing/hero";
+import { Benefits } from "@/components/landing/benefits";
 import { Pricing } from "@/components/landing/pricing";
 import { OrderForm } from "@/components/landing/order-form";
 
@@ -15,6 +16,7 @@ export default async function Home({
   return (
     <>
       <Hero />
+      <Benefits />
       <Pricing />
       <OrderForm />
     </>

@@ -11,7 +11,7 @@ import { getTranslations, getLocale } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 
 const PRODUCT_ANCHORS = [
-  "/beneficii",
+  "/#beneficii",
   "/ingrediente",
   "/cum-functioneaza",
   "/#preturi",
