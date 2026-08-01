@@ -24,43 +24,11 @@
     ]
   },
   "benefits": {
-    "eyebrow": "Beneficios",
     "title": "La molestia no debería controlar tu vida.",
-    "subtext": "PROCTOREX ofrece un alivio discreto y constante para que puedas retomar tu rutina sin preocupaciones. Una fórmula sencilla, a base de plantas, creada para calmar y proteger el tejido inflamado.",
-    "more": "Más detalles",
-    "tap": "Toca para ver detalles",
-    "close": "Cerrar",
-    "cards": [
-      {
-        "title": "Alivio rápido",
-        "text": "Reduce la sensación de molestia, picor y ardor en la zona sensible.",
-        "extra": "Los extractos de caléndula y manzanilla son conocidos por su efecto calmante sobre la piel irritada. Aplicado localmente, PROCTOREX refresca la zona y reduce el ardor y el picor desde las primeras aplicaciones."
-      },
-      {
-        "title": "Protección diaria",
-        "text": "Forma una delicada capa protectora sobre el tejido irritado.",
-        "extra": "La manteca de karité y el hamamelis crean una barrera emoliente que protege la zona sensible de la fricción y la irritación repetida, especialmente al caminar o al permanecer sentado durante mucho tiempo."
-      },
-      {
-        "title": "Regeneración",
-        "text": "Ayuda a la recuperación natural del tejido inflamado.",
-        "extra": "El aloe vera y la lavanda hidratan en profundidad y favorecen el proceso natural de curación del tejido, contribuyendo a un confort duradero y a la elasticidad de la piel en la zona tratada."
-      },
-      {
-        "title": "100% plantas",
-        "text": "Extractos naturales de árnica, celidonia, caléndula y hamamelis.",
-        "extra": "La fórmula contiene solo ingredientes de origen vegetal: árnica, celidonia, caléndula, lavanda, hamamelis y manteca de karité, sin colorantes artificiales."
-      },
-      {
-        "title": "Suave con la piel",
-        "text": "Fórmula ligera, sin perfume artificial, para pieles sensibles.",
-        "extra": "Sin perfume artificial y sin alcohol, la textura es adecuada para pieles sensibles, incluso con un uso repetido varias veces al día."
-      },
-      {
-        "title": "Efecto discreto",
-        "text": "Textura cremosa que se absorbe rápido, sin residuos.",
-        "extra": "Se absorbe rápidamente sin dejar marcas en la ropa. El pedido llega en un embalaje neutro y la factura no hace referencia al producto."
-      }
+    "paragraphs": [
+      "Las molestias asociadas a las hemorroides suelen aparecer en momentos cotidianos: al estar sentado, al caminar, al descansar.",
+      "Es una situación personal y delicada que requiere una solución suave, segura y discreta.",
+      "PROCTOREX fue creado para el cuidado diario, con énfasis en la comodidad y el respeto por la piel sensible."
     ]
   },
   "ingredients": {

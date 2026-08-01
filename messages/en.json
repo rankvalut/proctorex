@@ -24,43 +24,11 @@
     ]
   },
   "benefits": {
-    "eyebrow": "Benefits",
-    "title": "Discomfort shouldn't run your life.",
-    "subtext": "PROCTOREX brings discreet, steady relief so you can get back to your routine without worry. A simple, plant-based formula created to soothe and protect inflamed tissue.",
-    "more": "More details",
-    "tap": "Tap for details",
-    "close": "Close",
-    "cards": [
-      {
-        "title": "Quick calming",
-        "text": "Reduces the feeling of discomfort, itching and burning in the sensitive area.",
-        "extra": "Extracts of calendula and chamomile are known for their calming effect on irritated skin. Applied locally, PROCTOREX cools the area and reduces the burning and itching sensation from the very first uses."
-      },
-      {
-        "title": "Daily protection",
-        "text": "Forms a delicate protective layer over the irritated tissue.",
-        "extra": "Shea butter and witch hazel create an emollient barrier that protects the sensitive area from friction and repeated irritation, especially when walking or sitting for long periods."
-      },
-      {
-        "title": "Regeneration",
-        "text": "Supports the natural recovery of inflamed tissue.",
-        "extra": "Aloe vera and lavender deeply hydrate and support the natural healing process of the tissue, contributing to lasting comfort and skin elasticity in the treated area."
-      },
-      {
-        "title": "100% plants",
-        "text": "Natural extracts of arnica, celandine, calendula and witch hazel.",
-        "extra": "The formula contains only plant-based ingredients: arnica, celandine, calendula, lavender, witch hazel and shea butter — with no artificial colourants."
-      },
-      {
-        "title": "Gentle on skin",
-        "text": "A light formula, fragrance-free, for sensitive skin.",
-        "extra": "Fragrance-free and alcohol-free, the texture is suitable for sensitive skin, even with repeated use several times a day."
-      },
-      {
-        "title": "Discreet effect",
-        "text": "A creamy texture that absorbs quickly, with no residue.",
-        "extra": "It absorbs quickly without leaving marks on clothing. Your order arrives in neutral packaging and the invoice makes no reference to the product."
-      }
+    "title": "Discomfort shouldn't control your life.",
+    "paragraphs": [
+      "Haemorrhoid-related discomfort often appears in ordinary moments: sitting, walking, resting.",
+      "It is a personal and delicate situation that calls for a gentle, safe and discreet solution.",
+      "PROCTOREX was created for daily care, with an emphasis on comfort and respect for sensitive skin."
     ]
   },
   "ingredients": {
