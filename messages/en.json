@@ -48,8 +48,8 @@
       },
       {
         "title": "100% plants",
-        "text": "Natural extracts of calendula, lavender and witch hazel.",
-        "extra": "The formula contains only plant-based ingredients: calendula, lavender, witch hazel, aloe vera, chamomile and shea butter — with no artificial colourants."
+        "text": "Natural extracts of arnica, celandine, calendula and witch hazel.",
+        "extra": "The formula contains only plant-based ingredients: arnica, celandine, calendula, lavender, witch hazel, aloe vera, chamomile and shea butter — with no artificial colourants."
       },
       {
         "title": "Gentle on skin",
@@ -72,6 +72,8 @@
     "ctaLabel": "Medical note",
     "list": [
       { "name": "Calendula", "role": "Soothing; supports the regeneration of irritated tissue.", "extra": "Calendula (marigold) has been used in skin care for centuries thanks to its soothing effect and properties that support the regeneration of irritated skin." },
+      { "name": "Arnica", "role": "Soothes and supports the comfort of sensitive skin.", "extra": "Arnica is traditionally known for its soothing effect on the skin and for supporting local comfort." },
+      { "name": "Greater celandine", "role": "Calming, used in traditional skin care.", "extra": "Greater celandine is traditionally used in skin care for its calming properties." },
       { "name": "Lavender", "role": "Calming and relaxing effect on the sensitive area.", "extra": "Lavender oil has calming and relaxing properties, helping to reduce the feeling of tension and discomfort in the applied area." },
       { "name": "Witch hazel", "role": "Tones and reduces the feeling of irritation.", "extra": "Witch hazel extract has a gentle astringent effect: it tones the tissue and reduces the feeling of irritation and itching." },
       { "name": "Aloe vera", "role": "Hydrates and cools inflamed skin.", "extra": "Aloe vera gel deeply hydrates, cools inflamed skin and supports the comfort of sensitive skin." },

@@ -48,8 +48,8 @@
       },
       {
         "title": "100% plante",
-        "text": "Extracte naturale din calendula, lavandă și hamamelis.",
-        "extra": "Formula conține doar ingrediente de origine vegetală: calendula, lavandă, hamamelis, aloe vera, mușețel și unt de karité — fără coloranți artificiali."
+        "text": "Extracte naturale din arnica, rostopască, calendula și hamamelis.",
+        "extra": "Formula conține doar ingrediente de origine vegetală: arnica, rostopască, calendula, lavandă, hamamelis, aloe vera, mușețel și unt de karité — fără coloranți artificiali."
       },
       {
         "title": "Blând cu pielea",
@@ -72,6 +72,8 @@
     "ctaLabel": "Nota medicală",
     "list": [
       { "name": "Calendula", "role": "Calmant, sprijină regenerarea țesutului iritat.", "extra": "Calendula (gălbenelele) este folosită de secole în îngrijirea pielii datorită efectului său calmant și a proprietăților care sprijină regenerarea epidermei iritate." },
+      { "name": "Arnica", "role": "Calmează și sprijină confortul pielii sensibile.", "extra": "Arnica este cunoscută în mod tradițional pentru efectul său calmant asupra pielii și pentru susținerea confortului în zona aplicată." },
+      { "name": "Rostopască", "role": "Calmant, folosit în îngrijirea tradițională a pielii.", "extra": "Rostopasca (celidonia) este folosită în mod tradițional în îngrijirea pielii pentru proprietățile sale calmante." },
       { "name": "Lavandă", "role": "Efect calmant și relaxant asupra zonei sensibile.", "extra": "Uleiul de lavandă are proprietăți calmante și relaxante, contribuind la reducerea senzației de tensiune și disconfort în zona aplicată." },
       { "name": "Hamamelis", "role": "Tonifiază și reduce senzația de iritație.", "extra": "Extractul de hamamelis are un efect astringent ușor: tonifiază țesutul și reduce senzația de iritație și de mâncărime." },
       { "name": "Aloe vera", "role": "Hidratează și răcorește pielea inflamată.", "extra": "Gelul de aloe vera hidratează în profunzime, răcorește pielea inflamată și sprijină confortul pielii sensibile." },

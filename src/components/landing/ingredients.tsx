@@ -5,12 +5,14 @@ import {
   Drop,
   FlowerTulip,
   Sparkle,
+  Sun,
+  Plant,
 } from "@phosphor-icons/react/dist/ssr";
 import { getTranslations } from "next-intl/server";
 import { Eyebrow } from "@/components/ui/eyebrow";
 import { Reveal } from "@/components/ui/reveal";
 
-const ICONS = [FlowerLotus, Flower, Leaf, Drop, FlowerTulip, Sparkle];
+const ICONS = [FlowerLotus, Sun, Plant, Flower, Leaf, Drop, FlowerTulip, Sparkle];
 
 export async function Ingredients() {
   const t = await getTranslations("ingredients");
