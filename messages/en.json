@@ -49,7 +49,7 @@
       {
         "title": "100% plants",
         "text": "Natural extracts of arnica, celandine, calendula and witch hazel.",
-        "extra": "The formula contains only plant-based ingredients: arnica, celandine, calendula, lavender, witch hazel, aloe vera, chamomile and shea butter — with no artificial colourants."
+        "extra": "The formula contains only plant-based ingredients: arnica, celandine, calendula, lavender, witch hazel and shea butter — with no artificial colourants."
       },
       {
         "title": "Gentle on skin",
@@ -76,8 +76,6 @@
       { "name": "Greater celandine", "role": "Calming, used in traditional skin care.", "extra": "Greater celandine is traditionally used in skin care for its calming properties." },
       { "name": "Lavender", "role": "Calming and relaxing effect on the sensitive area.", "extra": "Lavender oil has calming and relaxing properties, helping to reduce the feeling of tension and discomfort in the applied area." },
       { "name": "Witch hazel", "role": "Tones and reduces the feeling of irritation.", "extra": "Witch hazel extract has a gentle astringent effect: it tones the tissue and reduces the feeling of irritation and itching." },
-      { "name": "Aloe vera", "role": "Hydrates and cools inflamed skin.", "extra": "Aloe vera gel deeply hydrates, cools inflamed skin and supports the comfort of sensitive skin." },
-      { "name": "Chamomile", "role": "Soothes and supports daily comfort.", "extra": "Chamomile extract is known for its anti-irritant and soothing effect, being especially gentle on sensitive skin." },
       { "name": "Shea butter", "role": "Protects and maintains skin elasticity.", "extra": "Shea butter is rich in fatty acids and vitamins: it nourishes and protects the skin, maintains elasticity and forms an emollient barrier." }
     ]
   },
@@ -88,7 +86,7 @@
     "steps": [
       {
         "title": "Soothes discomfort",
-        "text": "Extracts of calendula and chamomile calm the feeling of itching, burning and discomfort from the very first applications."
+        "text": "Extracts of calendula and arnica calm the feeling of itching, burning and discomfort from the very first applications."
       },
       {
         "title": "Protects the sensitive area",
@@ -96,7 +94,7 @@
       },
       {
         "title": "Supports regeneration",
-        "text": "Aloe vera and lavender deeply hydrate and support the natural recovery of inflamed tissue, for long-lasting comfort."
+        "text": "Lavender and shea butter deeply hydrate and support the natural recovery of inflamed tissue, for long-lasting comfort."
       }
     ],
     "usageTitle": "How to use",

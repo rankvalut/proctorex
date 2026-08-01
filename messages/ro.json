@@ -49,7 +49,7 @@
       {
         "title": "100% plante",
         "text": "Extracte naturale din arnica, rostopască, calendula și hamamelis.",
-        "extra": "Formula conține doar ingrediente de origine vegetală: arnica, rostopască, calendula, lavandă, hamamelis, aloe vera, mușețel și unt de karité — fără coloranți artificiali."
+        "extra": "Formula conține doar ingrediente de origine vegetală: arnica, rostopască, calendula, lavandă, hamamelis și unt de karité — fără coloranți artificiali."
       },
       {
         "title": "Blând cu pielea",
@@ -76,8 +76,6 @@
       { "name": "Rostopască", "role": "Calmant, folosit în îngrijirea tradițională a pielii.", "extra": "Rostopasca (celidonia) este folosită în mod tradițional în îngrijirea pielii pentru proprietățile sale calmante." },
       { "name": "Lavandă", "role": "Efect calmant și relaxant asupra zonei sensibile.", "extra": "Uleiul de lavandă are proprietăți calmante și relaxante, contribuind la reducerea senzației de tensiune și disconfort în zona aplicată." },
       { "name": "Hamamelis", "role": "Tonifiază și reduce senzația de iritație.", "extra": "Extractul de hamamelis are un efect astringent ușor: tonifiază țesutul și reduce senzația de iritație și de mâncărime." },
-      { "name": "Aloe vera", "role": "Hidratează și răcorește pielea inflamată.", "extra": "Gelul de aloe vera hidratează în profunzime, răcorește pielea inflamată și sprijină confortul pielii sensibile." },
-      { "name": "Mușețel", "role": "Calmează și sprijină confortul zilnic.", "extra": "Extractul de mușețel este cunoscut pentru efectul său anti-iritație și calmant, fiind deosebit de blând cu pielea sensibilă." },
       { "name": "Unt de karité", "role": "Protejează și menține elasticitatea pielii.", "extra": "Untul de karité este bogat în acizi grași și vitamine: hrănește și protejează pielea, menținând elasticitatea și formând o barieră emolientă." }
     ]
   },
@@ -88,7 +86,7 @@
     "steps": [
       {
         "title": "Calmează disconfortul",
-        "text": "Extractele de calendula și mușețel calmează senzația de mâncărime, arsură și disconfort încă de la primele aplicări."
+        "text": "Extractele de calendula și arnica calmează senzația de mâncărime, arsură și disconfort încă de la primele aplicări."
       },
       {
         "title": "Protejează zona sensibilă",
@@ -96,7 +94,7 @@
       },
       {
         "title": "Susține regenerarea",
-        "text": "Aloe vera și lavanda hidratează în profunzime și sprijină refacerea naturală a țesutului inflamat, pentru confort de durată."
+        "text": "Lavanda și untul de karité hidratează în profunzime și sprijină refacerea naturală a țesutului inflamat, pentru confort de durată."
       }
     ],
     "usageTitle": "Cum se folosește",

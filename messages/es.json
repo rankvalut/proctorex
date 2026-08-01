@@ -49,7 +49,7 @@
       {
         "title": "100% plantas",
         "text": "Extractos naturales de árnica, celidonia, caléndula y hamamelis.",
-        "extra": "La fórmula contiene solo ingredientes de origen vegetal: árnica, celidonia, caléndula, lavanda, hamamelis, aloe vera, manzanilla y manteca de karité, sin colorantes artificiales."
+        "extra": "La fórmula contiene solo ingredientes de origen vegetal: árnica, celidonia, caléndula, lavanda, hamamelis y manteca de karité, sin colorantes artificiales."
       },
       {
         "title": "Suave con la piel",
@@ -76,8 +76,6 @@
       { "name": "Celidonia", "role": "Calmante, utilizada en el cuidado tradicional de la piel.", "extra": "La celidonia se utiliza tradicionalmente en el cuidado de la piel por sus propiedades calmantes." },
       { "name": "Lavanda", "role": "Efecto calmante y relajante sobre la zona sensible.", "extra": "El aceite de lavanda tiene propiedades calmantes y relajantes, y ayuda a reducir la sensación de tensión y molestia en la zona aplicada." },
       { "name": "Hamamelis", "role": "Tonifica y reduce la sensación de irritación.", "extra": "El extracto de hamamelis tiene un suave efecto astringente: tonifica el tejido y reduce la sensación de irritación y picor." },
-      { "name": "Aloe vera", "role": "Hidrata y refresca la piel inflamada.", "extra": "El gel de aloe vera hidrata en profundidad, refresca la piel inflamada y favorece el confort de la piel sensible." },
-      { "name": "Manzanilla", "role": "Calma y favorece el confort diario.", "extra": "El extracto de manzanilla es conocido por su efecto antiirritante y calmante, siendo especialmente suave con la piel sensible." },
       { "name": "Manteca de karité", "role": "Protege y mantiene la elasticidad de la piel.", "extra": "La manteca de karité es rica en ácidos grasos y vitaminas: nutre y protege la piel, mantiene su elasticidad y forma una barrera emoliente." }
     ]
   },
@@ -88,7 +86,7 @@
     "steps": [
       {
         "title": "Calma la molestia",
-        "text": "Los extractos de caléndula y manzanilla calman el picor, el ardor y la molestia desde las primeras aplicaciones."
+        "text": "Los extractos de caléndula y árnica calman el picor, el ardor y la molestia desde las primeras aplicaciones."
       },
       {
         "title": "Protege la zona sensible",
@@ -96,7 +94,7 @@
       },
       {
         "title": "Favorece la regeneración",
-        "text": "El aloe vera y la lavanda hidratan en profundidad y favorecen la recuperación natural del tejido inflamado para un confort duradero."
+        "text": "La lavanda y la manteca de karité hidratan en profundidad y favorecen la recuperación natural del tejido inflamado para un confort duradero."
       }
     ],
     "usageTitle": "Cómo se usa",
