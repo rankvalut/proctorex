@@ -13,7 +13,7 @@ import { Link } from "@/i18n/navigation";
 const PRODUCT_ANCHORS = [
   "/#beneficii",
   "/ingrediente",
-  "/cum-functioneaza",
+  "/#cum-functioneaza",
   "/#preturi",
   "/#comanda",
 ];
