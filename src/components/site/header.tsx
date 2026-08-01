@@ -11,7 +11,6 @@ const NAV_KEYS = [
   { href: "/#despre", key: "despre" },
   { href: "/ingrediente", key: "ingrediente" },
   { href: "/#beneficii", key: "beneficii" },
-  { href: "/#cum-functioneaza", key: "cumFunctioneaza" },
   { href: "/#preturi", key: "preturi" },
   { href: "/#comanda", key: "comanda" },
   { href: "/#contact", key: "contact" },
