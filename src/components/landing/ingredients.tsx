@@ -5,12 +5,10 @@ import {
   Drop,
   FlowerTulip,
   Sparkle,
-  ArrowRight,
 } from "@phosphor-icons/react/dist/ssr";
 import { getTranslations } from "next-intl/server";
 import { Eyebrow } from "@/components/ui/eyebrow";
 import { Reveal } from "@/components/ui/reveal";
-import { Link } from "@/i18n/navigation";
 
 const ICONS = [FlowerLotus, Flower, Leaf, Drop, FlowerTulip, Sparkle];
 
@@ -67,24 +65,6 @@ export async function Ingredients() {
           })}
         </div>
       </div>
-
-      {/* CTA ribbon under the grid */}
-      <Reveal>
-        <div className="mx-auto max-w-6xl px-5 pb-16 md:px-8 md:pb-24">
-          <div className="flex flex-col items-center justify-between gap-4 rounded-blob border border-leaf/40 bg-leaf-soft px-7 py-6 text-center sm:flex-row sm:text-left">
-            <p className="max-w-[52ch] text-sm leading-relaxed text-ink-soft">
-              {t("ctaText")}
-            </p>
-            <Link
-              href="/nota-medicala"
-              className="inline-flex shrink-0 items-center gap-2 rounded-full bg-forest px-6 py-3 text-sm font-bold text-cream transition-colors duration-200 hover:bg-forest-600 active:scale-[0.97]"
-            >
-              {t("ctaLabel")}
-              <ArrowRight size={16} weight="bold" />
-            </Link>
-          </div>
-        </div>
-      </Reveal>
     </section>
   );
 }

@@ -72,37 +72,26 @@ export async function HowItWorks() {
           })}
         </div>
 
-        {/* Usage + note */}
+        {/* Usage */}
         <Reveal>
-          <div className="mt-12 grid gap-6 md:grid-cols-[1.1fr_0.9fr]">
-            <div className="rounded-blob border border-cream-3 bg-cream p-7 shadow-soft md:p-8">
-              <h3 className="font-display flex items-center gap-2.5 text-xl font-bold text-forest-900">
-                <DropHalf size={24} weight="bold" className="text-forest-600" />
-                {t("usageTitle")}
-              </h3>
-              <ul className="mt-4 flex flex-col gap-3">
-                {usage.map((u) => (
-                  <li
-                    key={u}
-                    className="flex items-start gap-2.5 text-sm leading-relaxed text-ink-soft"
-                  >
-                    <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-leaf-soft text-forest-700">
-                      <Check size={12} weight="bold" />
-                    </span>
-                    {u}
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            <div className="rounded-blob bg-forest p-7 text-cream shadow-card md:p-8">
-              <h3 className="font-display text-xl font-bold text-gold">
-                {t("noteTitle")}
-              </h3>
-              <p className="mt-3 leading-relaxed text-cream/85">
-                {t("note")}
-              </p>
-            </div>
+          <div className="mt-12 rounded-blob border border-cream-3 bg-cream p-7 shadow-soft md:p-8">
+            <h3 className="font-display flex items-center gap-2.5 text-xl font-bold text-forest-900">
+              <DropHalf size={24} weight="bold" className="text-forest-600" />
+              {t("usageTitle")}
+            </h3>
+            <ul className="mt-4 flex flex-col gap-3">
+              {usage.map((u) => (
+                <li
+                  key={u}
+                  className="flex items-start gap-2.5 text-sm leading-relaxed text-ink-soft"
+                >
+                  <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-leaf-soft text-forest-700">
+                    <Check size={12} weight="bold" />
+                  </span>
+                  {u}
+                </li>
+              ))}
+            </ul>
           </div>
         </Reveal>
       </div>

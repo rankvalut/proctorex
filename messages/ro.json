@@ -208,7 +208,7 @@
     "colLegal": "Documente legale",
     "colContact": "Contact",
     "productLinks": ["Beneficii", "Ingrediente", "Cum funcționează", "Prețuri", "Comandă"],
-    "legalLinks": ["Politica de confidențialitate", "Termeni și condiții", "Notă medicală", "Politica cookie-uri", "Retur și rambursare"],
+    "legalLinks": ["Politica de confidențialitate", "Termeni și condiții", "Politica cookie-uri", "Retur și rambursare"],
     "phone": "+40 700 000 000",
     "email": "contact@proctorex.ro",
     "schedule": "Luni – Vineri: 9:00 – 18:00",
@@ -252,7 +252,7 @@
       ]
     },
     "disclaimer": {
-      "title": "Notă medicală importantă",
+      "title": "Notă medicală",
       "intro": "Te rugăm să citești cu atenție această notă înainte de a utiliza PROCTOREX.",
       "sections": [
         { "heading": "1. Produs cosmetic, nu medicament", "body": ["PROCTOREX este o cremă cosmetică de uz extern, formulată pe bază de plante. Nu este un medicament și nu pretinde că diagnostichează, tratează, ameliorează sau vindecă hemoroizii sau orice altă afecțiune medicală."] },

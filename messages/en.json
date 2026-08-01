@@ -208,7 +208,7 @@
     "colLegal": "Legal documents",
     "colContact": "Contact",
     "productLinks": ["Benefits", "Ingredients", "How it works", "Prices", "Order"],
-    "legalLinks": ["Privacy Policy", "Terms and Conditions", "Medical note", "Cookie Policy", "Returns & refunds"],
+    "legalLinks": ["Privacy Policy", "Terms and Conditions", "Cookie Policy", "Returns & refunds"],
     "phone": "+40 700 000 000",
     "email": "contact@proctorex.ro",
     "schedule": "Monday – Friday: 9:00 – 18:00",
@@ -252,7 +252,7 @@
       ]
     },
     "disclaimer": {
-      "title": "Important medical note", "intro": "Please read this note carefully before using PROCTOREX.",
+      "title": "Medical note", "intro": "Please read this note carefully before using PROCTOREX.",
       "sections": [
         { "heading": "1. A cosmetic product, not a medicine", "body": ["PROCTOREX is a cosmetic cream for external use, formulated from plants. It is not a medicine and does not claim to diagnose, treat, relieve or cure haemorrhoids or any other medical condition."] },
         { "heading": "2. No guarantee of results", "body": ["As a natural product, PROCTOREX does not guarantee a specific outcome. Effectiveness may vary from person to person, and symptoms may persist even after use."] },

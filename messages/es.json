@@ -208,7 +208,7 @@
     "colLegal": "Documentos legales",
     "colContact": "Contacto",
     "productLinks": ["Beneficios", "Ingredientes", "Cómo funciona", "Precios", "Pedido"],
-    "legalLinks": ["Política de privacidad", "Términos y condiciones", "Nota médica", "Política de cookies", "Devoluciones y reembolsos"],
+    "legalLinks": ["Política de privacidad", "Términos y condiciones", "Política de cookies", "Devoluciones y reembolsos"],
     "phone": "+40 700 000 000",
     "email": "contact@proctorex.ro",
     "schedule": "Lun – Vie: 9:00 – 18:00",
@@ -252,7 +252,7 @@
       ]
     },
     "disclaimer": {
-      "title": "Nota médica importante",
+      "title": "Nota médica",
       "intro": "Por favor, lee atentamente esta nota antes de usar PROCTOREX.",
       "sections": [
         { "heading": "1. Producto cosmético, no un medicamento", "body": ["PROCTOREX es una crema cosmética de uso externo, formulada a base de plantas. No es un medicamento y no afirma diagnosticar, tratar, aliviar o curar las hemorroides ni ninguna otra afección médica."] },

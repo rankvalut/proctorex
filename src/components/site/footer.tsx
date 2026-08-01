@@ -21,7 +21,6 @@ const PRODUCT_ANCHORS = [
 const LEGAL_SLUGS = [
   "politica-de-confidentialitate",
   "termeni-si-conditii",
-  "nota-medicala",
   "politica-cookie",
   "retur",
 ];
