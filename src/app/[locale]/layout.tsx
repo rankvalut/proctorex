@@ -6,17 +6,17 @@ import {
   getTranslations,
   setRequestLocale,
 } from "next-intl/server";
-import { Poppins, Nunito_Sans } from "next/font/google";
+import { Montserrat, Nunito_Sans } from "next/font/google";
 import { routing, type Locale } from "@/i18n/routing";
 import "@/app/globals.css";
 import { Header } from "@/components/site/header";
 import { Footer } from "@/components/site/footer";
 import { CartProvider } from "@/components/cart/cart-provider";
 
-// Display font: Poppins — the bold, rounded geometric sans used by the
+// Display font: Montserrat — the bold geometric sans used by the
 // original PROCTOREX advertisement for its headlines.
-const poppins = Poppins({
-  variable: "--font-poppins",
+const montserrat = Montserrat({
+  variable: "--font-montserrat",
   subsets: ["latin", "latin-ext"],
   weight: ["500", "600", "700", "800"],
   display: "swap",
@@ -67,7 +67,7 @@ export default async function LocaleLayout({
   return (
     <html
       lang={locale}
-      className={`${poppins.variable} ${nunitoSans.variable} h-full antialiased`}
+      className={`${montserrat.variable} ${nunitoSans.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
         <NextIntlClientProvider messages={messages}>

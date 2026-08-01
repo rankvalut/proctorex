@@ -117,7 +117,7 @@ export function Header() {
           <button
             type="button"
             onClick={openCart}
-            className="hidden items-center gap-2 rounded-full bg-forest px-4 py-2 text-sm font-bold text-cream shadow-card transition-all duration-200 hover:bg-forest-600 active:scale-[0.97] sm:flex"
+            className="hidden shrink-0 items-center gap-2 whitespace-nowrap rounded-full bg-forest px-4 py-2 text-sm font-bold text-cream shadow-card transition-all duration-200 hover:bg-forest-600 active:scale-[0.97] sm:flex"
           >
             <Basket size={17} weight="bold" />
             {cart("pill", { count })}
@@ -159,7 +159,7 @@ export function Header() {
                   setOpen(false);
                   openCart();
                 }}
-                className="flex w-full items-center justify-center gap-2 rounded-full bg-forest px-4 py-3 text-sm font-bold text-cream"
+                className="flex w-full items-center justify-center gap-2 whitespace-nowrap rounded-full bg-forest px-4 py-3 text-sm font-bold text-cream"
               >
                 <Basket size={17} weight="bold" />
                 {cart("pill", { count })}

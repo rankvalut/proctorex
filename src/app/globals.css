@@ -8,7 +8,7 @@
 
 @theme inline {
   --font-sans: var(--font-nunito-sans);
-  --font-display: var(--font-poppins);
+  --font-display: var(--font-montserrat);
 }
 
 @theme {
