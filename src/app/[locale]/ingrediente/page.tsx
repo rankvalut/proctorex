@@ -1,6 +1,7 @@
 import { setRequestLocale, getTranslations } from "next-intl/server";
 import { routing, type Locale } from "@/i18n/routing";
 import { Ingredients } from "@/components/landing/ingredients";
+import { HowItWorks } from "@/components/landing/how-it-works";
 import { ProductCta } from "@/components/landing/product-cta";
 
 export function generateStaticParams() {
@@ -28,6 +29,7 @@ export default async function IngredientePage({
   return (
     <>
       <Ingredients />
+      <HowItWorks />
       <ProductCta />
     </>
   );
