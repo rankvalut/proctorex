@@ -11,17 +11,13 @@ import {
   ShieldCheck,
   Basket,
 } from "@phosphor-icons/react";
+import { useTranslations } from "next-intl";
 import { toast } from "sonner";
 import { Eyebrow } from "@/components/ui/eyebrow";
 import { Reveal } from "@/components/ui/reveal";
 import { useCart } from "@/components/cart/cart-provider";
 
-const ASSURANCES = [
-  { icon: Package, label: "Ambalaj neutru și discret" },
-  { icon: Truck, label: "Livrare rapidă în toată România" },
-  { icon: ShieldCheck, label: "Plată sigură — Card sau Ramburs" },
-  { icon: Lock, label: "Datele tale rămân confidențiale" },
-];
+const ASSURANCE_ICONS = [Package, Truck, ShieldCheck, Lock];
 
 const initialForm = {
   nume: "",
@@ -34,6 +30,8 @@ const initialForm = {
 
 export function OrderForm() {
   const { items, total, count, clearCart } = useCart();
+  const t = useTranslations("order");
+  const cartT = useTranslations("cart");
   const [form, setForm] = useState(initialForm);
   const [errors, setErrors] = useState<Partial<typeof initialForm>>({});
   const [status, setStatus] = useState<"idle" | "submitting" | "success">(
@@ -44,25 +42,27 @@ export function OrderForm() {
     count: 0,
   });
 
+  const assurances = t.raw("assurances") as string[];
+
   function validate() {
     const next: Partial<typeof initialForm> = {};
     if (form.nume.trim().length < 3) {
-      next.nume = "Te rugăm să introduci numele complet.";
+      next.nume = t("errorNume");
     }
     if (form.telefon.trim().replace(/\D/g, "").length < 7) {
-      next.telefon = "Introdu un număr de telefon valid.";
+      next.telefon = t("errorTelefon");
     }
     if (form.tara.trim().length < 2) {
-      next.tara = "Te rugăm să introduci țara.";
+      next.tara = t("errorTara");
     }
     if (form.oras.trim().length < 2) {
-      next.oras = "Te rugăm să introduci orașul.";
+      next.oras = t("errorOras");
     }
     if (form.adresa.trim().length < 10) {
-      next.adresa = "Introdu adresa completă de livrare.";
+      next.adresa = t("errorAdresa");
     }
     if (form.codPostal.trim().replace(/[^a-z0-9]/gi, "").length < 4) {
-      next.codPostal = "Introdu un cod poștal valid.";
+      next.codPostal = t("errorCodPostal");
     }
     return next;
   }
@@ -72,8 +72,8 @@ export function OrderForm() {
     const next = validate();
     setErrors(next);
     if (Object.keys(next).length > 0) {
-      toast.error("Verifică câmpurile marcate.", {
-        description: "Unele informații nu sunt complete sau sunt invalide.",
+      toast.error(t("errorTitle"), {
+        description: t("errorDesc"),
       });
       return;
     }
@@ -84,8 +84,8 @@ export function OrderForm() {
     setPlaced({ total, count });
     clearCart();
     setStatus("success");
-    toast.success("Comanda a fost trimisă!", {
-      description: "Un operator te va suna în curând pentru confirmare.",
+    toast.success(cartT("toastOrder"), {
+      description: cartT("toastOrderDesc"),
     });
   }
 
@@ -104,31 +104,34 @@ export function OrderForm() {
                 <CheckCircle size={32} weight="fill" />
               </span>
               <h2 className="font-display mt-6 text-3xl font-bold text-forest-900">
-                Mulțumim, {form.nume.trim()}!
+                {t("successTitle", { name: form.nume.trim() })}
               </h2>
               <p className="mt-3 leading-relaxed text-ink-soft">
-                Comanda ta a fost înregistrată cu succes.
+                {t("successSub")}
               </p>
 
               {/* Operator call notice */}
               <div className="mt-5 flex items-center justify-center gap-2.5 rounded-2xl bg-forest px-5 py-4 text-cream">
                 <PhoneCall size={22} weight="fill" />
                 <p className="text-left text-sm leading-snug">
-                  <strong>Un operator te va suna în scurt timp</strong> la{" "}
-                  <strong>{form.telefon.trim()}</strong> pentru a confirma
-                  comanda și detaliile de livrare către{" "}
-                  <strong>{form.oras.trim()}</strong>.
+                  <strong>{t("operatorTitle")}</strong>{" "}
+                  {t("operatorText", {
+                    phone: form.telefon.trim(),
+                    city: form.oras.trim(),
+                  })}
                 </p>
               </div>
 
               {placed.count > 0 && (
                 <div className="mt-5 rounded-2xl border border-cream-3 bg-white/60 px-5 py-4 text-left">
                   <p className="text-xs font-bold uppercase tracking-wide text-leaf-600">
-                    Rezumatul comenzii
+                    {t("summaryLabel")}
                   </p>
                   <p className="mt-1 text-sm text-ink-soft">
-                    {placed.count} {placed.count === 1 ? "produs" : "produse"} —
-                    total <strong className="text-forest-900">{placed.total} lei</strong>
+                    {t("summaryLine", {
+                      count: placed.count,
+                      total: placed.total,
+                    })}
                   </p>
                 </div>
               )}
@@ -141,7 +144,7 @@ export function OrderForm() {
                 }}
                 className="mt-7 inline-flex items-center gap-2 rounded-full bg-forest px-6 py-3 font-bold text-cream transition-colors duration-200 hover:bg-forest-600 active:scale-[0.97]"
               >
-                Trimite o altă comandă
+                {t("another")}
               </button>
             </div>
           </Reveal>
@@ -155,26 +158,28 @@ export function OrderForm() {
       <div className="mx-auto grid max-w-6xl items-center gap-12 px-5 py-16 md:px-8 md:py-24 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
         <Reveal>
           <div>
-            <Eyebrow>Comandă</Eyebrow>
+            <Eyebrow>{t("eyebrow")}</Eyebrow>
             <h2 className="font-display mt-3 text-3xl font-bold leading-tight tracking-tight text-forest-900 sm:text-4xl md:text-5xl">
-              Comandă rapid și discret
+              {t("title")}
             </h2>
             <p className="mt-4 max-w-[46ch] text-lg leading-relaxed text-ink-soft">
-              Completează formularul, iar un operator te va suna pentru a
-              confirma comanda. Fără cont, fără pași complicați.
+              {t("subtext")}
             </p>
             <ul className="mt-8 flex flex-col gap-4">
-              {ASSURANCES.map(({ icon: Icon, label }) => (
-                <li
-                  key={label}
-                  className="flex items-center gap-3 text-sm font-semibold text-ink-soft"
-                >
-                  <span className="flex h-9 w-9 items-center justify-center rounded-full bg-leaf-soft text-forest-700">
-                    <Icon size={18} weight="bold" />
-                  </span>
-                  {label}
-                </li>
-              ))}
+              {assurances.map((label, i) => {
+                const Icon = ASSURANCE_ICONS[i];
+                return (
+                  <li
+                    key={label}
+                    className="flex items-center gap-3 text-sm font-semibold text-ink-soft"
+                  >
+                    <span className="flex h-9 w-9 items-center justify-center rounded-full bg-leaf-soft text-forest-700">
+                      <Icon size={18} weight="bold" />
+                    </span>
+                    {label}
+                  </li>
+                );
+              })}
             </ul>
           </div>
         </Reveal>
@@ -189,13 +194,13 @@ export function OrderForm() {
             <div className="mb-6 rounded-2xl border border-cream-3 bg-cream-2 px-5 py-4">
               <p className="flex items-center gap-2 text-xs font-bold uppercase tracking-wide text-leaf-600">
                 <Basket size={15} weight="bold" />
-                Comanda ta
+                {t("summaryTitle")}
               </p>
               {items.length === 0 ? (
                 <p className="mt-1.5 text-sm text-ink-soft">
-                  Nu ai adăugat încă produse în coș. Poți alege din secțiunea{" "}
+                  {t("summaryEmpty")}{" "}
                   <a href="#preturi" className="font-semibold text-forest underline underline-offset-2">
-                    Prețuri
+                    {t("summaryEmptyLink")}
                   </a>
                   .
                 </p>
@@ -219,7 +224,7 @@ export function OrderForm() {
                   </ul>
                   <div className="mt-2 flex items-center justify-between border-t border-cream-3 pt-2">
                     <span className="text-sm font-bold text-forest-900">
-                      Total ({count} {count === 1 ? "produs" : "produse"})
+                      {t("summaryTotal", { count })}
                     </span>
                     <span className="font-display text-lg font-bold text-forest">
                       {total} lei
@@ -230,7 +235,7 @@ export function OrderForm() {
             </div>
 
             <div className="grid gap-5">
-              <Field label="Nume complet" id="nume" error={errors.nume}>
+              <Field label={t("fieldNume")} id="nume" error={errors.nume}>
                 <input
                   id="nume"
                   name="nume"
@@ -242,19 +247,19 @@ export function OrderForm() {
               </Field>
 
               <div className="grid gap-5 sm:grid-cols-2">
-                <Field label="Telefon" id="telefon" error={errors.telefon}>
+                <Field label={t("fieldTelefon")} id="telefon" error={errors.telefon}>
                   <input
                     id="telefon"
                     name="telefon"
                     type="tel"
                     autoComplete="tel"
-                    placeholder="07xx xxx xxx"
+                    placeholder={t("phTelefon")}
                     value={form.telefon}
                     onChange={(e) => set("telefon")(e.target.value)}
                     className={inputClass(!!errors.telefon)}
                   />
                 </Field>
-                <Field label="Țară" id="tara" error={errors.tara}>
+                <Field label={t("fieldTara")} id="tara" error={errors.tara}>
                   <input
                     id="tara"
                     name="tara"
@@ -267,7 +272,7 @@ export function OrderForm() {
               </div>
 
               <div className="grid gap-5 sm:grid-cols-2">
-                <Field label="Oraș" id="oras" error={errors.oras}>
+                <Field label={t("fieldOras")} id="oras" error={errors.oras}>
                   <input
                     id="oras"
                     name="oras"
@@ -277,7 +282,7 @@ export function OrderForm() {
                     className={inputClass(!!errors.oras)}
                   />
                 </Field>
-                <Field label="Cod poștal" id="codPostal" error={errors.codPostal}>
+                <Field label={t("fieldCodPostal")} id="codPostal" error={errors.codPostal}>
                   <input
                     id="codPostal"
                     name="codPostal"
@@ -290,13 +295,13 @@ export function OrderForm() {
                 </Field>
               </div>
 
-              <Field label="Adresă de livrare" id="adresa" error={errors.adresa}>
+              <Field label={t("fieldAdresa")} id="adresa" error={errors.adresa}>
                 <textarea
                   id="adresa"
                   name="adresa"
                   rows={3}
                   autoComplete="street-address"
-                  placeholder="Stradă, număr, bloc, scară, apartament"
+                  placeholder={t("phAdresa")}
                   value={form.adresa}
                   onChange={(e) => set("adresa")(e.target.value)}
                   className={`${inputClass(!!errors.adresa)} resize-none`}
@@ -311,22 +316,24 @@ export function OrderForm() {
                 {status === "submitting" ? (
                   <>
                     <span className="h-4 w-4 animate-spin rounded-full border-2 border-cream/40 border-t-cream" />
-                    Se trimite…
+                    {t("submitting")}
                   </>
                 ) : (
                   <>
                     <PaperPlaneTilt size={19} weight="bold" />
-                    Trimite Comanda
+                    {t("submit")}
                   </>
                 )}
               </button>
 
               <p className="text-center text-xs leading-relaxed text-ink-soft">
-                Prin trimiterea comenzii ești de acord cu{" "}
-                <a href="#termeni" className="font-semibold text-forest underline underline-offset-2">
-                  termenii și condițiile
-                </a>
-                .
+                {t.rich("terms", {
+                  link: (chunks) => (
+                    <a href="#termeni" className="font-semibold text-forest underline underline-offset-2">
+                      {chunks}
+                    </a>
+                  ),
+                })}
               </p>
             </div>
           </form>

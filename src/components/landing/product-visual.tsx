@@ -6,12 +6,18 @@
  * Gradients are prefixed to avoid id collisions when embedded on a page.
  */
 
-export function ProductVisual({ className }: { className?: string }) {
+export function ProductVisual({
+  className,
+  ariaLabel = "Borcan PROCTOREX Cremă naturală 30 g, pe o piatră, cu flori de calendula, lavandă și capsule",
+}: {
+  className?: string;
+  ariaLabel?: string;
+}) {
   return (
     <svg
       viewBox="0 0 720 640"
       role="img"
-      aria-label="Borcan PROCTOREX Cremă naturală 30 g, pe o piatră, cu flori de calendula, lavandă și capsule"
+      aria-label={ariaLabel}
       className={className}
     >
       <defs>

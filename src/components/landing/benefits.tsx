@@ -12,57 +12,18 @@ import {
   Plus,
   Info,
 } from "@phosphor-icons/react";
+import { useTranslations } from "next-intl";
 import { Eyebrow } from "@/components/ui/eyebrow";
 import { Reveal } from "@/components/ui/reveal";
 
-const BENEFITS = [
-  {
-    icon: Sparkle,
-    title: "Calmare rapidă",
-    text: "Reduce senzația de disconfort, mâncărime și arsură în zona sensibilă.",
-    extra:
-      "Extractele de calendula și mușețel sunt cunoscute pentru efectul lor calmant asupra pielii iritate. Aplicat local, PROCTOREX răcorește zona și reduce senzația de arsură și mâncărime încă de la primele utilizări.",
-  },
-  {
-    icon: ShieldCheck,
-    title: "Protecție zilnică",
-    text: "Formează un strat protector delicat peste țesutul iritat.",
-    extra:
-      "Untul de karité și hamamelisul creează o barieră emolientă care protejează zona sensibilă de frecare și de iritațiile repetate, în special în timpul mersului sau al statului prelungit pe scaun.",
-  },
-  {
-    icon: FlowerLotus,
-    title: "Regenerare",
-    text: "Sprijină refacerea naturală a țesutului inflamat.",
-    extra:
-      "Aloe vera și lavanda hidratează în profunzime și susțin procesul natural de refacere al țesutului, contribuind la confortul de durată și la elasticitatea pielii din zona tratată.",
-  },
-  {
-    icon: Leaf,
-    title: "100% plante",
-    text: "Extracte naturale din calendula, lavandă și hamamelis.",
-    extra:
-      "Formula conține doar ingrediente de origine vegetală: calendula, lavandă, hamamelis, aloe vera, mușețel și unt de karité — fără coloranți artificiali.",
-  },
-  {
-    icon: Drop,
-    title: "Blând cu pielea",
-    text: "Formulă ușoară, fără parfum artificial, pentru piele sensibilă.",
-    extra:
-      "Fără parfum artificial și fără alcool, textura este potrivită pentru pielea sensibilă, chiar și în cazul utilizării repetate, de mai multe ori pe zi.",
-  },
-  {
-    icon: Timer,
-    title: "Efect discret",
-    text: "Textură cremoasă care se absoarbe rapid, fără reziduuri.",
-    extra:
-      "Se absoarbe rapid, fără a lăsa urme pe îmbrăcăminte. Comanda ajunge într-un ambalaj neutru, iar factura nu face referire la produs.",
-  },
-];
+const ICONS = [Sparkle, ShieldCheck, FlowerLotus, Leaf, Drop, Timer];
 
 export function Benefits() {
+  const t = useTranslations("benefits");
   const [openIndex, setOpenIndex] = useState<number | null>(null);
   const reduce = useReducedMotion();
+
+  const cards = t.raw("cards") as { title: string; text: string; extra: string }[];
 
   function toggle(i: number) {
     setOpenIndex((cur) => (cur === i ? null : i));
@@ -73,20 +34,19 @@ export function Benefits() {
       <div className="mx-auto max-w-6xl px-5 py-16 md:px-8 md:py-24">
         <Reveal>
           <div className="max-w-3xl">
-            <Eyebrow>Beneficii</Eyebrow>
+            <Eyebrow>{t("eyebrow")}</Eyebrow>
             <h2 className="font-display mt-3 text-3xl font-bold leading-tight tracking-tight text-forest-900 sm:text-4xl md:text-5xl">
-              Disconfortul nu ar trebui să îți controleze viața.
+              {t("title")}
             </h2>
             <p className="mt-4 max-w-[58ch] text-lg leading-relaxed text-ink-soft">
-              PROCTOREX aduce alinare discretă și constantă, astfel încât să-ți
-              poți relua rutina fără griji. O formulă simplă, pe bază de plante,
-              creată pentru calmarea și protecția țesutului inflamat.
+              {t("subtext")}
             </p>
           </div>
         </Reveal>
 
         <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {BENEFITS.map((benefit, i) => {
+          {cards.map((benefit, i) => {
+            const Icon = ICONS[i];
             const featured = i === 2;
             const isOpen = openIndex === i;
             return (
@@ -120,7 +80,7 @@ export function Benefits() {
                           : "flex h-12 w-12 items-center justify-center rounded-2xl bg-leaf-soft text-forest-700"
                       }
                     >
-                      <benefit.icon size={24} weight="bold" />
+                      <Icon size={24} weight="bold" />
                     </span>
                     <span
                       className={
@@ -182,7 +142,7 @@ export function Benefits() {
                         >
                           <span className="mb-1.5 flex items-center gap-1.5 font-bold text-forest-700">
                             <Info size={14} weight="fill" />
-                            Mai multe detalii
+                            {t("more")}
                           </span>
                           {benefit.extra}
                         </div>
@@ -197,7 +157,7 @@ export function Benefits() {
                         : "mt-auto pt-4 text-xs font-semibold uppercase tracking-wide text-leaf-600"
                     }
                   >
-                    {isOpen ? "Închide" : "Atinge pentru detalii"}
+                    {isOpen ? t("close") : t("tap")}
                   </span>
                 </button>
               </motion.div>

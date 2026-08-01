@@ -1,0 +1,218 @@
+{
+  "brand": {
+    "name": "PROCTOREX",
+    "tagline": "Alivio natural. Día a día."
+  },
+  "nav": {
+    "despre": "Sobre el producto",
+    "ingrediente": "Ingredientes",
+    "beneficii": "Beneficios",
+    "preturi": "Precios",
+    "comanda": "Pedido",
+    "contact": "Contacto"
+  },
+  "hero": {
+    "title1": "Alivio natural.",
+    "title2": "Día a día.",
+    "body": "Crema natural para el cuidado de la zona sensible durante las molestias causadas por las hemorroides. Fórmula a base de plantas, creada para calmar, proteger y ayudar a regenerar el tejido inflamado.",
+    "ctaPrimary": "Pedir PROCTOREX",
+    "ctaSecondary": "Pedido rápido",
+    "trust": [
+      "Entrega discreta",
+      "Pago seguro",
+      "Devolución gratis 30 días"
+    ]
+  },
+  "benefits": {
+    "eyebrow": "Beneficios",
+    "title": "La molestia no debería controlar tu vida.",
+    "subtext": "PROCTOREX ofrece un alivio discreto y constante para que puedas retomar tu rutina sin preocupaciones. Una fórmula sencilla, a base de plantas, creada para calmar y proteger el tejido inflamado.",
+    "more": "Más detalles",
+    "tap": "Toca para ver detalles",
+    "close": "Cerrar",
+    "cards": [
+      {
+        "title": "Alivio rápido",
+        "text": "Reduce la sensación de molestia, picor y ardor en la zona sensible.",
+        "extra": "Los extractos de caléndula y manzanilla son conocidos por su efecto calmante sobre la piel irritada. Aplicado localmente, PROCTOREX refresca la zona y reduce el ardor y el picor desde las primeras aplicaciones."
+      },
+      {
+        "title": "Protección diaria",
+        "text": "Forma una delicada capa protectora sobre el tejido irritado.",
+        "extra": "La manteca de karité y el hamamelis crean una barrera emoliente que protege la zona sensible de la fricción y la irritación repetida, especialmente al caminar o al permanecer sentado durante mucho tiempo."
+      },
+      {
+        "title": "Regeneración",
+        "text": "Ayuda a la recuperación natural del tejido inflamado.",
+        "extra": "El aloe vera y la lavanda hidratan en profundidad y favorecen el proceso natural de curación del tejido, contribuyendo a un confort duradero y a la elasticidad de la piel en la zona tratada."
+      },
+      {
+        "title": "100% plantas",
+        "text": "Extractos naturales de caléndula, lavanda y hamamelis.",
+        "extra": "La fórmula contiene solo ingredientes de origen vegetal: caléndula, lavanda, hamamelis, aloe vera, manzanilla y manteca de karité, sin colorantes artificiales."
+      },
+      {
+        "title": "Suave con la piel",
+        "text": "Fórmula ligera, sin perfume artificial, para pieles sensibles.",
+        "extra": "Sin perfume artificial y sin alcohol, la textura es adecuada para pieles sensibles, incluso con un uso repetido varias veces al día."
+      },
+      {
+        "title": "Efecto discreto",
+        "text": "Textura cremosa que se absorbe rápido, sin residuos.",
+        "extra": "Se absorbe rápidamente sin dejar marcas en la ropa. El pedido llega en un embalaje neutro y la factura no hace referencia al producto."
+      }
+    ]
+  },
+  "ingredients": {
+    "eyebrow": "Ingredientes",
+    "title": "El poder de las plantas, en una fórmula suave.",
+    "subtext": "Cada ingrediente fue elegido por su papel natural: calmar, proteger y regenerar. Sin ingredientes innecesarios, sin perfume artificial.",
+    "badge": "Fórmula 100% a base de plantas",
+    "list": [
+      { "name": "Caléndula", "role": "Calma y favorece la regeneración del tejido irritado." },
+      { "name": "Lavanda", "role": "Efecto calmante y relajante sobre la zona sensible." },
+      { "name": "Hamamelis", "role": "Tonifica y reduce la sensación de irritación." },
+      { "name": "Aloe vera", "role": "Hidrata y refresca la piel inflamada." },
+      { "name": "Manzanilla", "role": "Calma y favorece el confort diario." },
+      { "name": "Manteca de karité", "role": "Protege y mantiene la elasticidad de la piel." }
+    ]
+  },
+  "howItWorks": {
+    "eyebrow": "Cómo funciona",
+    "title": "Cómo actúa PROCTOREX",
+    "subtext": "Una fórmula diseñada para responder a las tres necesidades principales de la zona sensible: calmar al instante, proteger y favorecer la regeneración del tejido inflamado.",
+    "steps": [
+      {
+        "title": "Calma la molestia",
+        "text": "Los extractos de caléndula y manzanilla calman el picor, el ardor y la molestia desde las primeras aplicaciones."
+      },
+      {
+        "title": "Protege la zona sensible",
+        "text": "El hamamelis y la manteca de karité forman una barrera delicada que protege el tejido irritado de la fricción y la irritación repetida."
+      },
+      {
+        "title": "Favorece la regeneración",
+        "text": "El aloe vera y la lavanda hidratan en profundidad y favorecen la recuperación natural del tejido inflamado para un confort duradero."
+      }
+    ],
+    "usageTitle": "Cómo se usa",
+    "usage": [
+      "Aplica una pequeña cantidad de crema sobre la zona limpia y seca.",
+      "Usa 2–3 veces al día o según las indicaciones de la etiqueta.",
+      "Solo para uso externo: no ingerir."
+    ],
+    "noteTitle": "Ten en cuenta",
+    "note": "PROCTOREX es un producto cosmético de uso externo, diseñado para el cuidado y el confort de la zona sensible. No sustituye el consejo médico: si la molestia persiste o empeora, consulta a tu médico."
+  },
+  "pricing": {
+    "eyebrow": "Precios",
+    "title": "Elige el envase adecuado para ti",
+    "subtext": "Precios justos, sin costes ocultos. El pedido se envía de forma discreta, en embalaje neutro.",
+    "productName": "PROCTOREX",
+    "recomandat": "Recomendado",
+    "plans": [
+      {
+        "size": "50 g",
+        "note": "Para empezar o viajar",
+        "cta": "Pedir 50 g",
+        "features": ["Crema natural 50 g", "Entrega discreta", "Pago seguro"]
+      },
+      {
+        "size": "100 g",
+        "note": "La mejor relación calidad-precio",
+        "cta": "Pedir 100 g",
+        "features": ["Crema natural 100 g", "Entrega discreta", "Pago seguro", "Devolución gratis 30 días"]
+      },
+      {
+        "size": "2 × 100 g",
+        "note": "Ahorra 20 lei, provisión para 2 meses",
+        "cta": "Pedir el pack",
+        "features": ["2 × Crema natural 100 g", "Entrega discreta", "Pago seguro", "Devolución gratis 30 días"]
+      }
+    ],
+    "perks": [
+      "Envío gratis en pedidos superiores a 250 lei",
+      "Devolución gratis 30 días",
+      "Pago: tarjeta o contra reembolso"
+    ]
+  },
+  "order": {
+    "eyebrow": "Pedido",
+    "title": "Pide rápido y de forma discreta",
+    "subtext": "Rellena el formulario y un operador te llamará para confirmar tu pedido. Sin cuenta, sin pasos complicados.",
+    "assurances": [
+      "Embalaje neutro y discreto",
+      "Envío rápido a toda Rumanía",
+      "Pago seguro: tarjeta o contra reembolso",
+      "Tus datos permanecen confidenciales"
+    ],
+    "summaryTitle": "Tu pedido",
+    "summaryEmpty": "Aún no has añadido productos al carrito. Puedes elegir en la sección",
+    "summaryEmptyLink": "Precios",
+    "summaryTotal": "Total ({count, plural, one {# artículo} other {# artículos}})",
+    "fieldNume": "Nombre completo",
+    "fieldTelefon": "Teléfono",
+    "fieldTara": "País",
+    "fieldOras": "Ciudad",
+    "fieldCodPostal": "Código postal",
+    "fieldAdresa": "Dirección de entrega",
+    "phTelefon": "07xx xxx xxx",
+    "phAdresa": "Calle, número, bloque, escalera, piso",
+    "submit": "Enviar pedido",
+    "submitting": "Enviando…",
+    "terms": "Al enviar tu pedido aceptas los <link>términos y condiciones</link>.",
+    "errorNume": "Por favor, introduce tu nombre completo.",
+    "errorTelefon": "Por favor, introduce un número de teléfono válido.",
+    "errorTara": "Por favor, introduce tu país.",
+    "errorOras": "Por favor, introduce tu ciudad.",
+    "errorAdresa": "Por favor, introduce la dirección de entrega completa.",
+    "errorCodPostal": "Por favor, introduce un código postal válido.",
+    "errorTitle": "Comprueba los campos marcados.",
+    "errorDesc": "Alguna información es incompleta o no es válida.",
+    "successTitle": "¡Gracias, {name}!",
+    "successSub": "Tu pedido se ha registrado correctamente.",
+    "operatorTitle": "Un operador te llamará en breve",
+    "operatorText": "al {phone} para confirmar tu pedido y los detalles de entrega en {city}.",
+    "summaryLabel": "Resumen del pedido",
+    "summaryLine": "{count, plural, one {# artículo} other {# artículos}} — total {total} lei",
+    "another": "Enviar otro pedido"
+  },
+  "cart": {
+    "pill": "Carrito ({count})",
+    "title": "Tu carrito ({count})",
+    "dialogLabel": "Tu carrito",
+    "close": "Cerrar carrito",
+    "emptyTitle": "Tu carrito está vacío",
+    "emptyText": "Añade un producto de la sección Precios para empezar tu pedido.",
+    "seePrices": "Ver precios",
+    "unit": "{price} lei / ud",
+    "removeAria": "Quitar {label} del carrito",
+    "decrease": "Reducir cantidad",
+    "increase": "Aumentar cantidad",
+    "total": "Total",
+    "freeShippingYes": "Obtienes envío gratis.",
+    "freeShippingNo": "Envío gratis en pedidos superiores a 250 lei.",
+    "checkout": "Finalizar pedido",
+    "toastAdded": "Añadido al carrito: {label}",
+    "toastAddedDesc": "Consulta los detalles de tu pedido en el carrito.",
+    "toastOrder": "¡Pedido enviado!",
+    "toastOrderDesc": "Un operador te llamará en breve para confirmarlo.",
+    "toastError": "Comprueba los campos marcados.",
+    "toastErrorDesc": "Alguna información es incompleta o no es válida."
+  },
+  "footer": {
+    "privacy": "Política de privacidad",
+    "terms": "Términos y condiciones",
+    "copyright": "© 2024 PROCTOREX — Fabricado en Rumanía. Certificado ISO 22000:2018."
+  },
+  "language": {
+    "label": "Idioma"
+  },
+  "aria": {
+    "product": "Tarro de crema natural PROCTOREX de 30 g sobre una piedra, con flores de caléndula, lavanda y cápsulas"
+  },
+  "meta": {
+    "title": "PROCTOREX — Alivio natural. Día a día.",
+    "description": "Crema natural para el cuidado de la zona sensible durante las molestias causadas por las hemorroides. Fórmula a base de plantas, creada para calmar, proteger y ayudar a regenerar el tejido inflamado."
+  }
+}

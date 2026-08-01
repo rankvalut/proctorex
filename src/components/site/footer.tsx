@@ -1,6 +1,9 @@
 import { Leaf } from "@phosphor-icons/react/dist/ssr";
+import { getTranslations } from "next-intl/server";
 
-export function Footer() {
+export async function Footer() {
+  const t = await getTranslations("footer");
+
   return (
     <footer
       id="contact"
@@ -18,16 +21,16 @@ export function Footer() {
 
         <nav aria-label="Legal" className="flex flex-wrap items-center justify-center gap-x-3 gap-y-1 text-sm font-semibold text-ink-soft">
           <a href="#politica" className="transition-colors duration-200 hover:text-forest">
-            Politica de confidențialitate
+            {t("privacy")}
           </a>
           <span aria-hidden="true" className="text-cream-4">|</span>
           <a href="#termeni" className="transition-colors duration-200 hover:text-forest">
-            Termeni și condiții
+            {t("terms")}
           </a>
         </nav>
 
         <p className="text-center text-sm text-ink-soft">
-          © 2024 PROCTOREX — Fabricat în România. Certificat ISO 22000:2018.
+          {t("copyright")}
         </p>
       </div>
     </footer>

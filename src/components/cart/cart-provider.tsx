@@ -9,6 +9,7 @@ import {
   type ReactNode,
 } from "react";
 import { Toaster, toast } from "sonner";
+import { useTranslations } from "next-intl";
 import { CartDrawer } from "@/components/cart/cart-drawer";
 
 export interface CartItem {
@@ -40,28 +41,32 @@ export function useCart() {
 }
 
 export function CartProvider({ children }: { children: ReactNode }) {
+  const t = useTranslations("cart");
   const [items, setItems] = useState<CartItem[]>([]);
   const [isOpen, setIsOpen] = useState(false);
 
   const openCart = useCallback(() => setIsOpen(true), []);
   const closeCart = useCallback(() => setIsOpen(false), []);
 
-  const addItem = useCallback((id: string, label: string, price: number) => {
-    setItems((prev) => {
-      const existing = prev.find((i) => i.id === id);
-      if (existing) {
-        return prev.map((i) =>
-          i.id === id ? { ...i, qty: i.qty + 1 } : i,
-        );
-      }
-      return [...prev, { id, label, price, qty: 1 }];
-    });
-    setIsOpen(true);
-    toast.success(`Adăugat în coș: ${label}`, {
-      description: "Vezi detaliile comenzii în coș.",
-      position: "bottom-right",
-    });
-  }, []);
+  const addItem = useCallback(
+    (id: string, label: string, price: number) => {
+      setItems((prev) => {
+        const existing = prev.find((i) => i.id === id);
+        if (existing) {
+          return prev.map((i) =>
+            i.id === id ? { ...i, qty: i.qty + 1 } : i,
+          );
+        }
+        return [...prev, { id, label, price, qty: 1 }];
+      });
+      setIsOpen(true);
+      toast.success(t("toastAdded", { label }), {
+        description: t("toastAddedDesc"),
+        position: "bottom-right",
+      });
+    },
+    [t],
+  );
 
   const removeItem = useCallback((id: string) => {
     setItems((prev) => prev.filter((i) => i.id !== id));

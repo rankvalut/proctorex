@@ -1,0 +1,218 @@
+{
+  "brand": {
+    "name": "PROCTOREX",
+    "tagline": "Natural relief. Day by day."
+  },
+  "nav": {
+    "despre": "About the product",
+    "ingrediente": "Ingredients",
+    "beneficii": "Benefits",
+    "preturi": "Prices",
+    "comanda": "Order",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title1": "Natural relief.",
+    "title2": "Day by day.",
+    "body": "A natural cream for caring for the sensitive area during discomfort caused by haemorrhoids. A plant-based formula designed to soothe, protect and help the inflamed tissue regenerate.",
+    "ctaPrimary": "Order PROCTOREX",
+    "ctaSecondary": "Quick order",
+    "trust": [
+      "Discreet delivery",
+      "Secure payment",
+      "30-day free returns"
+    ]
+  },
+  "benefits": {
+    "eyebrow": "Benefits",
+    "title": "Discomfort shouldn't run your life.",
+    "subtext": "PROCTOREX brings discreet, steady relief so you can get back to your routine without worry. A simple, plant-based formula created to soothe and protect inflamed tissue.",
+    "more": "More details",
+    "tap": "Tap for details",
+    "close": "Close",
+    "cards": [
+      {
+        "title": "Quick calming",
+        "text": "Reduces the feeling of discomfort, itching and burning in the sensitive area.",
+        "extra": "Extracts of calendula and chamomile are known for their calming effect on irritated skin. Applied locally, PROCTOREX cools the area and reduces the burning and itching sensation from the very first uses."
+      },
+      {
+        "title": "Daily protection",
+        "text": "Forms a delicate protective layer over the irritated tissue.",
+        "extra": "Shea butter and witch hazel create an emollient barrier that protects the sensitive area from friction and repeated irritation, especially when walking or sitting for long periods."
+      },
+      {
+        "title": "Regeneration",
+        "text": "Supports the natural recovery of inflamed tissue.",
+        "extra": "Aloe vera and lavender deeply hydrate and support the natural healing process of the tissue, contributing to lasting comfort and skin elasticity in the treated area."
+      },
+      {
+        "title": "100% plants",
+        "text": "Natural extracts of calendula, lavender and witch hazel.",
+        "extra": "The formula contains only plant-based ingredients: calendula, lavender, witch hazel, aloe vera, chamomile and shea butter — with no artificial colourants."
+      },
+      {
+        "title": "Gentle on skin",
+        "text": "A light formula, fragrance-free, for sensitive skin.",
+        "extra": "Fragrance-free and alcohol-free, the texture is suitable for sensitive skin, even with repeated use several times a day."
+      },
+      {
+        "title": "Discreet effect",
+        "text": "A creamy texture that absorbs quickly, with no residue.",
+        "extra": "It absorbs quickly without leaving marks on clothing. Your order arrives in neutral packaging and the invoice makes no reference to the product."
+      }
+    ]
+  },
+  "ingredients": {
+    "eyebrow": "Ingredients",
+    "title": "The power of plants, in a gentle formula.",
+    "subtext": "Every ingredient was chosen for its natural role: soothing, protection and regeneration. No unnecessary ingredients, no artificial fragrance.",
+    "badge": "100% plant-based formula",
+    "list": [
+      { "name": "Calendula", "role": "Soothing; supports the regeneration of irritated tissue." },
+      { "name": "Lavender", "role": "Calming and relaxing effect on the sensitive area." },
+      { "name": "Witch hazel", "role": "Tones and reduces the feeling of irritation." },
+      { "name": "Aloe vera", "role": "Hydrates and cools inflamed skin." },
+      { "name": "Chamomile", "role": "Soothes and supports daily comfort." },
+      { "name": "Shea butter", "role": "Protects and maintains skin elasticity." }
+    ]
+  },
+  "howItWorks": {
+    "eyebrow": "How it works",
+    "title": "How PROCTOREX works",
+    "subtext": "A formula designed to address the three main needs of the sensitive area: immediate soothing, protection and supporting the regeneration of inflamed tissue.",
+    "steps": [
+      {
+        "title": "Soothes discomfort",
+        "text": "Extracts of calendula and chamomile calm the feeling of itching, burning and discomfort from the very first applications."
+      },
+      {
+        "title": "Protects the sensitive area",
+        "text": "Witch hazel and shea butter form a delicate barrier that protects irritated tissue from friction and repeated irritation."
+      },
+      {
+        "title": "Supports regeneration",
+        "text": "Aloe vera and lavender deeply hydrate and support the natural recovery of inflamed tissue, for long-lasting comfort."
+      }
+    ],
+    "usageTitle": "How to use",
+    "usage": [
+      "Apply a small amount of cream to a clean, dry area.",
+      "Use 2–3 times a day or as directed on the label.",
+      "For external use only — do not ingest."
+    ],
+    "noteTitle": "Please note",
+    "note": "PROCTOREX is a cosmetic product for external use, designed for the care and comfort of the sensitive area. It does not replace medical advice: if discomfort persists or worsens, consult your doctor."
+  },
+  "pricing": {
+    "eyebrow": "Prices",
+    "title": "Choose the right pack for you",
+    "subtext": "Fair prices, no hidden costs. Orders are shipped discreetly, in neutral packaging.",
+    "productName": "PROCTOREX",
+    "recomandat": "Recommended",
+    "plans": [
+      {
+        "size": "50 g",
+        "note": "For beginners or travel",
+        "cta": "Order 50 g",
+        "features": ["Natural cream 50 g", "Discreet delivery", "Secure payment"]
+      },
+      {
+        "size": "100 g",
+        "note": "Best value for money",
+        "cta": "Order 100 g",
+        "features": ["Natural cream 100 g", "Discreet delivery", "Secure payment", "30-day free returns"]
+      },
+      {
+        "size": "2 × 100 g",
+        "note": "Save 20 lei, stock for 2 months",
+        "cta": "Order the pack",
+        "features": ["2 × Natural cream 100 g", "Discreet delivery", "Secure payment", "30-day free returns"]
+      }
+    ],
+    "perks": [
+      "Free shipping on orders over 250 lei",
+      "30-day free returns",
+      "Payment: Card or Cash on delivery"
+    ]
+  },
+  "order": {
+    "eyebrow": "Order",
+    "title": "Order quickly and discreetly",
+    "subtext": "Fill in the form and an operator will call you to confirm your order. No account, no complicated steps.",
+    "assurances": [
+      "Neutral, discreet packaging",
+      "Fast delivery across Romania",
+      "Secure payment — Card or Cash on delivery",
+      "Your data stays confidential"
+    ],
+    "summaryTitle": "Your order",
+    "summaryEmpty": "You haven't added any products to your cart yet. You can choose from the",
+    "summaryEmptyLink": "Prices",
+    "summaryTotal": "Total ({count, plural, one {# item} other {# items}})",
+    "fieldNume": "Full name",
+    "fieldTelefon": "Phone",
+    "fieldTara": "Country",
+    "fieldOras": "City",
+    "fieldCodPostal": "Postal code",
+    "fieldAdresa": "Delivery address",
+    "phTelefon": "07xx xxx xxx",
+    "phAdresa": "Street, number, block, stair, apartment",
+    "submit": "Send Order",
+    "submitting": "Sending…",
+    "terms": "By sending your order you agree to the <link>terms and conditions</link>.",
+    "errorNume": "Please enter your full name.",
+    "errorTelefon": "Please enter a valid phone number.",
+    "errorTara": "Please enter your country.",
+    "errorOras": "Please enter your city.",
+    "errorAdresa": "Please enter the full delivery address.",
+    "errorCodPostal": "Please enter a valid postal code.",
+    "errorTitle": "Check the highlighted fields.",
+    "errorDesc": "Some information is incomplete or invalid.",
+    "successTitle": "Thank you, {name}!",
+    "successSub": "Your order has been registered successfully.",
+    "operatorTitle": "An operator will call you shortly",
+    "operatorText": "at {phone} to confirm your order and delivery details to {city}.",
+    "summaryLabel": "Order summary",
+    "summaryLine": "{count, plural, one {# item} other {# items}} — total {total} lei",
+    "another": "Send another order"
+  },
+  "cart": {
+    "pill": "Cart ({count})",
+    "title": "Your cart ({count})",
+    "dialogLabel": "Your cart",
+    "close": "Close cart",
+    "emptyTitle": "Your cart is empty",
+    "emptyText": "Add a product from the Prices section to start your order.",
+    "seePrices": "See prices",
+    "unit": "{price} lei / item",
+    "removeAria": "Remove {label} from cart",
+    "decrease": "Decrease quantity",
+    "increase": "Increase quantity",
+    "total": "Total",
+    "freeShippingYes": "You get free shipping.",
+    "freeShippingNo": "Free shipping on orders over 250 lei.",
+    "checkout": "Complete order",
+    "toastAdded": "Added to cart: {label}",
+    "toastAddedDesc": "See your order details in the cart.",
+    "toastOrder": "Order sent!",
+    "toastOrderDesc": "An operator will call you shortly to confirm.",
+    "toastError": "Check the highlighted fields.",
+    "toastErrorDesc": "Some information is incomplete or invalid."
+  },
+  "footer": {
+    "privacy": "Privacy Policy",
+    "terms": "Terms and Conditions",
+    "copyright": "© 2024 PROCTOREX — Made in Romania. ISO 22000:2018 certified."
+  },
+  "language": {
+    "label": "Language"
+  },
+  "aria": {
+    "product": "PROCTOREX natural cream 30 g jar on a stone, with calendula flowers, lavender and capsules"
+  },
+  "meta": {
+    "title": "PROCTOREX — Natural relief. Day by day.",
+    "description": "A natural cream for caring for the sensitive area during discomfort caused by haemorrhoids. A plant-based formula designed to soothe, protect and help the inflamed tissue regenerate."
+  }
+}

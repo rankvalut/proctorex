@@ -5,37 +5,17 @@ import {
   DropHalf,
   Check,
 } from "@phosphor-icons/react/dist/ssr";
+import { getTranslations } from "next-intl/server";
 import { Eyebrow } from "@/components/ui/eyebrow";
 import { Reveal } from "@/components/ui/reveal";
 
-const STEPS = [
-  {
-    icon: Flame,
-    step: "01",
-    title: "Calmează disconfortul",
-    text: "Extractele de calendula și mușețel calmează senzația de mâncărime, arsură și disconfort încă de la primele aplicări.",
-  },
-  {
-    icon: ShieldStar,
-    step: "02",
-    title: "Protejează zona sensibilă",
-    text: "Hamamelisul și untul de karité formează o barieră delicată care protejează țesutul iritat de frecare și iritațiile repetate.",
-  },
-  {
-    icon: FlowerTulip,
-    step: "03",
-    title: "Susține regenerarea",
-    text: "Aloe vera și lavanda hidratează în profunzime și sprijină refacerea naturală a țesutului inflamat, pentru confort de durată.",
-  },
-];
+const STEP_ICONS = [Flame, ShieldStar, FlowerTulip];
 
-const USAGE = [
-  "Aplică o cantitate mică de cremă pe zona curată și uscată.",
-  "Folosește de 2–3 ori pe zi sau conform indicațiilor de pe etichetă.",
-  "Produs de uz extern — nu se administrează intern.",
-];
+export async function HowItWorks() {
+  const t = await getTranslations("howItWorks");
+  const steps = t.raw("steps") as { title: string; text: string }[];
+  const usage = t.raw("usage") as string[];
 
-export function HowItWorks() {
   return (
     <section id="cum-functioneaza" className="relative overflow-hidden">
       {/* decorative leaves */}
@@ -51,14 +31,12 @@ export function HowItWorks() {
       <div className="mx-auto max-w-6xl px-5 py-16 md:px-8 md:py-24">
         <Reveal>
           <div className="max-w-3xl">
-            <Eyebrow>Cum funcționează</Eyebrow>
+            <Eyebrow>{t("eyebrow")}</Eyebrow>
             <h2 className="font-display mt-3 text-3xl font-bold leading-tight tracking-tight text-forest-900 sm:text-4xl md:text-5xl">
-              Cum acționează PROCTOREX
+              {t("title")}
             </h2>
             <p className="mt-4 max-w-[58ch] text-lg leading-relaxed text-ink-soft">
-              Formulă concepută pentru a răspunde celor trei nevoi principale
-              ale zonei sensibile: calmarea imediată, protecția și sprijinirea
-              regenerării țesutului inflamat.
+              {t("subtext")}
             </p>
           </div>
         </Reveal>
@@ -70,24 +48,28 @@ export function HowItWorks() {
             aria-hidden="true"
             className="absolute left-[16%] right-[16%] top-10 hidden h-px bg-linear-to-r from-transparent via-leaf/50 to-transparent md:block"
           />
-          {STEPS.map((s, i) => (
-            <Reveal key={s.step} delay={i * 0.1} className="flex">
-              <div className="relative flex h-full flex-col rounded-blob border border-cream-3 bg-cream p-7 shadow-soft">
-                <div className="flex items-center justify-between">
-                  <span className="flex h-16 w-16 items-center justify-center rounded-2xl bg-leaf-soft text-forest-700">
-                    <s.icon size={28} weight="bold" />
-                  </span>
-                  <span className="font-display text-4xl font-bold text-cream-3">
-                    {s.step}
-                  </span>
+          {steps.map((s, i) => {
+            const Icon = STEP_ICONS[i];
+            const step = String(i + 1).padStart(2, "0");
+            return (
+              <Reveal key={step} delay={i * 0.1} className="flex">
+                <div className="relative flex h-full flex-col rounded-blob border border-cream-3 bg-cream p-7 shadow-soft">
+                  <div className="flex items-center justify-between">
+                    <span className="flex h-16 w-16 items-center justify-center rounded-2xl bg-leaf-soft text-forest-700">
+                      <Icon size={28} weight="bold" />
+                    </span>
+                    <span className="font-display text-4xl font-bold text-cream-3">
+                      {step}
+                    </span>
+                  </div>
+                  <h3 className="font-display mt-5 text-xl font-bold text-forest-900">
+                    {s.title}
+                  </h3>
+                  <p className="mt-2 leading-relaxed text-ink-soft">{s.text}</p>
                 </div>
-                <h3 className="font-display mt-5 text-xl font-bold text-forest-900">
-                  {s.title}
-                </h3>
-                <p className="mt-2 leading-relaxed text-ink-soft">{s.text}</p>
-              </div>
-            </Reveal>
-          ))}
+              </Reveal>
+            );
+          })}
         </div>
 
         {/* Usage + note */}
@@ -96,10 +78,10 @@ export function HowItWorks() {
             <div className="rounded-blob border border-cream-3 bg-cream p-7 shadow-soft md:p-8">
               <h3 className="font-display flex items-center gap-2.5 text-xl font-bold text-forest-900">
                 <DropHalf size={24} weight="bold" className="text-forest-600" />
-                Cum se folosește
+                {t("usageTitle")}
               </h3>
               <ul className="mt-4 flex flex-col gap-3">
-                {USAGE.map((u) => (
+                {usage.map((u) => (
                   <li
                     key={u}
                     className="flex items-start gap-2.5 text-sm leading-relaxed text-ink-soft"
@@ -115,13 +97,10 @@ export function HowItWorks() {
 
             <div className="rounded-blob bg-forest p-7 text-cream shadow-card md:p-8">
               <h3 className="font-display text-xl font-bold text-gold">
-                De reținut
+                {t("noteTitle")}
               </h3>
               <p className="mt-3 leading-relaxed text-cream/85">
-                PROCTOREX este un produs cosmetic de uz extern, destinat
-                îngrijirii și confortului zonei sensibile. Nu înlocuiește
-                consultul medical: dacă disconfortul persistă sau se agravează,
-                adresează-te medicului tău.
+                {t("note")}
               </p>
             </div>
           </div>

@@ -19,7 +19,23 @@ using the design guidance from the downloaded skill repos (see
 | Icons     | `@phosphor-icons/react`                                       |
 | Toasts    | `sonner` (add-to-cart + form feedback)                        |
 | Fonts     | `Outfit` (display) + `Nunito Sans` (body), self-hosted        |
-| Language  | Romanian (`ro`), latin-ext subsets for diacritics             |
+| i18n      | `next-intl` — 5 languages (see below)                         |
+
+## Languages
+
+The site is fully translated with `next-intl` (locale-prefixed routing).
+
+| Locale | Route  | Language   |
+| ------ | ------ | ---------- |
+| `ro`   | `/ro`  | Română (default) |
+| `en`   | `/en`  | English    |
+| `uk`   | `/uk`  | Українська |
+| `ru`   | `/ru`  | Русский    |
+| `es`   | `/es`  | Español    |
+
+- All copy lives in `messages/{ro,en,uk,ru,es}.json`.
+- A language switcher (globe icon) sits in the header; `/` redirects to `/ro`.
+- `<html lang>` and per-locale metadata are set automatically.
 
 ## Design tokens
 

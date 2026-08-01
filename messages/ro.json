@@ -1,0 +1,218 @@
+{
+  "brand": {
+    "name": "PROCTOREX",
+    "tagline": "Ajutor natural. Zi de zi."
+  },
+  "nav": {
+    "despre": "Despre produs",
+    "ingrediente": "Ingrediente",
+    "beneficii": "Beneficii",
+    "preturi": "Prețuri",
+    "comanda": "Comandă",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title1": "Ajutor natural.",
+    "title2": "Zi de zi.",
+    "body": "Cremă naturală pentru îngrijirea zonei sensibile în perioadele de disconfort cauzat de hemoroizi. Formulă pe bază de plante, creată pentru calmare, protecție și regenerarea țesutului inflamat.",
+    "ctaPrimary": "Comandă PROCTOREX",
+    "ctaSecondary": "Comandă rapidă",
+    "trust": [
+      "Livrare discretă",
+      "Plată sigură",
+      "Retur gratuit 30 zile"
+    ]
+  },
+  "benefits": {
+    "eyebrow": "Beneficii",
+    "title": "Disconfortul nu ar trebui să îți controleze viața.",
+    "subtext": "PROCTOREX aduce alinare discretă și constantă, astfel încât să-ți poți relua rutina fără griji. O formulă simplă, pe bază de plante, creată pentru calmarea și protecția țesutului inflamat.",
+    "more": "Mai multe detalii",
+    "tap": "Atinge pentru detalii",
+    "close": "Închide",
+    "cards": [
+      {
+        "title": "Calmare rapidă",
+        "text": "Reduce senzația de disconfort, mâncărime și arsură în zona sensibilă.",
+        "extra": "Extractele de calendula și mușețel sunt cunoscute pentru efectul lor calmant asupra pielii iritate. Aplicat local, PROCTOREX răcorește zona și reduce senzația de arsură și mâncărime încă de la primele utilizări."
+      },
+      {
+        "title": "Protecție zilnică",
+        "text": "Formează un strat protector delicat peste țesutul iritat.",
+        "extra": "Untul de karité și hamamelisul creează o barieră emolientă care protejează zona sensibilă de frecare și de iritațiile repetate, în special în timpul mersului sau al statului prelungit pe scaun."
+      },
+      {
+        "title": "Regenerare",
+        "text": "Sprijină refacerea naturală a țesutului inflamat.",
+        "extra": "Aloe vera și lavanda hidratează în profunzime și susțin procesul natural de refacere al țesutului, contribuind la confortul de durată și la elasticitatea pielii din zona tratată."
+      },
+      {
+        "title": "100% plante",
+        "text": "Extracte naturale din calendula, lavandă și hamamelis.",
+        "extra": "Formula conține doar ingrediente de origine vegetală: calendula, lavandă, hamamelis, aloe vera, mușețel și unt de karité — fără coloranți artificiali."
+      },
+      {
+        "title": "Blând cu pielea",
+        "text": "Formulă ușoară, fără parfum artificial, pentru piele sensibilă.",
+        "extra": "Fără parfum artificial și fără alcool, textura este potrivită pentru pielea sensibilă, chiar și în cazul utilizării repetate, de mai multe ori pe zi."
+      },
+      {
+        "title": "Efect discret",
+        "text": "Textură cremoasă care se absoarbe rapid, fără reziduuri.",
+        "extra": "Se absoarbe rapid, fără a lăsa urme pe îmbrăcăminte. Comanda ajunge într-un ambalaj neutru, iar factura nu face referire la produs."
+      }
+    ]
+  },
+  "ingredients": {
+    "eyebrow": "Ingrediente",
+    "title": "Puterea plantelor, într-o formulă blândă.",
+    "subtext": "Fiecare ingredient a fost ales pentru rolul său natural: calmare, protecție și regenerare. Fără ingrediente inutile, fără parfum artificial.",
+    "badge": "100% formulă pe bază de plante",
+    "list": [
+      { "name": "Calendula", "role": "Calmant, sprijină regenerarea țesutului iritat." },
+      { "name": "Lavandă", "role": "Efect calmant și relaxant asupra zonei sensibile." },
+      { "name": "Hamamelis", "role": "Tonifiază și reduce senzația de iritație." },
+      { "name": "Aloe vera", "role": "Hidratează și răcorește pielea inflamată." },
+      { "name": "Mușețel", "role": "Calmează și sprijină confortul zilnic." },
+      { "name": "Unt de karité", "role": "Protejează și menține elasticitatea pielii." }
+    ]
+  },
+  "howItWorks": {
+    "eyebrow": "Cum funcționează",
+    "title": "Cum acționează PROCTOREX",
+    "subtext": "Formulă concepută pentru a răspunde celor trei nevoi principale ale zonei sensibile: calmarea imediată, protecția și sprijinirea regenerării țesutului inflamat.",
+    "steps": [
+      {
+        "title": "Calmează disconfortul",
+        "text": "Extractele de calendula și mușețel calmează senzația de mâncărime, arsură și disconfort încă de la primele aplicări."
+      },
+      {
+        "title": "Protejează zona sensibilă",
+        "text": "Hamamelisul și untul de karité formează o barieră delicată care protejează țesutul iritat de frecare și iritațiile repetate."
+      },
+      {
+        "title": "Susține regenerarea",
+        "text": "Aloe vera și lavanda hidratează în profunzime și sprijină refacerea naturală a țesutului inflamat, pentru confort de durată."
+      }
+    ],
+    "usageTitle": "Cum se folosește",
+    "usage": [
+      "Aplică o cantitate mică de cremă pe zona curată și uscată.",
+      "Folosește de 2–3 ori pe zi sau conform indicațiilor de pe etichetă.",
+      "Produs de uz extern — nu se administrează intern."
+    ],
+    "noteTitle": "De reținut",
+    "note": "PROCTOREX este un produs cosmetic de uz extern, destinat îngrijirii și confortului zonei sensibile. Nu înlocuiește consultul medical: dacă disconfortul persistă sau se agravează, adresează-te medicului tău."
+  },
+  "pricing": {
+    "eyebrow": "Prețuri",
+    "title": "Alege ambalajul potrivit pentru tine",
+    "subtext": "Prețuri corecte, fără costuri ascunse. Comanda se expediază discret, în ambalaj neutru.",
+    "productName": "PROCTOREX",
+    "recomandat": "Recomandat",
+    "plans": [
+      {
+        "size": "50 g",
+        "note": "Pentru început sau călătorii",
+        "cta": "Comandă 50 g",
+        "features": ["Cremă naturală 50 g", "Livrare discretă", "Plată sigură"]
+      },
+      {
+        "size": "100 g",
+        "note": "Cel mai echilibrat raport preț–cantitate",
+        "cta": "Comandă 100 g",
+        "features": ["Cremă naturală 100 g", "Livrare discretă", "Plată sigură", "Retur gratuit 30 zile"]
+      },
+      {
+        "size": "2 × 100 g",
+        "note": "Economisești 20 lei, ai provizie pe 2 luni",
+        "cta": "Comandă pachetul",
+        "features": ["2 × Cremă naturală 100 g", "Livrare discretă", "Plată sigură", "Retur gratuit 30 zile"]
+      }
+    ],
+    "perks": [
+      "Transport gratuit la comenzile peste 250 lei",
+      "Retur gratuit 30 zile",
+      "Plată: Card sau Ramburs"
+    ]
+  },
+  "order": {
+    "eyebrow": "Comandă",
+    "title": "Comandă rapid și discret",
+    "subtext": "Completează formularul, iar un operator te va suna pentru a confirma comanda. Fără cont, fără pași complicați.",
+    "assurances": [
+      "Ambalaj neutru și discret",
+      "Livrare rapidă în toată România",
+      "Plată sigură — Card sau Ramburs",
+      "Datele tale rămân confidențiale"
+    ],
+    "summaryTitle": "Comanda ta",
+    "summaryEmpty": "Nu ai adăugat încă produse în coș. Poți alege din secțiunea",
+    "summaryEmptyLink": "Prețuri",
+    "summaryTotal": "Total ({count, plural, one {# produs} other {# produse}})",
+    "fieldNume": "Nume complet",
+    "fieldTelefon": "Telefon",
+    "fieldTara": "Țară",
+    "fieldOras": "Oraș",
+    "fieldCodPostal": "Cod poștal",
+    "fieldAdresa": "Adresă de livrare",
+    "phTelefon": "07xx xxx xxx",
+    "phAdresa": "Stradă, număr, bloc, scară, apartament",
+    "submit": "Trimite Comanda",
+    "submitting": "Se trimite…",
+    "terms": "Prin trimiterea comenzii ești de acord cu <link>termenii și condițiile</link>.",
+    "errorNume": "Te rugăm să introduci numele complet.",
+    "errorTelefon": "Introdu un număr de telefon valid.",
+    "errorTara": "Te rugăm să introduci țara.",
+    "errorOras": "Te rugăm să introduci orașul.",
+    "errorAdresa": "Introdu adresa completă de livrare.",
+    "errorCodPostal": "Introdu un cod poștal valid.",
+    "errorTitle": "Verifică câmpurile marcate.",
+    "errorDesc": "Unele informații nu sunt complete sau sunt invalide.",
+    "successTitle": "Mulțumim, {name}!",
+    "successSub": "Comanda ta a fost înregistrată cu succes.",
+    "operatorTitle": "Un operator te va suna în scurt timp",
+    "operatorText": "la {phone} pentru a confirma comanda și detaliile de livrare către {city}.",
+    "summaryLabel": "Rezumatul comenzii",
+    "summaryLine": "{count, plural, one {# produs} other {# produse}} — total {total} lei",
+    "another": "Trimite o altă comandă"
+  },
+  "cart": {
+    "pill": "Coș ({count})",
+    "title": "Coșul tău ({count})",
+    "dialogLabel": "Coșul tău",
+    "close": "Închide coșul",
+    "emptyTitle": "Coșul tău este gol",
+    "emptyText": "Adaugă un produs din secțiunea Prețuri pentru a începe comanda.",
+    "seePrices": "Vezi prețuri",
+    "unit": "{price} lei / buc",
+    "removeAria": "Elimină {label} din coș",
+    "decrease": "Scade cantitatea",
+    "increase": "Crește cantitatea",
+    "total": "Total",
+    "freeShippingYes": "Beneficiezi de transport gratuit.",
+    "freeShippingNo": "Transport gratuit la comenzi peste 250 lei.",
+    "checkout": "Finalizează comanda",
+    "toastAdded": "Adăugat în coș: {label}",
+    "toastAddedDesc": "Vezi detaliile comenzii în coș.",
+    "toastOrder": "Comanda a fost trimisă!",
+    "toastOrderDesc": "Un operator te va suna în curând pentru confirmare.",
+    "toastError": "Verifică câmpurile marcate.",
+    "toastErrorDesc": "Unele informații nu sunt complete sau sunt invalide."
+  },
+  "footer": {
+    "privacy": "Politica de confidențialitate",
+    "terms": "Termeni și condiții",
+    "copyright": "© 2024 PROCTOREX — Fabricat în România. Certificat ISO 22000:2018."
+  },
+  "language": {
+    "label": "Limba"
+  },
+  "aria": {
+    "product": "Borcan PROCTOREX Cremă naturală 30 g, pe o piatră, cu flori de calendula, lavandă și capsule"
+  },
+  "meta": {
+    "title": "PROCTOREX — Ajutor natural. Zi de zi.",
+    "description": "Cremă naturală pentru îngrijirea zonei sensibile în perioadele de disconfort cauzat de hemoroizi. Formulă pe bază de plante, creată pentru calmare, protecție și regenerarea țesutului inflamat."
+  }
+}

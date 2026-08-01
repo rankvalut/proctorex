@@ -3,9 +3,11 @@
 import { useEffect } from "react";
 import { AnimatePresence, motion, useReducedMotion } from "motion/react";
 import { Basket, X, Plus, Minus, Trash, ArrowRight } from "@phosphor-icons/react";
+import { useTranslations } from "next-intl";
 import { useCart } from "@/components/cart/cart-provider";
 
 export function CartDrawer() {
+  const t = useTranslations("cart");
   const {
     items,
     count,
@@ -47,7 +49,7 @@ export function CartDrawer() {
   return (
     <AnimatePresence>
       {isOpen && (
-        <div className="fixed inset-0 z-50" role="dialog" aria-modal="true" aria-label="Coșul tău">
+        <div className="fixed inset-0 z-50" role="dialog" aria-modal="true" aria-label={t("dialogLabel")}>
           {/* Backdrop */}
           <motion.div
             className="absolute inset-0 bg-forest-950/40 backdrop-blur-[2px]"
@@ -72,12 +74,12 @@ export function CartDrawer() {
                 <span className="flex h-9 w-9 items-center justify-center rounded-full bg-forest text-cream">
                   <Basket size={18} weight="bold" />
                 </span>
-                Coșul tău ({count})
+                {t("title", { count })}
               </h2>
               <button
                 type="button"
                 onClick={closeCart}
-                aria-label="Închide coșul"
+                aria-label={t("close")}
                 className="flex h-9 w-9 items-center justify-center rounded-full border border-cream-3 text-ink-soft transition-colors hover:bg-cream-2 hover:text-forest-900"
               >
                 <X size={18} />
@@ -93,11 +95,10 @@ export function CartDrawer() {
                   </span>
                   <div>
                     <p className="font-display text-lg font-bold text-forest-900">
-                      Coșul tău este gol
+                      {t("emptyTitle")}
                     </p>
                     <p className="mt-1 text-sm text-ink-soft">
-                      Adaugă un produs din secțiunea Prețuri pentru a începe
-                      comanda.
+                      {t("emptyText")}
                     </p>
                   </div>
                   <a
@@ -105,7 +106,7 @@ export function CartDrawer() {
                     onClick={closeCart}
                     className="mt-2 inline-flex items-center gap-2 rounded-full bg-forest px-6 py-3 text-sm font-bold text-cream transition-colors hover:bg-forest-600"
                   >
-                    Vezi prețuri
+                    {t("seePrices")}
                     <ArrowRight size={16} weight="bold" />
                   </a>
                 </div>
@@ -128,13 +129,13 @@ export function CartDrawer() {
                               {item.label}
                             </p>
                             <p className="text-sm text-ink-soft">
-                              {item.price} lei / buc
+                              {t("unit", { price: item.price })}
                             </p>
                           </div>
                           <button
                             type="button"
                             onClick={() => removeItem(item.id)}
-                            aria-label={`Elimină ${item.label} din coș`}
+                            aria-label={t("removeAria", { label: item.label })}
                             className="flex h-8 w-8 items-center justify-center rounded-full text-ink-soft transition-colors hover:bg-red-50 hover:text-red-600"
                           >
                             <Trash size={16} />
@@ -145,7 +146,7 @@ export function CartDrawer() {
                             <button
                               type="button"
                               onClick={() => setQty(item.id, item.qty - 1)}
-                              aria-label="Scade cantitatea"
+                              aria-label={t("decrease")}
                               className="flex h-7 w-7 items-center justify-center rounded-full text-forest-900 transition-colors hover:bg-cream-3"
                             >
                               <Minus size={14} weight="bold" />
@@ -156,7 +157,7 @@ export function CartDrawer() {
                             <button
                               type="button"
                               onClick={() => setQty(item.id, item.qty + 1)}
-                              aria-label="Crește cantitatea"
+                              aria-label={t("increase")}
                               className="flex h-7 w-7 items-center justify-center rounded-full text-forest-900 transition-colors hover:bg-cream-3"
                             >
                               <Plus size={14} weight="bold" />
@@ -178,23 +179,21 @@ export function CartDrawer() {
               <div className="border-t border-cream-3 bg-cream-2 px-6 py-5">
                 <div className="flex items-center justify-between">
                   <span className="text-sm font-semibold text-ink-soft">
-                    Total
+                    {t("total")}
                   </span>
                   <span className="font-display text-2xl font-bold text-forest-900">
                     {total} lei
                   </span>
                 </div>
                 <p className="mt-1 text-xs text-ink-soft">
-                  {total >= 250
-                    ? "Beneficiezi de transport gratuit."
-                    : "Transport gratuit la comenzi peste 250 lei."}
+                  {total >= 250 ? t("freeShippingYes") : t("freeShippingNo")}
                 </p>
                 <button
                   type="button"
                   onClick={checkout}
                   className="mt-4 inline-flex w-full items-center justify-center gap-2 rounded-full bg-forest px-6 py-3.5 font-bold text-cream shadow-card transition-all duration-200 hover:bg-forest-600 active:scale-[0.97]"
                 >
-                  Finalizează comanda
+                  {t("checkout")}
                   <ArrowRight size={18} weight="bold" />
                 </button>
               </div>
