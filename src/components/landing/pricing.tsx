@@ -2,18 +2,13 @@
 
 import {
   Basket,
-  Check,
   Truck,
-  ArrowCounterClockwise,
   CreditCard,
-  Star,
+  ArrowCounterClockwise,
 } from "@phosphor-icons/react";
-import { motion, useReducedMotion } from "motion/react";
 import { useTranslations } from "next-intl";
-import { Eyebrow } from "@/components/ui/eyebrow";
-import { Reveal } from "@/components/ui/reveal";
-import { CountUp } from "@/components/ui/count-up";
 import { useCart } from "@/components/cart/cart-provider";
+import { JarMini } from "@/components/landing/jar-mini";
 
 const PLANS = [
   { id: "proctorex-50g", price: 30, featured: false },
@@ -21,197 +16,93 @@ const PLANS = [
   { id: "proctorex-2x100g", price: 100, featured: false },
 ];
 
-const PERK_ICONS = [Truck, ArrowCounterClockwise, CreditCard];
+const PERK_ICONS = [Truck, CreditCard, ArrowCounterClockwise];
 
+/**
+ * Compact, brochure-style product offer — the "O cremă naturală, produsă în
+ * România" block from the source advertisement. Deliberately NOT a SaaS card:
+ * thin borders, serif prices, small rectangular buttons, no shadows, tight rows.
+ */
 export function Pricing() {
   const { addItem } = useCart();
   const t = useTranslations("pricing");
-  const reduce = useReducedMotion();
 
-  const plans = t.raw("plans") as {
-    size: string;
-    note: string;
-    cta: string;
-    features: string[];
-  }[];
+  const plans = t.raw("plans") as { name: string; cta: string }[];
   const perks = t.raw("perks") as string[];
 
   return (
     <section id="preturi" className="relative bg-cream-2/60">
-      <div className="mx-auto max-w-6xl px-5 py-16 md:px-8 md:py-24">
-        <Reveal>
-          <div className="mx-auto max-w-2xl text-center">
-            <Eyebrow className="justify-center">{t("eyebrow")}</Eyebrow>
-            <h2 className="font-display mt-3 text-3xl font-bold leading-tight tracking-tight text-forest-900 sm:text-4xl md:text-5xl">
-              {t("title")}
-            </h2>
-            <p className="mt-4 text-lg leading-relaxed text-ink-soft">
-              {t("subtext")}
-            </p>
-          </div>
-        </Reveal>
+      <div className="mx-auto max-w-4xl px-5 py-12 md:px-8 md:py-16">
+        {/* Heading */}
+        <h2 className="font-display text-center text-3xl italic font-semibold leading-tight text-forest-900 md:text-4xl">
+          {t("title")}
+        </h2>
 
-        <div className="mt-12 grid items-stretch gap-6 md:grid-cols-3">
+        {/* Certification line */}
+        <p className="mt-2 text-center text-sm text-ink-soft">{t("cert")}</p>
+
+        {/* Product boxes */}
+        <div className="mt-8 grid gap-4 sm:grid-cols-3 sm:gap-3">
           {plans.map((plan, i) => {
             const meta = PLANS[i];
             return (
-            <motion.div
-              key={meta.id}
-              initial={reduce ? false : { opacity: 0, y: 32, scale: 0.97 }}
-              whileInView={{ opacity: 1, y: 0, scale: 1 }}
-              viewport={{ once: true, margin: "-60px" }}
-              transition={{
-                duration: 0.55,
-                delay: i * 0.12,
-                ease: [0.23, 1, 0.32, 1],
-              }}
-              className={meta.featured ? "flex md:-my-3" : "flex"}
-            >
-              <article
-                className={
-                  meta.featured
-                    ? "relative flex h-full w-full flex-col rounded-blob bg-forest p-7 text-cream shadow-card transition-transform duration-300 hover:-translate-y-2 md:py-10"
-                    : "relative flex h-full w-full flex-col rounded-blob border border-cream-3 bg-cream p-7 shadow-soft transition-all duration-300 hover:-translate-y-2 hover:shadow-card"
-                }
-              >
+              <div key={meta.id} className="relative flex">
                 {meta.featured && (
-                  <motion.span
-                    className="absolute -top-3 left-1/2 -translate-x-1/2"
-                    animate={reduce ? {} : { y: [0, -4, 0] }}
-                    transition={{
-                      duration: 3,
-                      repeat: Infinity,
-                      ease: "easeInOut",
-                    }}
-                  >
-                    {/* gradient glow ring */}
-                    <motion.span
-                      aria-hidden="true"
-                      className="pointer-events-none absolute inset-[-1.5px] rounded-full"
-                      style={{
-                        background:
-                          "conic-gradient(from 0deg, #c9a24b, #fbf6ec, #84ac90, #c9a24b)",
-                      }}
-                      animate={reduce ? {} : { rotate: 360 }}
-                      transition={{
-                        duration: 4,
-                        repeat: Infinity,
-                        ease: "linear",
-                      }}
-                    />
-                    {/* badge label */}
-                    <span className="relative flex items-center gap-1.5 rounded-full bg-gold px-4 py-1.5 text-xs font-bold uppercase tracking-wide text-forest-950 shadow-card">
-                      <Star size={13} weight="fill" />
-                      {t("recomandat")}
-                    </span>
-                  </motion.span>
+                  <span className="absolute -top-3 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-sm bg-forest px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-wider text-cream">
+                    {t("recomandat")}
+                  </span>
                 )}
-
-                <h3
+                <div
                   className={
                     meta.featured
-                      ? "font-display text-2xl font-bold text-cream"
-                      : "font-display text-2xl font-bold text-forest-900"
+                      ? "flex w-full flex-col items-center rounded-md border border-forest/50 bg-cream px-4 pb-5 pt-6 text-center"
+                      : "flex w-full flex-col items-center rounded-md border border-cream-3 bg-cream px-4 pb-5 pt-6 text-center"
                   }
                 >
-                  {t("productName")} {plan.size}
-                </h3>
-                <p
-                  className={
-                    meta.featured
-                      ? "mt-1 text-sm text-cream/70"
-                      : "mt-1 text-sm text-ink-soft"
-                  }
-                >
-                  {plan.note}
-                </p>
+                  <h3 className="font-display text-xl font-semibold text-forest-900">
+                    {plan.name}
+                  </h3>
 
-                <div className="mt-5 flex items-baseline gap-1.5">
-                  <span
-                    className={
-                      meta.featured
-                        ? "font-display text-5xl font-bold text-gold"
-                        : "font-display text-5xl font-bold text-forest"
-                    }
+                  <div className="mt-3 flex h-24 items-center justify-center">
+                    <JarMini className="h-24 w-auto" />
+                  </div>
+
+                  <p className="font-display mt-2 text-4xl font-bold leading-none text-forest">
+                    {meta.price}
+                    <span className="ml-1 text-xl font-semibold text-ink-soft">
+                      lei
+                    </span>
+                  </p>
+
+                  <button
+                    type="button"
+                    onClick={() => addItem(meta.id, plan.name, meta.price)}
+                    className="mt-4 inline-flex items-center gap-1.5 rounded-sm bg-forest px-5 py-2.5 text-sm font-semibold text-cream transition-colors duration-200 hover:bg-forest-700 active:scale-[0.98]"
                   >
-                    <CountUp to={meta.price} />
-                  </span>
-                  <span
-                    className={
-                      meta.featured
-                        ? "text-base font-bold text-cream/70"
-                        : "text-base font-bold text-ink-soft"
-                    }
-                  >
-                    lei
-                  </span>
+                    <Basket size={15} weight="bold" />
+                    {plan.cta}
+                  </button>
                 </div>
-
-                <ul className="mt-6 flex flex-col gap-2.5">
-                  {plan.features.map((f) => (
-                    <li
-                      key={f}
-                      className={
-                        meta.featured
-                          ? "flex items-center gap-2.5 text-sm text-cream/90"
-                          : "flex items-center gap-2.5 text-sm text-ink-soft"
-                      }
-                    >
-                      <Check
-                        size={17}
-                        weight="bold"
-                        className={
-                          meta.featured ? "text-gold" : "text-forest-600"
-                        }
-                      />
-                      {f}
-                    </li>
-                  ))}
-                </ul>
-
-                <button
-                  type="button"
-                  onClick={() =>
-                    addItem(
-                      meta.id,
-                      `${t("productName")} ${plan.size}`,
-                      meta.price,
-                    )
-                  }
-                  className={
-                    meta.featured
-                      ? "mt-7 inline-flex items-center justify-center gap-2 rounded-lg bg-cream px-6 py-3.5 font-bold text-forest-900 transition-all duration-200 hover:bg-white active:scale-[0.97]"
-                      : "mt-7 inline-flex items-center justify-center gap-2 rounded-lg bg-forest px-6 py-3.5 font-bold text-cream shadow-card transition-all duration-200 hover:bg-forest-700 active:scale-[0.97]"
-                  }
-                >
-                  <Basket size={18} weight="bold" />
-                  {plan.cta}
-                </button>
-              </article>
-            </motion.div>
+              </div>
             );
           })}
         </div>
 
-        {/* Delivery & payment strip */}
-        <Reveal>
-          <ul className="mx-auto mt-12 flex max-w-4xl flex-col items-center justify-center gap-4 rounded-blob border border-cream-3 bg-cream px-6 py-6 shadow-soft sm:flex-row sm:gap-8">
-            {perks.map((label, i) => {
-              const Icon = PERK_ICONS[i];
-              return (
-                <li
-                  key={label}
-                  className="flex items-center gap-2.5 text-sm font-semibold text-ink-soft"
-                >
-                  <span className="flex h-9 w-9 items-center justify-center rounded-full bg-leaf-soft text-forest-700">
-                    <Icon size={18} weight="bold" />
-                  </span>
-                  {label}
-                </li>
-              );
-            })}
-          </ul>
-        </Reveal>
+        {/* Thin delivery / payment / service row */}
+        <div className="mx-auto mt-6 flex max-w-2xl items-center justify-center divide-x divide-cream-3 border-t border-b border-cream-3 py-3">
+          {perks.map((label, i) => {
+            const Icon = PERK_ICONS[i];
+            return (
+              <span
+                key={label}
+                className="flex flex-1 items-center justify-center gap-1.5 px-2 text-center text-xs font-semibold text-ink-soft sm:px-3"
+              >
+                <Icon size={14} weight="bold" className="shrink-0 text-forest" />
+                {label}
+              </span>
+            );
+          })}
+        </div>
       </div>
     </section>
   );

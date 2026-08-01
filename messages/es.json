@@ -7,6 +7,7 @@
     "despre": "Sobre el producto",
     "ingrediente": "Ingredientes",
     "beneficii": "Beneficios",
+    "cumFunctioneaza": "Cómo funciona",
     "preturi": "Precios",
     "comanda": "Pedido",
     "contact": "Contacto"
@@ -75,35 +76,19 @@
     "note": "PROCTOREX es un producto cosmético de uso externo, diseñado para el cuidado y el confort de la zona sensible. No sustituye el consejo médico: si la molestia persiste o empeora, consulta a tu médico."
   },
   "pricing": {
-    "eyebrow": "Precios",
-    "title": "Elige el envase adecuado para ti",
-    "subtext": "Precios justos, sin costes ocultos. El pedido se envía de forma discreta, en embalaje neutro.",
-    "productName": "PROCTOREX",
+    "title": "Una crema natural, producida en Rumanía",
+    "cert": "Fabricado en Rumanía · Certificado ISO 22000:2018",
     "recomandat": "Recomendado",
+    "addToCart": "Añadir al carrito",
     "plans": [
-      {
-        "size": "50 g",
-        "note": "Para empezar o viajar",
-        "cta": "Pedir 50 g",
-        "features": ["Crema natural 50 g", "Entrega discreta", "Pago seguro"]
-      },
-      {
-        "size": "100 g",
-        "note": "La mejor relación calidad-precio",
-        "cta": "Pedir 100 g",
-        "features": ["Crema natural 100 g", "Entrega discreta", "Pago seguro", "Devolución gratis 30 días"]
-      },
-      {
-        "size": "2 × 100 g",
-        "note": "Ahorra 20 lei, provisión para 2 meses",
-        "cta": "Pedir el pack",
-        "features": ["2 × Crema natural 100 g", "Entrega discreta", "Pago seguro", "Devolución gratis 30 días"]
-      }
+      { "name": "PROCTOREX 50 g", "cta": "Pedir 50 g" },
+      { "name": "PROCTOREX 100 g", "cta": "Pedir 100 g" },
+      { "name": "Pack 2 × PROCTOREX 100 g", "cta": "Pedir el pack" }
     ],
     "perks": [
-      "Envío gratis en pedidos superiores a 250 lei",
-      "Devolución gratis 30 días",
-      "Pago: tarjeta o contra reembolso"
+      "Entrega discreta",
+      "Pago seguro",
+      "Devolución gratis 30 días"
     ]
   },
   "order": {

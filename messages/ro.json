@@ -7,6 +7,7 @@
     "despre": "Despre produs",
     "ingrediente": "Ingrediente",
     "beneficii": "Beneficii",
+    "cumFunctioneaza": "Cum funcționează",
     "preturi": "Prețuri",
     "comanda": "Comandă",
     "contact": "Contact"
@@ -75,35 +76,19 @@
     "note": "PROCTOREX este un produs cosmetic de uz extern, destinat îngrijirii și confortului zonei sensibile. Nu înlocuiește consultul medical: dacă disconfortul persistă sau se agravează, adresează-te medicului tău."
   },
   "pricing": {
-    "eyebrow": "Prețuri",
-    "title": "Alege ambalajul potrivit pentru tine",
-    "subtext": "Prețuri corecte, fără costuri ascunse. Comanda se expediază discret, în ambalaj neutru.",
-    "productName": "PROCTOREX",
+    "title": "O cremă naturală, produsă în România",
+    "cert": "Fabricat în România · Certificat ISO 22000:2018",
     "recomandat": "Recomandat",
+    "addToCart": "Adaugă în coș",
     "plans": [
-      {
-        "size": "50 g",
-        "note": "Pentru început sau călătorii",
-        "cta": "Comandă 50 g",
-        "features": ["Cremă naturală 50 g", "Livrare discretă", "Plată sigură"]
-      },
-      {
-        "size": "100 g",
-        "note": "Cel mai echilibrat raport preț–cantitate",
-        "cta": "Comandă 100 g",
-        "features": ["Cremă naturală 100 g", "Livrare discretă", "Plată sigură", "Retur gratuit 30 zile"]
-      },
-      {
-        "size": "2 × 100 g",
-        "note": "Economisești 20 lei, ai provizie pe 2 luni",
-        "cta": "Comandă pachetul",
-        "features": ["2 × Cremă naturală 100 g", "Livrare discretă", "Plată sigură", "Retur gratuit 30 zile"]
-      }
+      { "name": "PROCTOREX 50 g", "cta": "Comandă 50 g" },
+      { "name": "PROCTOREX 100 g", "cta": "Comandă 100 g" },
+      { "name": "Pachet 2 × PROCTOREX 100 g", "cta": "Comandă pachetul" }
     ],
     "perks": [
-      "Transport gratuit la comenzile peste 250 lei",
-      "Retur gratuit 30 zile",
-      "Plată: Card sau Ramburs"
+      "Livrare discretă",
+      "Plată sigură",
+      "Retur gratuit 30 zile"
     ]
   },
   "order": {

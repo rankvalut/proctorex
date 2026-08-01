@@ -7,6 +7,7 @@
     "despre": "About the product",
     "ingrediente": "Ingredients",
     "beneficii": "Benefits",
+    "cumFunctioneaza": "How it works",
     "preturi": "Prices",
     "comanda": "Order",
     "contact": "Contact"
@@ -75,35 +76,19 @@
     "note": "PROCTOREX is a cosmetic product for external use, designed for the care and comfort of the sensitive area. It does not replace medical advice: if discomfort persists or worsens, consult your doctor."
   },
   "pricing": {
-    "eyebrow": "Prices",
-    "title": "Choose the right pack for you",
-    "subtext": "Fair prices, no hidden costs. Orders are shipped discreetly, in neutral packaging.",
-    "productName": "PROCTOREX",
+    "title": "A natural cream, made in Romania",
+    "cert": "Made in Romania · ISO 22000:2018 certified",
     "recomandat": "Recommended",
+    "addToCart": "Add to cart",
     "plans": [
-      {
-        "size": "50 g",
-        "note": "For beginners or travel",
-        "cta": "Order 50 g",
-        "features": ["Natural cream 50 g", "Discreet delivery", "Secure payment"]
-      },
-      {
-        "size": "100 g",
-        "note": "Best value for money",
-        "cta": "Order 100 g",
-        "features": ["Natural cream 100 g", "Discreet delivery", "Secure payment", "30-day free returns"]
-      },
-      {
-        "size": "2 × 100 g",
-        "note": "Save 20 lei, stock for 2 months",
-        "cta": "Order the pack",
-        "features": ["2 × Natural cream 100 g", "Discreet delivery", "Secure payment", "30-day free returns"]
-      }
+      { "name": "PROCTOREX 50 g", "cta": "Order 50 g" },
+      { "name": "PROCTOREX 100 g", "cta": "Order 100 g" },
+      { "name": "Pack of 2 × PROCTOREX 100 g", "cta": "Order the pack" }
     ],
     "perks": [
-      "Free shipping on orders over 250 lei",
-      "30-day free returns",
-      "Payment: Card or Cash on delivery"
+      "Discreet delivery",
+      "Secure payment",
+      "30-day free returns"
     ]
   },
   "order": {

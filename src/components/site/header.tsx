@@ -8,12 +8,13 @@ import { Link } from "@/i18n/navigation";
 import { type Locale } from "@/i18n/routing";
 
 const NAV_KEYS = [
-  { href: "#despre", key: "despre" },
-  { href: "#ingrediente", key: "ingrediente" },
-  { href: "#beneficii", key: "beneficii" },
-  { href: "#preturi", key: "preturi" },
-  { href: "#comanda", key: "comanda" },
-  { href: "#contact", key: "contact" },
+  { href: "/#despre", key: "despre" },
+  { href: "/ingrediente", key: "ingrediente" },
+  { href: "/beneficii", key: "beneficii" },
+  { href: "/cum-functioneaza", key: "cumFunctioneaza" },
+  { href: "/#preturi", key: "preturi" },
+  { href: "/#comanda", key: "comanda" },
+  { href: "/#contact", key: "contact" },
 ] as const;
 
 const LANGUAGES: { code: Locale; label: string }[] = [
@@ -62,13 +63,13 @@ export function Header() {
           className="hidden items-center gap-6 lg:flex"
         >
           {NAV_KEYS.map((item) => (
-            <a
+            <Link
               key={item.href}
               href={item.href}
               className="text-[15px] text-ink-soft transition-colors duration-200 hover:text-forest"
             >
               {t(item.key)}
-            </a>
+            </Link>
           ))}
         </nav>
 
@@ -143,13 +144,13 @@ export function Header() {
           <ul className="flex flex-col gap-1">
             {NAV_KEYS.map((item) => (
               <li key={item.href}>
-                <a
+                <Link
                   href={item.href}
                   onClick={() => setOpen(false)}
                   className="block rounded-lg px-3 py-2.5 text-[15px] text-ink-soft hover:bg-cream-2 hover:text-forest"
                 >
                   {t(item.key)}
-                </a>
+                </Link>
               </li>
             ))}
             <li className="mt-2">

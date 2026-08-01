@@ -11,11 +11,11 @@ import { getTranslations, getLocale } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 
 const PRODUCT_ANCHORS = [
-  "#beneficii",
-  "#ingrediente",
-  "#cum-functioneaza",
-  "#preturi",
-  "#comanda",
+  "/beneficii",
+  "/ingrediente",
+  "/cum-functioneaza",
+  "/#preturi",
+  "/#comanda",
 ];
 
 const LEGAL_SLUGS = [
